@@ -1,0 +1,16 @@
+{
+   "projects": [
+        {
+        "name": "extension",
+        "files": [{"source":"projects/web/project.csproj"}]
+        },
+       {
+          "name": "web",
+          "files": [{"source":"projects/web/project.csproj"}]
+       },
+       {
+        "name": "worker",
+        "files": []
+     }
+   ]  
+}

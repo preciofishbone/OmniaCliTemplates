@@ -1,0 +1,54 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+    <AssemblyName>Omnia.Fx.Demo</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netcoreapp2.1\Omnia.Fx.Demo.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="omfxconfig.d.ts" />
+    <None Remove="omfxconfig.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="tools\" />
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.1.0-preview1-final" />
+    <PackageReference Include="Microsoft.TypeScript.Compiler" Version="2.8.3" />
+    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="2.8.3" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.1.0-preview1-final" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.0-preview1-final" />
+    <PackageReference Include="Omnia.Fx.NetCore" Version="0.3.29-vnext">
+      <IncludeAssets>all</IncludeAssets>
+      <ExcludeAssets>contentFiles</ExcludeAssets>
+      <PrivateAssets>contentFiles;analyzers</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="2.4.0" />
+
+  </ItemGroup>
+  <Target Name="OmniaRunBeforeBuild" BeforeTargets="Build">
+    <Exec Command="npm run omnia-before-build" ContinueOnError="false">
+    </Exec>
+  </Target>
+  <Target Name="OmniaRunAfterBuild" AfterTargets="Build">
+    <Exec Command="npm run omnia-after-build" ContinueOnError="false">
+    </Exec>
+  </Target>
+  <Target Name="IncludeOmniaOutput" AfterTargets="ComputeFilesToPublish">
+    <ItemGroup>
+      <DistFiles Include="wwwroot\omnia\**" />
+      <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+        <RelativePath>%(DistFiles.Identity)</RelativePath>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </ResolvedFileToPublish>
+    </ItemGroup>
+  </Target>
+</Project>
