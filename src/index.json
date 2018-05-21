@@ -1,7 +1,7 @@
 [
     {
         "version": "0.1.0",
-        "omniaVersion": "0.1.0",
-        "cliVersion": "0.1.0"
+        "requiresOmniaVersion": "0.1.0",
+        "requiresCliVersion": "0.1.0"
     }
 ]
