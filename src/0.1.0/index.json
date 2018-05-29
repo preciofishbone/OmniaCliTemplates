@@ -3,7 +3,7 @@
         {
         "name": "extension",
         "description": "Template for creating new extension",
-        "source": [
+        "sources": [
           {
             "folder": "projects/extension.json",
             "files": [
@@ -17,7 +17,7 @@
         },
        {
           "name": "web",
-          "source": [
+          "sources": [
             {
               "folder": "projects/web",
               "files": [
