@@ -9,7 +9,7 @@
             "files": [
               {
               "sourceName": "extension.json",
-              "targetName": "extension.json"
+              "outputName": "extension.json"
               }
             ]
           }
@@ -23,7 +23,7 @@
               "files": [
                 {
                 "sourceName": "project.csproj",
-                "targetName": "$outputname$.csproj"
+                "outputName": "$outputname$.csproj"
                 }
               ]
             }
