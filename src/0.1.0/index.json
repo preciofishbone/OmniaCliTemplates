@@ -2,15 +2,32 @@
    "projects": [
         {
         "name": "extension",
-        "files": [{"source":"projects/web/project.csproj"}]
+        "description": "Template for creating new extension",
+        "source": [
+          {
+            "folder": "projects/extension.json",
+            "files": [
+              {
+              "sourceName": "extension.json",
+              "targetName": "extension.json"
+              }
+            ]
+          }
+        ]
         },
        {
           "name": "web",
-          "files": [{"source":"projects/web/project.csproj"}]
-       },
-       {
-        "name": "worker",
-        "files": []
-     }
+          "source": [
+            {
+              "folder": "projects/web",
+              "files": [
+                {
+                "sourceName": "project.csproj",
+                "targetName": "$outputname$.csproj"
+                }
+              ]
+            }
+          ]
+       }
    ]  
 }
