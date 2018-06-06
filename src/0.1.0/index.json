@@ -5,13 +5,8 @@
         "description": "Template for creating new extension",
         "sources": [
           {
-            "folder": "projects/extension",
-            "files": [
-              {
-              "sourceName": "extension.json",
-              "outputName": "extension.json"
-              }
-            ]
+            "folder": "",
+            "files": []
           }
         ]
         },
