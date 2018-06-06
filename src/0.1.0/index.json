@@ -1,32 +1,52 @@
 {
-   "projects": [
+  "projects": [
+    {
+      "name": "extension",
+      "description": "Template for creating new extension",
+      "sources": [
         {
-        "name": "extension",
-        "description": "Template for creating new extension",
-        "sources": [
-          {
-            "folder": "",
-            "files": []
-          }
-        ]
-        },
-       {
-          "name": "web",
-          "sources": [
+          "folder": "",
+          "files": []
+        }
+      ]
+    },
+    {
+      "name": "web",
+      "sources": [
+        {
+          "folder": "projects/web",
+          "files": [
             {
-              "folder": "projects/web",
-              "files": [
-                {
-                "sourceName": "project.csproj",
-                "outputName": "$namespace$.csproj"
-                },
-                {
-                  "sourceName": "tsconfig.json",
-                  "outputName": "tsconfig.json"
-                }
-              ]
+              "sourceName": "project.csproj",
+              "outputName": "$namespace$.csproj"
+            },
+            {
+              "sourceName": "tsconfig.json",
+              "outputName": "tsconfig.json"
+            },
+            {
+              "sourceName": "appsettings.json",
+              "outputName": "appsettings.json"
+            },
+            {
+              "sourceName": "omnia.service.ts",
+              "outputName": "omnia.service.ts"
+            },
+            {
+              "sourceName": "package.json",
+              "outputName": "package.json"
+            },
+            {
+              "sourceName": "Program.cs",
+              "outputName": "Program.cs"
+            },
+            {
+              "sourceName": "Startup.cs",
+              "outputName": "Startup.cs"
             }
           ]
-       }
-   ]  
+        }
+      ]
+    }
+  ]
 }
