@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Omnia.Fx.NetCore.HostConfiguration.Extensions;
 using System;
 
-namespace Omnia.Fx.Demo
+namespace $namespace$
 {
     public class Program
     {
