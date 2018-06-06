@@ -3,11 +3,11 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
-    <AssemblyName>Omnia.Fx.Demo</AssemblyName>
+    <AssemblyName>$namespace$</AssemblyName>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>bin\Debug\netcoreapp2.1\Omnia.Fx.Demo.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\netcoreapp2.1\$namespace$.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

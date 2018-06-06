@@ -23,7 +23,11 @@
               "files": [
                 {
                 "sourceName": "project.csproj",
-                "outputName": "$outputname$.csproj"
+                "outputName": "$namespace$.csproj"
+                },
+                {
+                  "sourceName": "tsconfig.json",
+                  "outputName": "tsconfig.json"
                 }
               ]
             }
