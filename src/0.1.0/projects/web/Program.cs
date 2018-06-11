@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using Omnia.Fx.NetCore.HostConfiguration.Extensions;
+using Omnia.Fx.NetCore.Extensions;
+using Omnia.Fx.NetCore.SharePoint.HostConfiguration.Extensions;
+using Omnia.Fx.NetCore.Tenants.Extensions;
 using System;
 
 namespace $namespace$
@@ -23,7 +25,10 @@ namespace $namespace$
 
         public static IWebHost BuildWebHost(string[] args) =>
           WebHost.CreateDefaultBuilder(args)
-                .AddOmniaFxNetCore<Startup>()
+                .AddOmniaFxClientResourcesHandler()
+                .AddOmniaFxNetCoreTenant()
+                .AddOmniaFxNetCoreSharePoint()
+                .AddStartup<Startup>()
                 .Build();
     }
 }

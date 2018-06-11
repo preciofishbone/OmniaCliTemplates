@@ -17,11 +17,6 @@
     "jsx": "preserve"
   },
   "compileOnSave": true,
-  "include": [
-    "omfxconfig.ts",
-    "Resources/**/*",
-    "tools/**/*"
-  ],
   "exclude": [
     "node_modules"
   ]

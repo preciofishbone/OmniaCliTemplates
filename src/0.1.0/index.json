@@ -2,7 +2,7 @@
   "projects": [
     {
       "name": "extension",
-      "description": "Template for creating new extension",
+      "description": "Extension solution",
       "sources": [
         {
           "folder": "",
@@ -12,6 +12,7 @@
     },
     {
       "name": "web",
+      "description":  ".net core web project",
       "sources": [
         {
           "folder": "projects/web",
@@ -27,6 +28,10 @@
             {
               "sourceName": "appsettings.json",
               "outputName": "appsettings.json"
+            },
+            {
+              "sourceName": "gulpfile.js",
+              "outputName": "gulpfile.js"
             },
             {
               "sourceName": "omnia.service.ts",
@@ -46,6 +51,9 @@
             }
           ]
         }
+      ],
+      "folders": [
+        "client"
       ]
     }
   ]
