@@ -3,12 +3,13 @@
 Composer
     .registerManifest("$serviceid$", "$namespace$")
     .registerService({ description: "Description of $namespace$" })
+    .AsWebApp()
     .withBuildOptions({
         include: ["client"],
         moduleOptions: {
             enableTransformResourcePath: true
         },
         enableAutoAddManifestDependency: true
-    })
-    .AsWebApp();
+    });
+    
    

@@ -53,7 +53,8 @@
         }
       ],
       "folders": [
-        "client"
+        "client",
+        "wwwroot"
       ]
     }
   ]
