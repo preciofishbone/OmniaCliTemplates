@@ -86,6 +86,22 @@
           ]
         }
       ]
+    },
+    {
+      "name": "manifest",
+      "description": "Manifest definition",
+      "tokens": [],
+      "sources": [
+        {
+          "folder": "items/manifest",
+          "files": [
+            {
+              "sourceName": "manifest.ts",
+              "outputName": "$outputname$.manifest.ts"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
