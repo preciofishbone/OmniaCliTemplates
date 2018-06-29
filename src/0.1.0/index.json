@@ -12,7 +12,7 @@
     },
     {
       "name": "web",
-      "description":  ".net core web project",
+      "description": ".net core web project",
       "sources": [
         {
           "folder": "projects/web",
@@ -55,6 +55,36 @@
       "folders": [
         "client",
         "wwwroot"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "name": "vuewebcomponent",
+      "description": "Vue based web component",
+      "tokens": [ "tagname" ],
+      "sources": [
+        {
+          "folder": "items/vuewebcomponent",
+          "files": [
+            {
+              "sourceName": "vuewebcomponent.tsx",
+              "outputName": "$outputname$.tsx"
+            },
+            {
+              "sourceName": "ivuewebcomponent.ts",
+              "outputName": "$outputname$.ts"
+            },
+            {
+              "sourceName": "vuewebcomponent.manifest.ts",
+              "outputName": "$outputname$.manifest.ts"
+            },
+            {
+              "sourceName": "vuewebcomponent.css.ts",
+              "outputName": "$outputname$.css.ts"
+            }
+          ]
+        }
       ]
     }
   ]
