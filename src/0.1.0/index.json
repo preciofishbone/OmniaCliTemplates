@@ -102,6 +102,22 @@
           ]
         }
       ]
+    },
+    {
+      "name": "gitignore",
+      "description": "Gitignore file for git versioning",
+      "tokens": [],
+      "sources": [
+        {
+          "folder": "items/gitignore",
+          "files": [
+            {
+              "sourceName": ".gitignore",
+              "outputName": ".gitignore"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
