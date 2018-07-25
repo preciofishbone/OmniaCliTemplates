@@ -13,7 +13,7 @@ namespace $namespace$
             try
             {
                 BuildWebHost(args)
-                .Run();
+                .RunOmnia();
             }
             catch (Exception ex)
             {
@@ -22,11 +22,12 @@ namespace $namespace$
 
         }
 
-        public static IWebHost BuildWebHost(string[] args) =>
-          WebHost.CreateDefaultBuilder(args)
-                .AddOmniaFxClientResourcesHandler()
-                .AddOmniaFxNetCoreTenant()
-                .AddStartup<Startup>()
+        public static IWebHost BuildWebHost(string[] args) => 
+            WebHost
+                .CreateDefaultBuilder(args)
+                .UseOmniaWebAppConfiguration<Startup>((omniaConfig) => {
+                    omniaConfig.AddOmniaFxWebApp();
+                })
                 .Build();
     }
 }

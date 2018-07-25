@@ -29,7 +29,7 @@
     <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="2.8.3" />
     <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.1.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.0" />
-    <PackageReference Include="Omnia.Fx.NetCore" Version="0.4.33-vnext">
+    <PackageReference Include="Omnia.Fx.NetCore.WebApp" Version="0.4.84-vnext">
       <IncludeAssets>all</IncludeAssets>
       <ExcludeAssets>contentFiles</ExcludeAssets>
       <PrivateAssets>contentFiles;analyzers</PrivateAssets>

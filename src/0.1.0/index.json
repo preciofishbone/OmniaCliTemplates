@@ -12,7 +12,7 @@
     },
     {
       "name": "web",
-      "description": ".net core web project",
+      "description": "Omnia web project",
       "sources": [
         {
           "folder": "projects/web",
@@ -48,14 +48,63 @@
             {
               "sourceName": "Startup.cs",
               "outputName": "Startup.cs"
+            },
+            {
+              "sourceName": "Properties/launchSettings.json",
+              "outputName": "Properties/launchSettings.json"
             }
           ]
         }
       ],
       "folders": [
         "client",
-        "wwwroot"
+        "wwwroot",
+        "Properties"
       ]
+    },
+    {
+      "name": "worker",
+      "description": "Omnia worker project",
+      "sources": [
+        {
+          "folder": "projects/worker",
+          "files": [
+            {
+              "sourceName": "project.csproj",
+              "outputName": "$namespace$.csproj"
+            },
+            {
+              "sourceName": "tsconfig.json",
+              "outputName": "tsconfig.json"
+            },
+            {
+              "sourceName": "appsettings.json",
+              "outputName": "appsettings.json"
+            },
+            {
+              "sourceName": "gulpfile.js",
+              "outputName": "gulpfile.js"
+            },
+            {
+              "sourceName": "omnia.service.ts",
+              "outputName": "omnia.service.ts"
+            },
+            {
+              "sourceName": "package.json",
+              "outputName": "package.json"
+            },
+            {
+              "sourceName": "Program.cs",
+              "outputName": "Program.cs"
+            },
+            {
+              "sourceName": "ExampleWorker.cs",
+              "outputName": "ExampleWorker.cs"
+            }
+          ]
+        }
+      ],
+      "folders": []
     }
   ],
   "items": [

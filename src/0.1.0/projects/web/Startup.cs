@@ -31,6 +31,7 @@ namespace $namespace$
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseOmniaWebpackDevMiddleware();
             }
 
             // Enable middleware to serve generated Swagger as a JSON endpoint.
