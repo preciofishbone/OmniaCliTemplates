@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using Omnia.Fx.NetCore.Extensions;
-using Omnia.Fx.NetCore.Tenants.Extensions;
+using Omnia.Fx.HostConfiguration.Extensions;
 using System;
 
 namespace $namespace$

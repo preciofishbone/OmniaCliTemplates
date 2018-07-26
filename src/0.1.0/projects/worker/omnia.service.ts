@@ -1,7 +1,8 @@
 ﻿import { Composer, DevelopmentEnvironment } from "@omnia/tooling/composers";
+import { Guid } from '@omnia/fx-models';
 
 Composer
-    .registerManifest("$serviceid$", "$namespace$")
+    .registerManifest(new Guid("$serviceid$"), "$namespace$")
     .registerService({ description: "Description of $namespace$" })
     .AsWorker();
     
