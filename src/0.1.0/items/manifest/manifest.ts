@@ -1,5 +1,6 @@
 import { Composer } from '@omnia/tooling/composers';
+import { Guid } from '@omnia/fx-models';
 
 Composer
-    .registerManifest("$guid1$", "$outputname$")
+    .registerManifest(new Guid("$guid1$"), "$outputname$")
    

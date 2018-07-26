@@ -122,7 +122,7 @@
             },
             {
               "sourceName": "ivuewebcomponent.ts",
-              "outputName": "$outputname$.ts"
+              "outputName": "I$outputname$.ts"
             },
             {
               "sourceName": "vuewebcomponent.manifest.ts",
