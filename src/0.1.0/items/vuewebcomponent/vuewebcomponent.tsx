@@ -4,7 +4,10 @@ import { vueCustomElement, IWebComponentInstance, WebComponentBootstrapper, Loca
 import { $outputname$Styles } from './$outputname$.css';
 
 @Component
-export default class $outputname$ extends Vue implements IWebComponentInstance {
+export default class $outputname$ extends Vue implements IWebComponentInstance, I$outputname$ {
+
+    @Prop({ default: false }) required: boolean;
+    @Prop({ default: { title: 'Hello from $outputname$!' } }) data?: MyTestCompData
 
     mounted() {
 
@@ -15,7 +18,10 @@ export default class $outputname$ extends Vue implements IWebComponentInstance {
 
     render(h) {
         return (
-            <div class={$outputname$Styles.container}>Hello $outputname$!</div>
+            <div class={$outputname$Styles.container}>
+                <div>{this.data.title}</div>
+                {this.required ? <div>Im required</div> : null}
+            </div>
         )
     }
 }

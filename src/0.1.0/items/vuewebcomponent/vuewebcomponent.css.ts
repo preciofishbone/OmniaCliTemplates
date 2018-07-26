@@ -1,7 +1,5 @@
 import { style, cssRule, cssRaw } from "typestyle";
 
-export const $outputname$Styles = {
-    container: {
-        color: 'green'
-    }
-};
+export const container = style({
+    fontSize:22
+});

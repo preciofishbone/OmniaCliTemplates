@@ -31,7 +31,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Omnia.Fx.NetCore.Worker" Version="0.4.87-vnext" />
+    <PackageReference Include="Omnia.Fx.NetCore.Worker" Version="0.4.90-vnext" />
   </ItemGroup>
 
 <!--***************************************************************************************-->

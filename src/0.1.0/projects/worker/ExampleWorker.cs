@@ -18,7 +18,7 @@ namespace $namespace$
     {
         public ILogger<ExampleWorker> Logger { get; }
         
-        public QueueBusExampleWorker(
+        public ExampleWorker(
             IApplicationLifetime appLifetime,
             ILogger<ExampleWorker> logger
             ) : base(appLifetime)

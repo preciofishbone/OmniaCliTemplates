@@ -41,7 +41,7 @@ namespace $namespace$
             app.UseSwaggerUI(c =>
             {
                 c.RoutePrefix = "swagger";
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Omnia API V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "$namespace$ V1");
             });
 
             app.UseMvcWithDefaultRoute();

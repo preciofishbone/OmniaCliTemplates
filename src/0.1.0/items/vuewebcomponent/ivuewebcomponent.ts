@@ -1,20 +1,16 @@
+import { TsxAllowUnknowProperties } from '@omnia/fx/ux'
 
-export interface $outputname$Model {
+export interface $outputname$Data {
     title: string;
 }
 
-export interface I$outputname$Properties {
-    required?: boolean;
-}
-
 /*@WebComponentInterface("$tagname$")*/
-export interface I$outputname$ extends I$outputname$Properties {
+export interface I$outputname$ {
 
-    // allow unknown properties
-    [name: string]: any;
+    required: boolean;
 
     /*@DomProperty*/
-    model: $outputname$Model;
+    data?: $outputname$Data;
 }
 
 declare global {
@@ -24,7 +20,7 @@ declare global {
         interface ElementAttributesProperty { }
         interface IntrinsicElements {
             /*@WebComponent*/
-            "$tagname$": I$outputname$
+            "$tagname$": TsxAllowUnknowProperties<I$outputname$>
         }
     }
 }
