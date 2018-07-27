@@ -47,5 +47,8 @@
     <Exec Command="npm run omnia-after-build" ContinueOnError="false"></Exec>
     <Copy SourceFiles="@(AppRoot)" DestinationFolder="$(OutDir)/approot/%(RecursiveDir)" />
   </Target>
+    <Target Name="OmniaPublish" AfterTargets="ComputeFilesToPublish">
+    <Copy SourceFiles="@(AppRoot)" DestinationFolder="publish/%(RecursiveDir)" />
+  </Target>
   <!--***************************************************************************************-->
 </Project>
