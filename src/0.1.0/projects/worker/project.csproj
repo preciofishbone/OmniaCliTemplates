@@ -48,7 +48,7 @@
     <Copy SourceFiles="@(AppRoot)" DestinationFolder="$(OutDir)/approot/%(RecursiveDir)" />
   </Target>
     <Target Name="OmniaPublish" AfterTargets="ComputeFilesToPublish">
-    <Copy SourceFiles="@(AppRoot)" DestinationFolder="publish/%(RecursiveDir)" />
+    <Copy SourceFiles="@(AppRoot)" DestinationFolder="publish/approot/%(RecursiveDir)" />
   </Target>
   <!--***************************************************************************************-->
 </Project>
