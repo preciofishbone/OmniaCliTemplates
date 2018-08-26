@@ -13,6 +13,7 @@
     {
       "name": "web",
       "description": "Omnia web project",
+      "baseImage": "preciofishbone/omnia:1.0-webapp",
       "sources": [
         {
           "folder": "projects/web",
@@ -65,6 +66,7 @@
     {
       "name": "worker",
       "description": "Omnia worker project",
+      "baseImage": "preciofishbone/omnia:1.0-worker",
       "sources": [
         {
           "folder": "projects/worker",
