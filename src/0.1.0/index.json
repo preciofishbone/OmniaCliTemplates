@@ -155,6 +155,44 @@
       ]
     },
     {
+      "name": "store",
+      "description": "Store module for state management",
+      "sources": [
+        {
+          "folder": "items/store",
+          "files": [
+            {
+              "sourceName": "vuexstoremodule.actions.ts",
+              "outputName": "$outputname$.actions.ts"
+            },
+            {
+              "sourceName": "vuexstoremodule.mutations.ts",
+              "outputName": "$outputname$.mutations.ts"
+            },
+            {
+              "sourceName": "vuexstoremodule.store.ts",
+              "outputName": "$outputname$.store.ts"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "unittest",
+      "description": "Unit test for client testing",
+      "sources": [
+        {
+          "folder": "items/unittest",
+          "files": [
+            {
+              "sourceName": "unit.test.ts",
+              "outputName": "$outputname$.test.ts"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "gitignore",
       "description": "Gitignore file for git versioning",
       "tokens": [],
