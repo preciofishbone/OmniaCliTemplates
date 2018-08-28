@@ -1,5 +1,5 @@
 ﻿import { Composer, DevelopmentEnvironment } from "@omnia/tooling/composers";
-import { Guid } from '@omnia/fx-models';
+import { Guid } from '@omnia/fx/models';
 
 Composer
     .registerManifest(new Guid("$serviceid$"), "$namespace$")
@@ -10,7 +10,12 @@ Composer
         moduleOptions: {
             enableTransformResourcePath: true
         },
-        enableAutoAddManifestDependency: true
+        bundleOptions: {
+            commonsChunk: {
+                name: new Guid("$guid2$"),
+                minChunks: 2
+            }
+        }
     });
     
    
