@@ -139,6 +139,38 @@
       ]
     },
     {
+      "name": "vuespfxcomponent",
+      "description": "Vue spfx component",
+      "tokens": [ "tagname" ],
+      "sources": [
+        {
+          "folder": "items/vuespfxcomponent",
+          "files": [
+            {
+              "sourceName": "vuespfxcomponent.tsx",
+              "outputName": "$outputname$.tsx"
+            },
+            {
+              "sourceName": "vuespfxcomponentsettings.tsx",
+              "outputName": "$outputname$Settings.tsx"
+            },
+            {
+              "sourceName": "ivuespfxcomponentsettings.ts",
+              "outputName": "I$outputname$Settings.ts"
+            },
+            {
+              "sourceName": "vuespfxcomponent.manifest.ts",
+              "outputName": "$outputname$.manifest.ts"
+            },
+            {
+              "sourceName": "vuespfxcomponent.css.ts",
+              "outputName": "$outputname$.css.ts"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "manifest",
       "description": "Manifest definition",
       "tokens": [],

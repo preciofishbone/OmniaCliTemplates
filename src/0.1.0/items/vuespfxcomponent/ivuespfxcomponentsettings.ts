@@ -1,16 +1,17 @@
 import { TsxAllowUnknowProperties } from '@omnia/fx/ux'
 
-export interface $outputname$Data {
+export interface $outputname$Settings {
     title: string;
 }
 
-/*@WebComponentInterface("$tagname$")*/
-export interface I$outputname$ {
-
-    required: boolean;
+/*@WebComponentInterface("$tagname$-settings")*/
+export interface I$outputname$Settings {
 
     /*@DomProperty*/
-    data?: $outputname$Data;
+    onClosed?: () => void;
+
+    /*@DomProperty*/
+    onChange?: (value) => void
 }
 
 declare global {
@@ -20,7 +21,7 @@ declare global {
         interface ElementAttributesProperty { }
         interface IntrinsicElements {
             /*@WebComponent*/
-            "$tagname$": TsxAllowUnknowProperties<I$outputname$>
+            "$tagname$-settings": TsxAllowUnknowProperties<I$outputname$Settings>
         }
     }
 }
