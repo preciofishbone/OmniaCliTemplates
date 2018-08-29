@@ -8,7 +8,7 @@ import {
     Inject
 } from "@omnia/fx";
 
-import { SettingsServiceConstructor, SettingsService, SecurityProviders } from "@omnia/fx/services";
+import { SettingsServiceConstructor, SettingsService } from "@omnia/fx/services";
 import { SettingsPaneModel } from '@omnia/fx/ux';
 import { I$outputname$Settings, $outputname$Settings } from './I$outputname$Settings';
 
@@ -18,7 +18,7 @@ export default class $outputname$SettingsForm extends Vue implements IWebCompone
     @Prop() settingsKey: string;
     @Prop() onClosed: () => void;
 
-    @Inject<SettingsServiceConstructor>(SettingsService, { securityProviderId: SecurityProviders.Tenant.Admin }) protected settingsService: SettingsService<$outputname$Settings>;
+    @Inject<SettingsServiceConstructor>(SettingsService) protected settingsService: SettingsService<$outputname$Settings>;
 
     private settingsPaneModel: SettingsPaneModel = { visible: this.opened }
     private settings: $outputname$Settings = { title: "" };
