@@ -4,7 +4,7 @@ import { vueCustomElement, IWebComponentInstance, WebComponentBootstrapper, Loca
 import { SettingsServiceConstructor, SettingsService, SecurityProviders } from '@omnia/fx/services';
 import { OpenSpfxWebPartSettingsFormTopic } from "@omnia/fx/spfx"
 import { $outputname$Settings } from './I$outputname$Settings';
-import * as $outputname$Styles from './$outputname$.css';
+import {$outputname$Styles} from './$outputname$.css';
 
 @Component
 export default class $outputname$ extends Vue implements IWebComponentInstance {

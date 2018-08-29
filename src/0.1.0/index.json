@@ -171,6 +171,22 @@
       ]
     },
     {
+      "name": "vuesubcomponent",
+      "description": "Vue based sub component",
+      "tokens": [],
+      "sources": [
+        {
+          "folder": "items/vuesubcomponent",
+          "files": [
+            {
+              "sourceName": "vuesubcomponent.tsx",
+              "outputName": "$outputname$.tsx"
+            }
+          ]
+        }
+      ]
+    },    
+    {
       "name": "manifest",
       "description": "Manifest definition",
       "tokens": [],

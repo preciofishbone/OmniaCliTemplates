@@ -5,7 +5,7 @@ import { style, cssRule, cssRaw } from "typestyle";
  */
 export const $outputname$Styles ={
     container:style({
-
+        fontSize:22
     })
 }
 
