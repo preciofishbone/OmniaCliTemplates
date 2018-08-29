@@ -12,5 +12,23 @@
   },
   "engines": {
     "node": ">=6.0.0"
-  }
+  },
+  "jest": {
+    "transform": {
+      ".(ts|tsx|jsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "moduleNameMapper": {
+      "(@omnia/fx/)": "<rootDir>/__mocks__/index.ts"
+    },
+    "testRegex": "(/Resources/.*|\\.(test|spec))\\.(test.ts|test.tsx)$",
+    "testPathIgnorePatterns": [
+      "<rootDir>/Resources/Dist"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "testEnvironment": "node"
+  }  
 }

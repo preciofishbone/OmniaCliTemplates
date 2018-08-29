@@ -1,5 +1,12 @@
 import { style, cssRule, cssRaw } from "typestyle";
 
-export const container = style({
-    fontSize:22
-});
+/**
+ * Styles for the $outputname$ component
+ */
+export const $outputname$Styles ={
+    container:style({
+
+    })
+}
+
+
