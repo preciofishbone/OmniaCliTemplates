@@ -1,17 +1,17 @@
 import Vue from 'vue';
 import { Component, Watch, Prop } from 'vue-property-decorator';
 import { vueCustomElement, IWebComponentInstance, WebComponentBootstrapper, Localize, Inject } from "@omnia/fx";
-import { SettingsServiceConstructor, SettingsService, SecurityProviders } from '@omnia/fx/services';
+import { SettingsServiceConstructor, SettingsService } from '@omnia/fx/services';
 import { OpenSpfxWebPartSettingsFormTopic } from "@omnia/fx/spfx"
 import { $outputname$Settings } from './I$outputname$Settings';
-import * as $outputname$Styles from './$outputname$.css';
+import {$outputname$Styles} from './$outputname$.css';
 
 @Component
 export default class $outputname$ extends Vue implements IWebComponentInstance {
 
     @Prop() settingsKey: string;
 
-    @Inject<SettingsServiceConstructor>(SettingsService, { securityProviderId: SecurityProviders.Tenant.Admin }) private settingsService: SettingsService<$outputname$Settings>;
+    @Inject<SettingsServiceConstructor>(SettingsService) private settingsService: SettingsService<$outputname$Settings>;
 
     private settingsOpen: boolean = false;
     private settings: $outputname$Settings = { title: ""};

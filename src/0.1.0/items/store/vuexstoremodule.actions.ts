@@ -1,5 +1,6 @@
 import { Action, GlobalState } from "@omnia/fx/store"
 import { $outputname$, $outputname$State } from "./$outputname$.store";
+import {ActionContext} from "vuex";
 
 /**
  * Actions
