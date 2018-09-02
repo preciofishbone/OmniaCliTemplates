@@ -44,6 +44,11 @@ namespace $namespace$
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "$namespace$ V1");
             });
 
+
+            // Redirect to https, for production you might want to do som emore configuration.
+            // Se: https://docs.microsoft.com/en-us/aspnet/core/security/enforcing-ssl?view=aspnetcore-2.1&tabs=visual-studio#require-https
+            app.UseHttpsRedirection();
+
             app.UseMvcWithDefaultRoute();
 
             app.UseStaticFiles();
