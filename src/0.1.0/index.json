@@ -2,7 +2,8 @@
   "projects": [
     {
       "name": "extension",
-      "description": "Extension solution",
+      "description": "Omnia Extension solution",
+      "requiresName": true,
       "sources": [
         {
           "folder": "",
@@ -14,6 +15,7 @@
       "name": "web",
       "description": "Omnia web project",
       "baseImage": "preciofishbone/omnia:1.0-webapp",
+      "requiresName": true,
       "sources": [
         {
           "folder": "projects/web",
@@ -67,6 +69,7 @@
       "name": "worker",
       "description": "Omnia worker project",
       "baseImage": "preciofishbone/omnia:1.0-worker",
+      "requiresName": true,
       "sources": [
         {
           "folder": "projects/worker",
@@ -114,6 +117,7 @@
       "name": "vuewebcomponent",
       "description": "Vue based web component",
       "tokens": [ "element" ],
+      "requiresName": true,
       "sources": [
         {
           "folder": "items/vuewebcomponent",
@@ -142,6 +146,7 @@
       "name": "vuespfxcomponent",
       "description": "Vue spfx component",
       "tokens": [ "element" ],
+      "requiresName": true,
       "sources": [
         {
           "folder": "items/vuespfxcomponent",
@@ -174,6 +179,7 @@
       "name": "vuesubcomponent",
       "description": "Vue based sub component",
       "tokens": [],
+      "requiresName": true,
       "sources": [
         {
           "folder": "items/vuesubcomponent",
@@ -190,6 +196,7 @@
       "name": "manifest",
       "description": "Manifest definition",
       "tokens": [],
+      "requiresName": true,
       "sources": [
         {
           "folder": "items/manifest",
@@ -205,6 +212,7 @@
     {
       "name": "store",
       "description": "Store module for state management",
+      "requiresName": true,
       "sources": [
         {
           "folder": "items/store",
@@ -228,6 +236,7 @@
     {
       "name": "unittest",
       "description": "Unit test for client testing",
+      "requiresName": true,
       "sources": [
         {
           "folder": "items/unittest",
@@ -243,6 +252,7 @@
     {
       "name": "gitignore",
       "description": "Gitignore file for git versioning",
+      "requiresName": false,
       "tokens": [],
       "sources": [
         {
@@ -260,6 +270,7 @@
       "name": "vscodesetup",
       "description": "Configure VS Code for extension development",
       "tokens": [],
+      "requiresName": false,
       "sources": [
         {
           "folder": "items/vscodesetup",
@@ -276,6 +287,7 @@
       "name": "vscodetddsetup",
       "description": "Configure project for TDD",
       "tokens": [],
+      "requiresName": false,
       "sources": [
         {
           "folder": "items/vstddsetup",
