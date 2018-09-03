@@ -255,6 +255,46 @@
           ]
         }
       ]
-    }
+    },
+    {
+      "name": "vscodesetup",
+      "description": "Configure VS Code for extension development",
+      "tokens": [],
+      "sources": [
+        {
+          "folder": "items/vscodesetup",
+          "files": [
+            {
+              "sourceName": "settings.json",
+              "outputName": ".vscode/settings.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "vscodetddsetup",
+      "description": "Configure project for TDD",
+      "tokens": [],
+      "sources": [
+        {
+          "folder": "items/vstddsetup",
+          "files": [
+            {
+              "sourceName": "index.ts",
+              "outputName": "__mocks__/index.ts"
+            },
+            {
+              "sourceName": "Sample.mock.ts",
+              "outputName": "__mocks__/Sample.mock.ts"
+            },
+            {
+              "sourceName": "launch.json",
+              "outputName": ".vscode/launch.json"
+            }
+          ]
+        }
+      ]
+    }    
   ]
 }
