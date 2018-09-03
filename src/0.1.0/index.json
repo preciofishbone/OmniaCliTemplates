@@ -113,7 +113,7 @@
     {
       "name": "vuewebcomponent",
       "description": "Vue based web component",
-      "tokens": [ "tagname" ],
+      "tokens": [ "element" ],
       "sources": [
         {
           "folder": "items/vuewebcomponent",
@@ -141,7 +141,7 @@
     {
       "name": "vuespfxcomponent",
       "description": "Vue spfx component",
-      "tokens": [ "tagname" ],
+      "tokens": [ "element" ],
       "sources": [
         {
           "folder": "items/vuespfxcomponent",

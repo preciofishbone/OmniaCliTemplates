@@ -11,7 +11,8 @@ export interface I$outputname$Settings {
     onClosed?: () => void;
 
     /*@DomProperty*/
-    onChange?: (value) => void
+    onChange?: (value) => void;
+
 }
 
 declare global {
