@@ -45,6 +45,10 @@
               "outputName": "package.json"
             },
             {
+              "sourceName": "nuget.config",
+              "outputName": "nuget.config"
+            },
+            {
               "sourceName": "Program.cs",
               "outputName": "Program.cs"
             },
@@ -97,6 +101,10 @@
             {
               "sourceName": "package.json",
               "outputName": "package.json"
+            },
+            {
+              "sourceName": "nuget.config",
+              "outputName": "nuget.config"
             },
             {
               "sourceName": "Program.cs",
