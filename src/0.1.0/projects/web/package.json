@@ -7,9 +7,9 @@
     "test" : "jest"    
   },
   "dependencies": {
-    "@omnia/fx": "0.4.130-vnext",
-    "@omnia/fx-sp": "0.4.130-vnext",
-    "@omnia/fx-spfx": "0.4.130-vnext",
+    "@omnia/fx": "0.4.164-vnext",
+    "@omnia/fx-sp": "0.4.164-vnext",
+    "@omnia/fx-spfx": "0.4.164-vnext",
     "gulp": "3.9.1",
     "gulp-cli": "2.0.1"
   },
