@@ -4,9 +4,9 @@ Serves the project and item templates for Omnia Cli
 omnia dev new -i 0.1.0 -f
 Done
 Installed template pack for version 0.1.0
-+---------+------------------+---------+----------+---------------------------------------------+
+
 | Type    | Name             | Tokens  | Required | Description                                 |
-+---------+------------------+---------+----------+---------------------------------------------+
+|---------|------------------|---------|----------|---------------------------------------------|
 | Project | extension        |         | -n       | Omnia Extension solution                    |
 | Project | web              |         | -n       | Omnia web project                           |
 | Project | worker           |         | -n       | Omnia worker project                        |
@@ -19,4 +19,3 @@ Installed template pack for version 0.1.0
 | Item    | gitignore        |         |          | Gitignore file for git versioning           |
 | Item    | vscodesetup      |         |          | Configure VS Code for extension development |
 | Item    | vscodetddsetup   |         |          | Configure project for TDD                   |
-+---------+------------------+---------+----------+---------------------------------------------+
