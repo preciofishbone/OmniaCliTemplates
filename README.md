@@ -2,7 +2,7 @@
 Serves the project and item templates for Omnia Cli
 
 omnia dev new -i 0.1.0 -f
-Done
+
 Installed template pack for version 0.1.0
 
 | Type    | Name             | Tokens  | Required | Description                                 |
