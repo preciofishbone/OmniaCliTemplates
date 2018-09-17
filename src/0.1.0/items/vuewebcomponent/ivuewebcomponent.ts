@@ -4,7 +4,7 @@ export interface $outputname$Data {
     title: string;
 }
 
-/*@WebComponentInterface("$tagname$")*/
+/*@WebComponentInterface("$element$")*/
 export interface I$outputname$ {
 
     required: boolean;
@@ -20,7 +20,7 @@ declare global {
         interface ElementAttributesProperty { }
         interface IntrinsicElements {
             /*@WebComponent*/
-            "$tagname$": TsxAllowUnknowProperties<I$outputname$>
+            "$element$": TsxAllowUnknowProperties<I$outputname$>
         }
     }
 }

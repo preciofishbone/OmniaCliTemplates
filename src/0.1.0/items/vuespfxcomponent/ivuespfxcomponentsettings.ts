@@ -4,7 +4,7 @@ export interface $outputname$Settings {
     title: string;
 }
 
-/*@WebComponentInterface("$tagname$-settings")*/
+/*@WebComponentInterface("$element$-settings")*/
 export interface I$outputname$Settings {
 
     /*@DomProperty*/
@@ -22,7 +22,7 @@ declare global {
         interface ElementAttributesProperty { }
         interface IntrinsicElements {
             /*@WebComponent*/
-            "$tagname$-settings": TsxAllowUnknowProperties<I$outputname$Settings>
+            "$element$-settings": TsxAllowUnknowProperties<I$outputname$Settings>
         }
     }
 }

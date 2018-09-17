@@ -62,11 +62,11 @@ export default class $outputname$ extends Vue implements IWebComponentInstance {
             <div class={$outputname$Styles.container}>
                 <h1>My Setting: {this.settings.title}</h1>
                 {this.settingsOpen ?
-                    <$tagname$-settings
+                    <$element$-settings
                         opened={this.settingsOpen}
                         settingskey={this.settingsKey}
                         onClosed={this.close}>
-                    </$tagname$-settings>
+                    </$element$-settings>
                     : null
                 }
             </div>

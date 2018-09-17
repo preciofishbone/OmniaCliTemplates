@@ -4,7 +4,7 @@ import { Guid, FontAwesomeIcon } from "@omnia/fx/models";
 Composer
     .registerManifest(new Guid("$guid1$"), "$outputname$")
     .registerWebComponent({
-        elementName: "$tagname$",
+        elementName: "$element$",
         entryPoint: "./$outputname$.jsx"
     })
     .withDefinition({
@@ -17,7 +17,7 @@ Composer
 Composer
     .registerManifest(new Guid("$guid2$"), "$outputname$.settings")
     .registerWebComponent({
-        elementName: "$tagname$-settings",
+        elementName: "$element$-settings",
         entryPoint: "./$outputname$Settings.jsx",
         typings: ["./I$outputname$Settings.ts"]
     });
