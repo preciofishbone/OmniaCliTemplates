@@ -213,13 +213,13 @@
               "outputName": "blades/HomeBlade.tsx"
             },
             {
-              "sourceName": "blades/CreateBlade.tsx",
+              "sourceName": "blades/createblade.tsx",
               "outputName": "blades/CreateBlade.tsx"
             }
           ]
         }
       ]
-    }
+    },
     {
       "name": "vuecomponent",
       "description": "Vue based component",
