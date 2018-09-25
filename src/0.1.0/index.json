@@ -184,16 +184,53 @@
       ]
     },
     {
-      "name": "vuesubcomponent",
-      "description": "Vue based sub component",
+      "name": "journeycomponent",
+      "description": "Web component for journey experience",
+      "tokens": [ "element" ],
+      "requiresName": true,
+      "sources": [
+        {
+          "folder": "items/journeycomponent",
+          "files": [
+            {
+              "sourceName": "journeycomponent.tsx",
+              "outputName": "$outputname$.tsx"
+            },
+            {
+              "sourceName": "ijourneycomponent.ts",
+              "outputName": "I$outputname$.ts"
+            },
+            {
+              "sourceName": "journeycomponent.manifest.ts",
+              "outputName": "$outputname$.manifest.ts"
+            },
+            {
+              "sourceName": "journeycomponent.css.ts",
+              "outputName": "$outputname$.css.ts"
+            },
+            {
+              "sourceName": "blades/homeblade.tsx",
+              "outputName": "blades/HomeBlade.tsx"
+            },
+            {
+              "sourceName": "blades/CreateBlade.tsx",
+              "outputName": "blades/CreateBlade.tsx"
+            }
+          ]
+        }
+      ]
+    }
+    {
+      "name": "vuecomponent",
+      "description": "Vue based component",
       "tokens": [],
       "requiresName": true,
       "sources": [
         {
-          "folder": "items/vuesubcomponent",
+          "folder": "items/vuecomponent",
           "files": [
             {
-              "sourceName": "vuesubcomponent.tsx",
+              "sourceName": "vuecomponent.tsx",
               "outputName": "$outputname$.tsx"
             }
           ]
