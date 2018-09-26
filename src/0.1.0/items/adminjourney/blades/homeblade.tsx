@@ -3,7 +3,7 @@ import Component from 'vue-class-component';
 import { Prop, Emit } from 'vue-property-decorator';
 import * as tsx from 'vue-tsx-support';
 import { JourneyInstance, Blade, BladeSizes } from '@omnia/fx/ux';
-import { $outputname$Journeys } from '../$outputname$';
+import { $outputname$Destinations } from '../$outputname$';
 
 export interface HomeBladeProps {
     journey: () => JourneyInstance;
@@ -38,7 +38,7 @@ HomeBladeScopedSlots
                     <v-toolbar-title >$outputname$</v-toolbar-title>
                     <v-spacer></v-spacer>
 
-                    <v-btn icon onClick={() => { this.journey.travelTo($outputname$Journeys.create); }}>
+                    <v-btn icon onClick={() => { this.journey().travelTo($outputname$Destinations.create); }}>
                         <v-icon>add</v-icon>
                     </v-btn>
 

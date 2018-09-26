@@ -184,28 +184,28 @@
       ]
     },
     {
-      "name": "journeycomponent",
+      "name": "adminjourney",
       "description": "Web component for journey experience",
       "tokens": [ "element" ],
       "requiresName": true,
       "sources": [
         {
-          "folder": "items/journeycomponent",
+          "folder": "items/adminjourney",
           "files": [
             {
-              "sourceName": "journeycomponent.tsx",
+              "sourceName": "adminjourney.tsx",
               "outputName": "$outputname$.tsx"
             },
             {
-              "sourceName": "ijourneycomponent.ts",
+              "sourceName": "iadminjourney.ts",
               "outputName": "I$outputname$.ts"
             },
             {
-              "sourceName": "journeycomponent.manifest.ts",
+              "sourceName": "adminjourney.manifest.ts",
               "outputName": "$outputname$.manifest.ts"
             },
             {
-              "sourceName": "journeycomponent.css.ts",
+              "sourceName": "adminjourney.css.ts",
               "outputName": "$outputname$.css.ts"
             },
             {

@@ -3,7 +3,7 @@ import Component from 'vue-class-component';
 import { Prop, Emit } from 'vue-property-decorator';
 import * as tsx from 'vue-tsx-support';
 import { JourneyInstance, Blade, BladeSizes } from '@omnia/fx/ux';
-import { $outputname$Journeys } from '../$outputname$';
+import { $outputname$Destinations } from '../$outputname$';
 
 export interface CreateBladeProps {
     journey: () => JourneyInstance;
