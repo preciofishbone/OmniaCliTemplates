@@ -6,7 +6,7 @@
     <AssemblyName>$namespace$</AssemblyName>
   </PropertyGroup>
 
-   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <LangVersion>7.1</LangVersion>
   </PropertyGroup>
 
@@ -34,20 +34,23 @@
     <PackageReference Include="Omnia.Fx.NetCore.Worker" Version="0.4.164-vnext" />
   </ItemGroup>
 
-<!--***************************************************************************************-->
-<!--**** Omnia Build Tasks ****************************************************************-->
-<!--***************************************************************************************-->
-  <ItemGroup>
-    <AppRoot Include="approot\**" />
-  </ItemGroup>
+  <!--***************************************************************************************-->
+  <!--**** Omnia Build Tasks ****************************************************************-->
+  <!--***************************************************************************************-->
   <Target Name="OmniaRunBeforeBuild" BeforeTargets="Build">
     <Exec Command="npm run omnia-before-build" ContinueOnError="false"></Exec>
   </Target>
   <Target Name="OmniaRunAfterBuild" AfterTargets="Build">
+    <ItemGroup>
+      <AppRoot Include="approot\**" />
+    </ItemGroup>
     <Exec Command="npm run omnia-after-build" ContinueOnError="false"></Exec>
     <Copy SourceFiles="@(AppRoot)" DestinationFolder="$(OutDir)/approot/%(RecursiveDir)" />
   </Target>
-    <Target Name="OmniaPublish" AfterTargets="ComputeFilesToPublish">
+  <Target Name="OmniaPublish" AfterTargets="ComputeFilesToPublish">
+    <ItemGroup>
+      <AppRoot Include="approot\**" />
+    </ItemGroup>
     <Copy SourceFiles="@(AppRoot)" DestinationFolder="publish/approot/%(RecursiveDir)" />
   </Target>
   <!--***************************************************************************************-->

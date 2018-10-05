@@ -30,8 +30,11 @@
       <ExcludeAssets>contentFiles</ExcludeAssets>
       <PrivateAssets>contentFiles;analyzers</PrivateAssets>
     </PackageReference>
-
   </ItemGroup>
+
+  <!--***************************************************************************************-->
+  <!--**** Omnia Build Tasks ****************************************************************-->
+  <!--***************************************************************************************-->
   <Target Name="OmniaRunBeforeBuild" BeforeTargets="Build">
     <Exec Command="npm run omnia-before-build" ContinueOnError="false">
     </Exec>
@@ -49,4 +52,5 @@
       </ResolvedFileToPublish>
     </ItemGroup>
   </Target>
+  <!--***************************************************************************************-->
 </Project>
