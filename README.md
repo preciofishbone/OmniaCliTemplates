@@ -2,7 +2,9 @@
 Serves the project and item templates for Omnia Cli
 
 omnia dev new -i 0.1.0 -f
+
 omnia dev new extension -n web=My.Test
+
 omnia dev new worker -n My.Test.Worker
 
 Installed template pack for version 0.1.0
