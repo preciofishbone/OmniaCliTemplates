@@ -42,7 +42,7 @@
   </Target>
   <Target Name="OmniaRunAfterBuild" AfterTargets="Build">
     <ItemGroup>
-      <AppRoot Include="approot\**" />
+      <AppRoot Include="approot/**" />
     </ItemGroup>
     <Exec Command="npm run omnia-after-build" ContinueOnError="false"></Exec>
     <Copy SourceFiles="@(AppRoot)" DestinationFolder="$(OutDir)/approot/%(RecursiveDir)" />
