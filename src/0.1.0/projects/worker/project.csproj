@@ -49,9 +49,12 @@
   </Target>
   <Target Name="OmniaPublish" AfterTargets="ComputeFilesToPublish">
     <ItemGroup>
-      <AppRoot Include="approot\**" />
+      <DistFiles Include="approot/**" />
+      <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+        <RelativePath>%(DistFiles.Identity)</RelativePath>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </ResolvedFileToPublish>
     </ItemGroup>
-    <Copy SourceFiles="@(AppRoot)" DestinationFolder="publish/approot/%(RecursiveDir)" />
   </Target>
   <!--***************************************************************************************-->
 </Project>
