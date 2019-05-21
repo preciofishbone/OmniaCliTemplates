@@ -33,6 +33,10 @@
               "outputName": "appsettings.json"
             },
             {
+              "sourceName": "appsettings.local.json",
+              "outputName": "appsettings.local.json"
+            },
+            {
               "sourceName": "gulpfile.js",
               "outputName": "gulpfile.js"
             },
@@ -89,6 +93,10 @@
             {
               "sourceName": "appsettings.json",
               "outputName": "appsettings.json"
+            },
+            {
+              "sourceName": "appsettings.local.json",
+              "outputName": "appsettings.local.json"
             },
             {
               "sourceName": "gulpfile.js",

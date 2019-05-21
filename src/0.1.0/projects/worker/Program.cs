@@ -14,35 +14,63 @@ namespace $namespace$
     {
         public static async Task Main(string[] args)
         {
-            var host = new HostBuilder()
-                .UseOmniaHostConfiguration((omniaConfig) => {
-                    omniaConfig.AddAppSettingsJsonFile("appsettings.json", Directory.GetCurrentDirectory());
-                    omniaConfig.AddAppSettingsJsonFile("appsettings.local.json", Directory.GetCurrentDirectory());
+               var logFactory = new LoggerFactory()
+                    .AddConsole(LogLevel.Debug)
+                    .AddDebug();
 
-                    omniaConfig.AddOmniaFxNetCore();
+            Logger = logFactory.CreateLogger<Program>();
+            IHost host = null;
 
-                    omniaConfig.Configuration((configBuilder) => {
-                        configBuilder.AddCommandLine(args);
+            try
+            {
+                host = new HostBuilder()
+                    .UseOmniaHostConfiguration((omniaConfig) =>
+                    {
+                        omniaConfig.AddAppSettingsJsonFile("appsettings.json", Directory.GetCurrentDirectory());
+                        omniaConfig.AddAppSettingsJsonFile("appsettings.local.json", Directory.GetCurrentDirectory());
 
-                        omniaConfig.ConfigureServices((serviceCollection) => {
-                            var configuration = configBuilder.Build();
-                            serviceCollection.AddAsOption<OmniaAppSettings>(configuration);
-
-                            serviceCollection.AddLogging();
-                            serviceCollection.AddHostedService<ExampleWorker>();
-
+                        omniaConfig.AddOmniaFxNetCore((configBuilder) =>
+                        {
+                           
                         });
-                    });
-                })
-               .ConfigureLogging((hostContext, configLogging) =>
-               {
-                   configLogging.AddConsole();
-                   configLogging.AddDebug();
-               })
-               .UseConsoleLifetime()
-               .Build();
 
-            await host.RunAsync();
+                        omniaConfig.Configuration((configBuilder) =>
+                            {
+                                configBuilder.AddCommandLine(args);
+
+                                omniaConfig.ConfigureServices((serviceCollection) =>
+                                {
+                                    var configuration = configBuilder.Build();
+
+                                    serviceCollection.AddAsOption<OmniaAppSettings>(configuration);
+                                    serviceCollection.AddLogging();
+                                    serviceCollection.AddHostedService<ExampleWorker>();
+                                    
+                                });
+                            });
+                    })
+                   .ConfigureLogging((hostContext, configLogging) =>
+                   {
+                       cfgLogging.UseOmniaLogging();
+                   })
+                   .UseConsoleLifetime()
+                   .Build();
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError($"Configuration exception: {ex.Message}, stacktrace: {ex.StackTrace}");
+                throw ex;
+            }
+
+            try
+            {
+                await host.RunOmniaAsync();
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError($"Runtime exception: {ex.Message}, stacktrace: {ex.StackTrace}");
+                throw ex;
+            }
         }
     }
 }

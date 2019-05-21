@@ -24,8 +24,15 @@ namespace $namespace$
         public static IWebHost BuildWebHost(string[] args) => 
             WebHost
                 .CreateDefaultBuilder(args)
-                .UseOmniaWebAppConfiguration<Startup>((omniaConfig) => {
-                    omniaConfig.AddOmniaFxWebApp();
+                .UseOmniaWebAppConfiguration<Startup>((omniaConfig) =>
+                {
+                    omniaConfig
+                    .AddAppSettingsJsonFile("appsettings.local.json")
+                    .AddOmniaFxWebApp();
+                })
+                .ConfigureLogging((cfgLogging) =>
+                {
+                    cfgLogging.UseOmniaLogging();
                 })
                 .Build();
     }
