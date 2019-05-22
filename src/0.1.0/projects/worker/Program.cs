@@ -5,6 +5,7 @@ using Microsoft.Extensions.Logging;
 using Omnia.Fx.HostConfiguration;
 using Omnia.Fx.HostConfiguration.Extensions;
 using Omnia.Fx.Models.AppSettings;
+using System;
 using System.IO;
 using System.Threading.Tasks;
 
@@ -12,6 +13,7 @@ namespace $namespace$
 {
     public class Program
     {
+        public static ILogger<Program> Logger = null;
         public static async Task Main(string[] args)
         {
                var logFactory = new LoggerFactory()
@@ -31,7 +33,7 @@ namespace $namespace$
 
                         omniaConfig.AddOmniaFxNetCore((configBuilder) =>
                         {
-                           
+                           //Add your 
                         });
 
                         omniaConfig.Configuration((configBuilder) =>
@@ -49,7 +51,7 @@ namespace $namespace$
                                 });
                             });
                     })
-                   .ConfigureLogging((hostContext, configLogging) =>
+                   .ConfigureLogging((hostContext, cfgLogging) =>
                    {
                        cfgLogging.UseOmniaLogging();
                    })

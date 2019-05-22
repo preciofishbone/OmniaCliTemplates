@@ -1,7 +1,8 @@
-﻿using Microsoft.AspNetCore;
+﻿using System;
+using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Omnia.Fx.HostConfiguration.Extensions;
-using System;
 
 namespace $namespace$
 {

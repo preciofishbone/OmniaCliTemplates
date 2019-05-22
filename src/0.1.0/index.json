@@ -132,7 +132,9 @@
     {
       "name": "vuewebcomponent",
       "description": "Vue based web component",
-      "tokens": [ "element" ],
+      "tokens": [
+        "element"
+      ],
       "requiresName": true,
       "sources": [
         {
@@ -161,7 +163,9 @@
     {
       "name": "vuespfxcomponent",
       "description": "Vue spfx component",
-      "tokens": [ "element" ],
+      "tokens": [
+        "element"
+      ],
       "requiresName": true,
       "sources": [
         {
@@ -194,7 +198,9 @@
     {
       "name": "adminjourney",
       "description": "Web component for journey experience",
-      "tokens": [ "element" ],
+      "tokens": [
+        "element"
+      ],
       "requiresName": true,
       "sources": [
         {
@@ -244,7 +250,7 @@
           ]
         }
       ]
-    },    
+    },
     {
       "name": "manifest",
       "description": "Manifest definition",
@@ -360,6 +366,70 @@
           ]
         }
       ]
-    }    
+    }
+  ],
+  "dependencies": [
+    {
+      "name": "omniafx",
+      "tags": ["","vnext"],
+      "nuget": [
+        {
+          "name": "Omnia.Fx"
+        },
+        {
+          "name": "Omnia.Fx.Models"
+        },
+        {
+          "name": "Omnia.Fx.NetCore"
+        },
+        {
+          "name": "Omnia.Fx.NetCore.WebApp"
+        },
+        {
+          "name": "Omnia.Fx.NetCore.Worker"
+        },
+        {
+          "name": "Omnia.Fx.SharePoint"
+        },
+        {
+          "name": "Omnia.Fx.NetCore.Runtime"
+        },
+        {
+          "name": "Omnia.Fx.NetCore.SharePoint"
+        }
+      ],
+      "npm": [
+        {
+          "name": "@omnia/fx-models"
+        },
+        {
+          "name": "@omnia/fx-sp-models"
+        },
+        {
+          "name": "@omnia/types"
+        },
+        {
+          "name": "@omnia/fx"
+        },
+        {
+          "name": "@omnia/fx-sp"
+        },
+        {
+          "name": "@omnia/fx-spfx"
+        },
+        {
+          "name": "@omnia/runtime"
+        },
+        {
+          "name": "@omnia/tooling"
+        },
+        {
+          "name": "@omnia/tooling-composers"
+        },
+        {
+          "name": "@omnia/tooling-vue"
+        }
+      ]
+    }
   ]
 }
