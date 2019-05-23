@@ -26,7 +26,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
-    <PackageReference Include="Omnia.Fx.NetCore.WebApp" Version="0.20.13-vnext">
+    <PackageReference Include="Omnia.Fx.NetCore.WebApp" Version="0.20.23-vnext">
       <IncludeAssets>all</IncludeAssets>
       <ExcludeAssets>contentFiles</ExcludeAssets>
       <PrivateAssets>contentFiles;analyzers</PrivateAssets>

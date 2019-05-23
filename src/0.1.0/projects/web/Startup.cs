@@ -16,8 +16,6 @@ namespace $namespace$
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
-
             // Register the Swagger generator, defining one or more Swagger documents
             services.AddSwaggerGen(c =>
             {
@@ -34,6 +32,9 @@ namespace $namespace$
                 app.UseOmniaWebpackDevMiddleware();
             }
 
+            //Enables Omnia Token based auth
+            app.UseAuthentication();
+
             // Enable middleware to serve generated Swagger as a JSON endpoint.
             app.UseSwagger();
 
@@ -44,9 +45,6 @@ namespace $namespace$
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "$namespace$ V1");
             });
 
-
-            // Redirect to https, for production you might want to do som emore configuration.
-            // Se: https://docs.microsoft.com/en-us/aspnet/core/security/enforcing-ssl?view=aspnetcore-2.1&tabs=visual-studio#require-https
             app.UseHttpsRedirection();
 
             app.UseMvcWithDefaultRoute();

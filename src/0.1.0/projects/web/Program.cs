@@ -1,40 +1,31 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Logging;
-using Microsoft.AspNetCore;
-using Microsoft.AspNetCore.Hosting;
 using Omnia.Fx.HostConfiguration.Extensions;
+using Omnia.Fx.NetCore.WebApp.Hosting;
+using System.Threading.Tasks;
 
 namespace $namespace$
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
-            try
-            {
-                BuildWebHost(args)
-                .RunOmnia();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-
+            await new WebAppHost(args)
+                    .ConfigureOmnia<Startup>((omniaConfig, logging) =>
+                    {
+                        omniaConfig
+                            .AddAppSettingsJsonFile("appsettings.local.json")
+                            .AddOmniaFxWebApp();
+                    })
+                    .ConfigureHost((host, logging) =>
+                    {
+                        host
+                            .ConfigureLogging((hostCtx, cfgLogging) =>
+                            {
+                                cfgLogging.UseOmniaLogging();
+                            });
+                    })
+                    .RunAsync();
         }
-
-        public static IWebHost BuildWebHost(string[] args) => 
-            WebHost
-                .CreateDefaultBuilder(args)
-                .UseOmniaWebAppConfiguration<Startup>((omniaConfig) =>
-                {
-                    omniaConfig
-                    .AddAppSettingsJsonFile("appsettings.local.json")
-                    .AddOmniaFxWebApp();
-                })
-                .ConfigureLogging((cfgLogging) =>
-                {
-                    cfgLogging.UseOmniaLogging();
-                })
-                .Build();
     }
 }

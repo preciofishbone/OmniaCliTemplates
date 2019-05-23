@@ -7,10 +7,10 @@
     "test" : "jest"    
   },
   "dependencies": {
-    "@omnia/fx-models": "0.20.10-vnext",
-    "@omnia/fx-sp": "0.20.10-vnext",
-    "@omnia/fx-spfx": "0.20.10-vnext",
-    "@omnia/tooling-vue": "0.20.10-vnext",
+    "@omnia/fx-models": "0.20.23-vnext",
+    "@omnia/fx-sp": "0.20.23-vnext",
+    "@omnia/fx-spfx": "0.20.23-vnext",
+    "@omnia/tooling-vue": "0.20.23-vnext",
     "gulp": "3.9.1",
     "gulp-cli": "2.0.1"
   },
