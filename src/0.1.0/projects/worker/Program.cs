@@ -21,10 +21,7 @@ namespace $namespace$
                         omniaConfig.AddAppSettingsJsonFile("appsettings.json", Directory.GetCurrentDirectory());
                         omniaConfig.AddAppSettingsJsonFile("appsettings.local.json", Directory.GetCurrentDirectory());
 
-                        omniaConfig.AddOmniaFxNetCore((configBuilder) =>
-                        {
-                            //Configure Omnia Fx NetCore specific service implementations and options
-                        });
+                        omniaConfig.AddOmniaFxNetCore();
 
                         omniaConfig.Configuration((configBuilder) =>
                         {

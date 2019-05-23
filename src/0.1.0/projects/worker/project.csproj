@@ -6,6 +6,11 @@
     <AssemblyName>$namespace$</AssemblyName>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netcoreapp2.2\$namespace$.xml</DocumentationFile>
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+  
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <LangVersion>7.1</LangVersion>
   </PropertyGroup>
@@ -38,9 +43,6 @@
   <!--***************************************************************************************-->
   <!--**** Omnia Build Tasks ****************************************************************-->
   <!--***************************************************************************************-->
-  <Target Name="OmniaRunBeforeBuild" BeforeTargets="Build">
-    <Exec Command="npm run omnia-before-build" ContinueOnError="false"></Exec>
-  </Target>
   <Target Name="OmniaRunAfterBuild" AfterTargets="Build">
     <ItemGroup>
       <AppRoot Include="approot\**" />
