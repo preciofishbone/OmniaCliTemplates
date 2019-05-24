@@ -44,13 +44,6 @@ namespace $namespace$
                 c.RoutePrefix = "swagger";
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "$namespace$ V1");
             });
-
-            app.UseHttpsRedirection();
-
-            app.UseMvcWithDefaultRoute();
-
-            app.UseStaticFiles();
-
         }
     }
 }
