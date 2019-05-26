@@ -7,12 +7,12 @@
     "test" : "jest"    
   },
   "dependencies": {
-    "@omnia/fx-models": "0.20.28-vnext",
-    "@omnia/fx-sp": "0.20.28-vnext",
-    "@omnia/fx-spfx": "0.20.28-vnext",
-    "@omnia/tooling-vue": "0.20.28-vnext",
-    "gulp": "3.9.1",
-    "gulp-cli": "2.0.1"
+    "@omnia/fx-models": "0.20.29-vnext",
+    "@omnia/fx-sp": "0.20.29-vnext",
+    "@omnia/fx-spfx": "0.20.29-vnext",
+    "@omnia/tooling-vue": "0.20.29-vnext",
+    "gulp": "4.0.2",
+    "gulp-cli": "2.2.0"
   },
   "devDependencies": {
     "@types/jest": "^22.1.0",
