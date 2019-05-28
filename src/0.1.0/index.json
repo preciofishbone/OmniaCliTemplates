@@ -277,16 +277,8 @@
           "folder": "items/store",
           "files": [
             {
-              "sourceName": "vuexstoremodule.actions.ts",
-              "outputName": "$outputname$.actions.ts"
-            },
-            {
-              "sourceName": "vuexstoremodule.mutations.ts",
-              "outputName": "$outputname$.mutations.ts"
-            },
-            {
-              "sourceName": "vuexstoremodule.store.ts",
-              "outputName": "$outputname$.store.ts"
+              "sourceName": "store.ts",
+              "outputName": "$outputname$.ts"
             }
           ]
         }

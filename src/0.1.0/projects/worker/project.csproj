@@ -4,6 +4,7 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <AssemblyName>$namespace$</AssemblyName>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -34,6 +35,7 @@
       <DependentUpon>appsettings.json</DependentUpon>
     </Content>
     <None Include="gulpfile.js" />
+    <Content Include="tsconfig.json" />
   </ItemGroup>
 
   <ItemGroup>
