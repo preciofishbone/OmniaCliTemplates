@@ -10,9 +10,7 @@
     "@omnia/fx-models": "0.20.28-vnext",
     "@omnia/fx-sp": "0.20.28-vnext",
     "@omnia/fx-spfx": "0.20.28-vnext",
-    "@omnia/tooling-vue": "0.20.28-vnext",
-    "gulp": "3.9.1",
-    "gulp-cli": "2.0.1"
+    "@omnia/tooling-vue": "0.20.28-vnext"
   },
   "devDependencies": {
     "@types/jest": "^22.1.0",
