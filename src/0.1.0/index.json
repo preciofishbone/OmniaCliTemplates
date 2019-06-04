@@ -363,7 +363,7 @@
   "dependencies": [
     {
       "name": "omniafx",
-      "tags": ["","vnext"],
+      "tags": [ "", "vnext" ],
       "nuget": [
         {
           "name": "Omnia.Fx"
@@ -420,6 +420,36 @@
         },
         {
           "name": "@omnia/tooling-vue"
+        }
+      ]
+    },
+    {
+      "name": "omniawcmfx",
+      "tags": [ "", "vnext" ],
+      "nuget": [
+        {
+          "name": "Omnia.WebContentManagement.Fx"
+        },
+        {
+          "name": "Omnia.WebContentManagement.Fx.NetCore.WebApp"
+        },
+        {
+          "name": "Omnia.Wcm.Models"
+        }
+      ],
+      "npm": [
+        {
+          "name": "@omnia/wcm"
+        }
+      ]
+    },
+    {
+      "name": "omniaworkplacefx",
+      "tags": [ "", "vnext" ],
+      "nuget": [],
+      "npm": [
+        {
+          "name": "@omnia/workplace"
         }
       ]
     }
