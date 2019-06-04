@@ -10,7 +10,13 @@ namespace $namespace$
     {
         public static async Task Main(string[] args)
         {
-            await new WebAppHost(args)
+            await BuildWebHost(args)
+                    .RunOmniaAsync();
+        }
+
+        public static IWebHost BuildWebHost(string[] args)
+        {
+                return new WebAppHost(args)
                     .ConfigureOmnia<Startup>((omniaConfig, logging) =>
                     {
                         omniaConfig
@@ -25,7 +31,7 @@ namespace $namespace$
                                 cfgLogging.UseOmniaLogging();
                             });
                     })
-                    .RunAsync();
+                    .Build();
         }
     }
 }
