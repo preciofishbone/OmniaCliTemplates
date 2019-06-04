@@ -7,21 +7,19 @@
     "test" : "jest"    
   },
   "dependencies": {
-    "@omnia/fx-models": "0.20.30-vnext",
-    "@omnia/fx-sp": "0.20.30-vnext",
-    "@omnia/fx-spfx": "0.20.30-vnext",
-    "@omnia/tooling-vue": "0.20.30-vnext",
-    "gulp": "4.0.2",
-    "gulp-cli": "2.2.0"
+    "@omnia/fx-models": "0.20.48-vnext",
+    "@omnia/fx-sp": "0.20.48-vnext",
+    "@omnia/fx-spfx": "0.20.48-vnext",
+    "@omnia/tooling-vue": "0.20.48-vnext"
   },
   "devDependencies": {
     "@types/jest": "^22.1.0",
     "jest": "^22.1.4",
     "jest-cli": "^22.1.4",
     "ts-jest": "^22.0.1"
-  },  
+  },
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=10.0.0"
   },
   "jest": {
     "transform": {

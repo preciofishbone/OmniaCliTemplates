@@ -30,8 +30,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.TypeScript.Compiler" Version="3.1.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="3.3.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.App" />
-    <PackageReference Include="Omnia.Fx.NetCore.WebApp" Version="0.20.28-vnext">
+    <PackageReference Include="Omnia.Fx.NetCore.WebApp" Version="0.20.48-vnext">
       <IncludeAssets>all</IncludeAssets>
       <ExcludeAssets>contentFiles</ExcludeAssets>
       <PrivateAssets>contentFiles;analyzers</PrivateAssets>

@@ -4,7 +4,6 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <AssemblyName>$namespace$</AssemblyName>
-    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -35,11 +34,18 @@
       <DependentUpon>appsettings.json</DependentUpon>
     </Content>
     <None Include="gulpfile.js" />
-    <Content Include="tsconfig.json" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Omnia.Fx.NetCore.Worker" Version="0.20.28-vnext" />
+    <PackageReference Include="Microsoft.TypeScript.Compiler" Version="3.1.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="3.3.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Omnia.Fx.NetCore.Worker" Version="0.20.48-vnext" />
   </ItemGroup>
 
   <!--***************************************************************************************-->
