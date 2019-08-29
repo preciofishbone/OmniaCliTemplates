@@ -45,7 +45,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Omnia.Fx.NetCore.Worker" Version="0.20.54-vnext" />
+    <PackageReference Include="Omnia.Fx.NetCore.Worker" Version="0.22.53-vnext" />
   </ItemGroup>
 
   <!--***************************************************************************************-->
