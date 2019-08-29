@@ -26,19 +26,22 @@ namespace $namespace$
             Logger = logger;
         }
 
-        public override async Task OnStarted()
+        public override Task OnStarted()
         {
             Logger.LogInformation("OnStarted");
+            return Task.CompletedTask;
         }
 
-        public override async Task OnStopped()
+        public override Task OnStopped()
         {
             Logger.LogInformation("OnStopped");
+            return Task.CompletedTask;
         }
 
-        public override async Task OnStopping()
+        public override Task OnStopping()
         {
             Logger.LogInformation("OnStopping");
+            return Task.CompletedTask;
         }
 
     }

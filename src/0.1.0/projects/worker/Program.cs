@@ -15,7 +15,7 @@ namespace $namespace$
     {
         public static async Task Main(string[] args)
         {
-                await new WorkerHost()
+                await new WorkerHost(args)
                     .ConfigureOmnia((omniaConfig, logging) =>
                     {
                         omniaConfig.AddAppSettingsJsonFile("appsettings.json", Directory.GetCurrentDirectory());
