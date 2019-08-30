@@ -1,4 +1,5 @@
-import { TsxAllowUnknowProperties } from '@omnia/fx/ux'
+import { TsxAllowUnknowProperties } from '@omnia/fx/ux';
+import { $outputname$Styles } from './$outputname$.css';
 
 export interface $outputname$Data {
     title: string;
@@ -11,6 +12,9 @@ export interface I$outputname$ {
 
     /*@DomProperty*/
     data?: $outputname$Data;
+
+    /*@DomProperty*/
+    styles?: typeof $outputname$Styles;
 }
 
 declare global {
