@@ -4,7 +4,7 @@ import { SubscriptionHandler, vueCustomElement, IWebComponentInstance, WebCompon
 import { SettingsServiceConstructor, SettingsService } from '@omnia/fx/services';
 import { StyleFlow } from '@omnia/fx/ux';
 import { $outputname$Settings } from './I$outputname$Settings';
-import {$outputname$Styles} from './$outputname$.css';
+import { $outputname$Styles } from './$outputname$.css';
 
 @Component
 export default class $outputname$ extends Vue implements IWebComponentInstance {
@@ -48,7 +48,7 @@ export default class $outputname$ extends Vue implements IWebComponentInstance {
         //    : null
         //}
         return (
-            <div class={$outputname$Styles.container}>
+            <div class={$outputname$Classes.container}>
                 <h1>My Setting: {this.settings.title}</h1>
             </div>
 

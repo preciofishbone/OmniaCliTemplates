@@ -13,10 +13,8 @@ export default class $outputname$SettingsForm extends Vue implements IWebCompone
     private settings: $outputname$Settings = { title: "" };
 
     created() {
-        this.settingsService.getValue(this.settingsKey).then((settings) => {
-            if (settings != null) {
-                this.settings = settings;
-            }
+        this.settingsService.getValue(this.settingsKey).then((result) => {
+            this.settings = result || this.settings;
         });
     }
 
