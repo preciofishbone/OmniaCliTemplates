@@ -30,6 +30,8 @@ export default class $outputname$SettingsForm extends Vue implements IWebCompone
     render(h) {
         return (
             <v-text-field
+                single-line
+                box
                 label="Title"
                 v-model={this.settings.title}
                 onChange={() => this.updateSettings()}>
