@@ -11,10 +11,12 @@ export default class $outputname$ extends Vue implements IWebComponentInstance {
 
     @Prop() settingsKey: string;
 
-    @Inject(SubscriptionHandler) subscriptionHandler: SubscriptionHandler;
-    @Inject<SettingsServiceConstructor>(SettingsService) private settingsService: SettingsService<$outputname$Settings>;
+    @Inject(SubscriptionHandler)
+    private subscriptionHandler: SubscriptionHandler;
 
-    private settingsOpen: boolean = false;
+    @Inject<SettingsServiceConstructor>(SettingsService)
+    private settingsService: SettingsService<$outputname$Settings>;
+
     private settings: $outputname$Settings = { title: ""};
     private $outputname$Classes = StyleFlow.use($outputname$Styles);
 
@@ -38,17 +40,8 @@ export default class $outputname$ extends Vue implements IWebComponentInstance {
     }
 
     render(h) {
-        //{
-        //    this.settingsOpen ?
-        //    <$element$-settings
-        //        opened={this.settingsOpen}
-        //        settingskey={this.settingsKey}
-        //        onClosed={this.close}>
-        //    </$element$-settings>
-        //    : null
-        //}
         return (
-            <div class={$outputname$Classes.container}>
+            <div class={this.$outputname$Classes.container}>
                 <h1>My Setting: {this.settings.title}</h1>
             </div>
 

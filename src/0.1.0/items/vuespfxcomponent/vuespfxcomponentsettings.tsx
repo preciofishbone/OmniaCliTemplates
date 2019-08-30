@@ -8,7 +8,8 @@ import { I$outputname$Settings, $outputname$Settings } from './I$outputname$Sett
 export default class $outputname$SettingsForm extends Vue implements IWebComponentInstance, I$outputname$Settings {
     @Prop() settingsKey: string;
 
-    @Inject<SettingsServiceConstructor>(SettingsService) protected settingsService: SettingsService<$outputname$Settings>;
+    @Inject<SettingsServiceConstructor>(SettingsService)
+    private settingsService: SettingsService<$outputname$Settings>;
 
     private settings: $outputname$Settings = { title: "" };
 
