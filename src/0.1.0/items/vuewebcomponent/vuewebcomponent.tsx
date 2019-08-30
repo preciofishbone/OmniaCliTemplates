@@ -12,11 +12,11 @@ export default class $outputname$ extends Vue implements IWebComponentInstance, 
     @Prop({ default: { title: 'Hello from $outputname$!' } }) data?: $outputname$Data
     @Prop() styles?: typeof $outputname$Styles;
 
-    private classes = StyleFlow.use($outputname$Styles);
+    private $outputname$Classes = StyleFlow.use($outputname$Styles);
 
     created() {
         if (this.styles) {
-            this.classes = StyleFlow.use($outputname$Styles, this.styles);
+            this.$outputname$Classes = StyleFlow.use($outputname$Styles, this.styles);
         }
     }
 
@@ -27,7 +27,7 @@ export default class $outputname$ extends Vue implements IWebComponentInstance, 
 
     render(h) {
         return (
-            <div class={this.classes.container}>
+            <div class={this.$outputname$Classes.container}>
                 <div>{this.data.title}</div>
                 {this.required ? <div>Im required</div> : null}
             </div>
