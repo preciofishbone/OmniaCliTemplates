@@ -6,13 +6,6 @@ export interface $outputname$Settings {
 
 /*@WebComponentInterface("$element$-settings")*/
 export interface I$outputname$Settings {
-
-    /*@DomProperty*/
-    onClosed?: () => void;
-
-    /*@DomProperty*/
-    onChange?: (value) => void;
-
 }
 
 declare global {
