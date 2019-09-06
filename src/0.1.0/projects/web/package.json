@@ -4,13 +4,13 @@
   "scripts": {
     "omnia-before-build": "gulp omnia-before-build",
     "omnia-after-build": "gulp omnia-after-build",
-    "test" : "jest"    
+    "test": "jest"
   },
   "dependencies": {
-    "@omnia/fx-models": "0.22.53-vnext",
-    "@omnia/fx-sp": "0.22.53-vnext",
-    "@omnia/fx-spfx": "0.22.53-vnext",
-    "@omnia/tooling-vue": "0.22.53-vnext"
+    "@omnia/fx-models": "0.23.11-vnext",
+    "@omnia/fx-sp": "0.23.11-vnext",
+    "@omnia/fx-spfx": "0.23.11-vnext",
+    "@omnia/tooling-vue": "0.23.11-vnext"
   },
   "devDependencies": {
     "@types/jest": "^22.1.0",
@@ -30,7 +30,8 @@
     },
     "testRegex": "(/.*|\\.(test|spec))\\.(test.ts|test.tsx)$",
     "testPathIgnorePatterns": [
-      "<rootDir>/wwwroot","<rootDir>/node_modules"
+      "<rootDir>/wwwroot",
+      "<rootDir>/node_modules"
     ],
     "moduleFileExtensions": [
       "ts",
@@ -38,5 +39,5 @@
       "js"
     ],
     "testEnvironment": "node"
-  }  
+  }
 }
