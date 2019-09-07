@@ -39,7 +39,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.App" />
-    <PackageReference Include="Omnia.Fx.NetCore.WebApp" Version="0.23.11-vnext" />
+    <PackageReference Include="Omnia.Fx.NetCore.WebApp" Version="0.23.14-vnext" />
   </ItemGroup>
 
   <!--***************************************************************************************-->
