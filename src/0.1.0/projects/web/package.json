@@ -7,10 +7,10 @@
     "test": "jest"
   },
   "dependencies": {
-    "@omnia/fx-models": "0.23.18-vnext",
-    "@omnia/fx-sp": "0.23.18-vnext",
-    "@omnia/fx-spfx": "0.23.18-vnext",
-    "@omnia/tooling-vue": "0.23.18-vnext"
+    "@omnia/fx-models": "2.0.6-dev",
+    "@omnia/fx-sp": "2.0.6-dev",
+    "@omnia/fx-spfx": "2.0.6-dev",
+    "@omnia/tooling-vue": "2.0.6-dev"
   },
   "devDependencies": {
     "@types/jest": "^22.1.0",
