@@ -49,10 +49,6 @@
               "outputName": "package.json"
             },
             {
-              "sourceName": "nuget.config",
-              "outputName": "nuget.config"
-            },
-            {
               "sourceName": "Program.cs",
               "outputName": "Program.cs"
             },
@@ -109,10 +105,6 @@
             {
               "sourceName": "package.json",
               "outputName": "package.json"
-            },
-            {
-              "sourceName": "nuget.config",
-              "outputName": "nuget.config"
             },
             {
               "sourceName": "Program.cs",
@@ -363,7 +355,7 @@
   "dependencies": [
     {
       "name": "omniafx",
-      "tags": [ "", "vnext" ],
+      "tags": [ "latest", "dev", "preview" ],
       "nuget": [
         {
           "name": "Omnia.Fx"
@@ -424,8 +416,8 @@
       ]
     },
     {
-      "name": "omniawcmfx",
-      "tags": [ "", "vnext" ],
+      "name": "wcmfx",
+      "tags": [ "latest", "dev", "preview" ],
       "nuget": [
         {
           "name": "Omnia.WebContentManagement.Fx"
@@ -444,12 +436,22 @@
       ]
     },
     {
-      "name": "omniaworkplacefx",
-      "tags": [ "", "vnext" ],
+      "name": "workplacefx",
+      "tags": [ "latest", "dev", "preview" ],
       "nuget": [],
       "npm": [
         {
           "name": "@omnia/workplace"
+        }
+      ]
+    },
+    {
+      "name": "adminfx",
+      "tags": [ "latest", "dev", "preview" ],
+      "nuget": [],
+      "npm": [
+        {
+          "name": "@omnia/tenantadmin"
         }
       ]
     }
