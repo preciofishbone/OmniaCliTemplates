@@ -37,14 +37,6 @@ namespace $namespace$
                             });
                         });
                     })
-                    .ConfigureHost((host, logging) =>
-                    {
-                        host
-                            .ConfigureLogging((hostContext, cfgLogging) =>
-                            {
-                                cfgLogging.UseOmniaLogging();
-                            });
-                    })
                     .RunAsync();
         }
     }
