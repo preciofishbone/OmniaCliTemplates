@@ -1,0 +1,38 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+node_modules
+packages
+
+# Build generated files
+Dist
+.cache-loader
+package-lock.json
+publish
+
+# OSX
+.DS_Store
+
+# Visual Studio files
+.ntvs_analysis.dat
+.vs
+bin
+obj
+.vscode
+
+We use typescript all in except for taskrunner
+*.js
+*.jsx
+*.d.ts
+!gulpfile.js
+
+# Exclude local certs and secrets
+*.pem
+*.cer
+*.pfx
+*.key
+*.crt
+*.user
