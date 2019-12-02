@@ -5,15 +5,28 @@ using System.Threading.Tasks;
 
 namespace $namespace$
 {
+    /// <summary>
+    /// Program
+    /// </summary>
     public class Program
     {
 
+        /// <summary>
+        /// Main entry point
+        /// </summary>
+        /// <param name="args"></param>
+        /// <returns></returns>
         public static async Task Main(string[] args)
         {
             await BuildWebHost(args)
                     .RunOmniaAsync();
         }
 
+        /// <summary>
+        /// Builds the Web Host
+        /// </summary>
+        /// <param name="args"></param>
+        /// <returns></returns>
         public static IWebHost BuildWebHost(string[] args)
         {
             return new WebAppHost(args)
