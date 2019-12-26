@@ -39,7 +39,11 @@
   <!--***************************************************************************************-->
   <!--**** Omnia Build Tasks ****************************************************************-->
   <!--***************************************************************************************-->
-  <Target Name="OmniaRunAfterBuild" AfterTargets="Build">
+  <Target Name="OmniaRunAfterBuildRelease" AfterTargets="Build" Condition="'$(Configuration)' == 'Release' ">
+    <Exec Command="npm run omnia-after-build-release" ContinueOnError="false">
+    </Exec>
+  </Target>
+  <Target Name="OmniaRunAfterBuild" AfterTargets="Build" Condition="'$(Configuration)' != 'Release' ">
     <Exec Command="npm run omnia-after-build" ContinueOnError="false">
     </Exec>
   </Target>
