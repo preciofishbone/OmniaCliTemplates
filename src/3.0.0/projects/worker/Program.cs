@@ -1,11 +1,10 @@
-﻿using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
+﻿using System.IO;
+using System.Threading.Tasks;
+using Microsoft.Extensions.Hosting;
+
 using Omnia.Fx.HostConfiguration;
 using Omnia.Fx.HostConfiguration.Extensions;
-using Omnia.Fx.Models.AppSettings;
 using Omnia.Fx.NetCore.Worker.Hosting;
-using System.IO;
-using System.Threading.Tasks;
 
 namespace $namespace$
 {
@@ -21,29 +20,33 @@ namespace $namespace$
         /// <returns></returns>
         public static async Task Main(string[] args)
         {
-                await new WorkerHost(args)
-                    .ConfigureOmnia((omniaConfig, logging) =>
+            await CreateHostBuilder(args).Build().RunAsync();
+        }
+
+        /// <summary>
+        /// Build host here to support add migration
+        /// </summary>
+        /// <param name="args"></param>
+        /// <returns></returns>
+        public static IHostBuilder CreateHostBuilder(string[] args)
+        {
+            return new OmniaHostBuilder(args)
+                .ConfigureOmniaFx((omniaConfig, logger) => { 
+                
+                    omniaConfig.AddAppSettingsJsonFile("appsettings.json");
+                    omniaConfig.AddAppSettingsJsonFile("appsettings.local.json", Directory.GetCurrentDirectory());
+                    omniaConfig.AddOmniaFxNetCore((options) =>
                     {
-                        omniaConfig.AddAppSettingsJsonFile("appsettings.json", Directory.GetCurrentDirectory());
-                        omniaConfig.AddAppSettingsJsonFile("appsettings.local.json", Directory.GetCurrentDirectory());
-
-                        omniaConfig.AddOmniaFxNetCore();
-
-                        omniaConfig.Configuration((configBuilder) =>
-                        {
-                            configBuilder.AddCommandLine(args);
-                            omniaConfig.ConfigureServices((serviceCollection) =>
-                            {
-                                var configuration = configBuilder.Build();
-
-                                serviceCollection.AddLogging();
-                                serviceCollection.AddAsOption<OmniaAppSettings>(configuration);
-                                serviceCollection.AddHostedService<ExampleWorker>();
-
-                            });
-                        });
+                        //Configure apphandlers etc
                     })
-                    .RunAsync();
+                    .AddOmniaFxNetCoreSharePoint();
+                    
+                }).ConfigureHost(hostbuilder => {
+                    hostbuilder.ConfigureServices(serviceCollection => {
+                        //Configure services here
+                        serviceCollection.AddHostedService<ExampleWorker>();
+                    });
+                });
         }
     }
 }
