@@ -3,8 +3,8 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:$httpport1$",
-      "sslPort": $httpsport1$
+      "applicationUrl": "http://localhost:307$num1$",
+      "sslPort": 443$num1$
     }
   },
   "profiles": {
@@ -13,17 +13,17 @@
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "ASPNETCORE_URLS": "https://localhost:$httpsport1$",
+        "ASPNETCORE_URLS": "https://localhost:443$num1$",
         "OMNIA_LOGGING": "ON"
       }
     },
     "$namespace$": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "https://localhost:$httpsport1$",
+      "applicationUrl": "https://localhost:443$num1$",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "ASPNETCORE_URLS": "https://localhost:$httpsport1$",
+        "ASPNETCORE_URLS": "https://localhost:443$num1$",
         "OMNIA_LOGGING": "ON"
       }
     }
