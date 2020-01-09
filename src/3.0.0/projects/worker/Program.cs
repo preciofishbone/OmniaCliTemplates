@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
-
+using Microsoft.Extensions.DependencyInjection;
 using Omnia.Fx.HostConfiguration;
 using Omnia.Fx.HostConfiguration.Extensions;
 using Omnia.Fx.NetCore.Worker.Hosting;
@@ -38,8 +38,7 @@ namespace $namespace$
                     omniaConfig.AddOmniaFxNetCore((options) =>
                     {
                         //Configure apphandlers etc
-                    })
-                    .AddOmniaFxNetCoreSharePoint();
+                    });
                     
                 }).ConfigureHost(hostbuilder => {
                     hostbuilder.ConfigureServices(serviceCollection => {

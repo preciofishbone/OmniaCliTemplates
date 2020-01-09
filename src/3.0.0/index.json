@@ -53,10 +53,6 @@
               "outputName": "Program.cs"
             },
             {
-              "sourceName": "Startup.cs",
-              "outputName": "Startup.cs"
-            },
-            {
               "sourceName": "Properties/launchSettings.json",
               "outputName": "Properties/launchSettings.json"
             }
