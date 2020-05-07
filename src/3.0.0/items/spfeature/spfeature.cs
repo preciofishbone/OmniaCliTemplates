@@ -14,7 +14,7 @@ using Microsoft.SharePoint.Client;
 using System.Linq;
 using Omnia.Fx.SharePoint.Services.Contexts;
 
-namespace Omnia.Fx.Examples.BasicSharePointFeature.Features
+namespace $namespace$
 {
     //Same id as defined in the manifest
     [OmniaFeature("$guid1$")]
