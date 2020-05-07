@@ -32,6 +32,30 @@ namespace Omnia.Fx.Examples.BasicSharePointFeature.Features
         {
             Logger = logger;
             SharePointClientContextProvider = sharePointContext;
+
+            //****************************************************************************************************
+            //** TODO ********************************************************************************************
+            //****************************************************************************************************
+            
+            //** Step 1 ******************************************************************************************
+            // In your .csproj file ensure you have the Omnia.Fx.NetCore.SharePoint dependency
+
+             <PackageReference Include="Omnia.Fx.NetCore.SharePoint" Version="Same as Omnia.Fx.NetCore.Worker" />
+
+            //** Step 2 ******************************************************************************************
+            // Cut the code below and add it inside omniaConfig.AddOmniaFxNetCore in Program.cs
+            
+             options.AddFeatureHandlers((featureProviderOptions) =>
+             {
+                 featureProviderOptions.AddFeatureProvider<ChangeSiteTitle>();
+             });
+            
+            //** Step 3 ******************************************************************************************
+            //Cut the code below and make sure that its added after the .AddOmniaFxNetCore method in Program.cs
+             
+             .AddOmniaFxNetCoreSharePoint();
+            
+            //****************************************************************************************************
         }
 
         protected override async Task ActivateAsync()
