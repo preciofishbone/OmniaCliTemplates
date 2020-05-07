@@ -346,6 +346,32 @@
           ]
         }
       ]
+    },
+    {
+      "name": "spfeature",
+      "description": "Feature for SharePoint",
+      "tokens": [],
+      "requiresName": true,
+      "sources": [
+        {
+          "folder": "items/spfeature",
+          "files": [
+            {
+              "sourceName": "spfeature.cs",
+              "outputName": "$outputname$.cs"
+            }
+          ]
+        },
+        {
+          "folder": "items/spfeature",
+          "files": [
+            {
+              "sourceName": "spfeature.manifest.ts",
+              "outputName": "$outputname$.manifest.ts"
+            }
+          ]
+        }
+      ]
     }
   ],
   "dependencies": [
