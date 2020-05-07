@@ -20,7 +20,7 @@ namespace Omnia.Fx.Examples.BasicSharePointFeature.Features
     [OmniaFeature("$guid1$")]
     internal class $outputname$ : BaseAppFeatureProvider
     {
-        ILogger<ChangeSiteTitle> Logger { get; }
+        ILogger<$outputname$> Logger { get; }
 
         ISharePointClientContextProvider SharePointClientContextProvider { get; }
 
