@@ -47,7 +47,7 @@ namespace Omnia.Fx.Examples.BasicSharePointFeature.Features
             
              options.AddFeatureHandlers((featureProviderOptions) =>
              {
-                 featureProviderOptions.AddFeatureProvider<ChangeSiteTitle>();
+                 featureProviderOptions.AddFeatureProvider<$outputname$>();
              });
             
             //** Step 3 ******************************************************************************************
