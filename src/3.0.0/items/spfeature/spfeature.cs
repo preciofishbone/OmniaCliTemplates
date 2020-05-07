@@ -45,7 +45,7 @@ namespace Omnia.Fx.Examples.BasicSharePointFeature.Features
             //** Step 2 ******************************************************************************************
             // Cut the code below and add it inside omniaConfig.AddOmniaFxNetCore in Program.cs
             // NOTE! If you already have options.AddFeatureHandlers then only add the .AddFeatureProvider line
-            
+
              options.AddFeatureHandlers((featureProviderOptions) =>
              {
                  featureProviderOptions.AddFeatureProvider<$outputname$>();
@@ -78,6 +78,9 @@ namespace Omnia.Fx.Examples.BasicSharePointFeature.Features
         {
             var spUrl = AppInstance.Properties.ContextParams.EnsureContextParamStringValue(Omnia.Fx.SharePoint.Constants.Parameters.SPUrl);
             var ctx = SharePointClientContextProvider.CreateClientContext(spUrl);
+
+            //TODO: Remove this when you have a async operation
+            await Task.CompletedTask;
         }
     }
 }
