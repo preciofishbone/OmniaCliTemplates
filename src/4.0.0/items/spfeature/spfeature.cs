@@ -44,6 +44,7 @@ namespace Omnia.Fx.Examples.BasicSharePointFeature.Features
 
             //** Step 2 ******************************************************************************************
             // Cut the code below and add it inside omniaConfig.AddOmniaFxNetCore in Program.cs
+            // NOTE! If you already have options.AddFeatureHandlers then only add the .AddFeatureProvider line
             
              options.AddFeatureHandlers((featureProviderOptions) =>
              {
