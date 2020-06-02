@@ -22,7 +22,7 @@ export default class $outputname$ extends Vue implements IWebComponentInstance {
 
     created() {
         //Register the settings component
-        this.settingsService.suggestKeyRenderer(this.settingsKey, "$element$-settings");
+        this.settingsService.suggestKeyRenderer(this.settingsKey, "$element$-setting");
         //Subscribe to the settings data changed event to be able to re-render with the latest settings
         this.subscriptionHandler.add(this.settingsService
             .onKeyValueUpdated(this.settingsKey)
