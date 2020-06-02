@@ -21,7 +21,9 @@ export default class $outputname$ extends Vue implements IWebComponentInstance {
     };
 
     created() {
+        //Register the settings component
         this.settingsService.suggestKeyRenderer(this.settingsKey, "$element$-settings");
+        //Subscribe to the settings data changed event to be able to re-render with the latest settings
         this.subscriptionHandler.add(this.settingsService
             .onKeyValueUpdated(this.settingsKey)
             .subscribe(this.setBlockData));
@@ -35,6 +37,10 @@ export default class $outputname$ extends Vue implements IWebComponentInstance {
     mounted() {
         WebComponentBootstrapper
             .registerElementInstance(this, this.$el);
+    }
+
+    beforeDestroy(){
+        this.subscriptionHandler.unsubscribe();
     }
 
     private setBlockData(blockData: $outputname$BlockData) {

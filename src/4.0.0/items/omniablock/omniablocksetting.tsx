@@ -33,9 +33,11 @@ export default class $outputname$Setting extends Vue implements IWebComponentIns
     };
 
     created() {
+        //Subscribe to the settings data changed event to be able to re-render with the latest settings
         this.subscriptionHandler.add(this.settingsService
             .onKeyValueUpdated(this.settingsKey)
             .subscribe(this.setBlockData));
+            
         this.settingsService.getValue(this.settingsKey).then((blockData) => {
             if (blockData) {
                 this.setBlockData(blockData)

@@ -9,12 +9,12 @@ Composer
         entryPoint: "./$outputname$.jsx"
     })
     .withDefinition({
-        title: "$outputname$", /* You can use localization, i.e., $Localize:Namespace.Something.Title; */
-        description: "$outputname$", /* You can use localization, i.e., $Localize:Namespace.Something.Description; */
+        title: "$outputname$", // You can use localization, i.e., $Localize:Namespace.Something.Title; 
+        description: "$outputname$", // You can use localization, i.e., $Localize:Namespace.Something.Description;
         icon: new FontAwesomeIcon("far fa-smile-beam")
     })
     .registerOmniaBlock({
-        category: "$outputname$" /* You can use localization, i.e., $Localize:Namespace.Something.Category; */
+        category: "$outputname$" // You can use localization, i.e., $Localize:Namespace.Something.Category;
     });
 
 Composer
