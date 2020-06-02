@@ -407,6 +407,23 @@
           ]
         }
       ]
+    },
+    {
+      "name": "timerjob",
+      "description": "Timer Job",
+      "tokens": [],
+      "requiresName": true,
+      "sources": [
+        {
+          "folder": "items/timerjob",
+          "files": [
+            {
+              "sourceName": "timerjob.cs",
+              "outputName": "$outputname$.cs"
+            }
+          ]
+        }
+      ]
     }
   ],
   "dependencies": [
