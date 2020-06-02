@@ -223,6 +223,41 @@
       ]
     },
     {
+      "name": "omniablock",
+      "description": "Omnia Block",
+      "tokens": [
+        "element"
+      ],
+      "requiresName": true,
+      "sources": [
+        {
+          "folder": "items/omniablock",
+          "files": [
+            {
+              "sourceName": "omniablock.tsx",
+              "outputName": "$outputname$.tsx"
+            },
+            {
+              "sourceName": "omniablock.manifest.ts",
+              "outputName": "$outputname$.manifest.ts"
+            },
+            {
+              "sourceName": "omniablock.css.ts",
+              "outputName": "$outputname$.css.ts"
+            },
+            {
+              "sourceName": "omniablocksetting.tsx",
+              "outputName": "$outputname$setting.tsx"
+            },
+            {
+              "sourceName": "omniablocksetting.css.ts",
+              "outputName": "$outputname$setting.css.ts"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "vuecomponent",
       "description": "Vue based component",
       "tokens": [],
