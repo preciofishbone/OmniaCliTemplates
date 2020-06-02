@@ -16,7 +16,7 @@
     <None Remove="**\*.js" />
     <None Remove="**\*.jsx" />
     <None Remove="**\*.map" />
-	<None Remove="publish\**" />
+    <None Remove="publish\**" />
     <None Remove="wwwroot\omnia\**" />
     <None Include="gulpfile.js" />
   </ItemGroup>
