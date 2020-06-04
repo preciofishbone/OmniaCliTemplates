@@ -4,7 +4,7 @@ import { vueCustomElement, IWebComponentInstance, WebComponentBootstrapper, Loca
 import { StyleFlow } from '@omnia/fx/ux';
 import { SettingsService, SettingsServiceConstructor } from '@omnia/fx/services';
 import { $outputname$Styles } from './$outputname$.css';
-import { $outputname$BlockData } from './$outputname$Setting';
+import { $outputname$BlockData } from './$outputname$Settings';
 
 @Component
 export default class $outputname$ extends Vue implements IWebComponentInstance {
@@ -22,7 +22,7 @@ export default class $outputname$ extends Vue implements IWebComponentInstance {
 
     created() {
         //Register the settings component
-        this.settingsService.suggestKeyRenderer(this.settingsKey, "$element$-setting");
+        this.settingsService.suggestKeyRenderer(this.settingsKey, "$element$-settings");
         //Subscribe to the settings data changed event to be able to re-render with the latest settings
         this.subscriptionHandler.add(this.settingsService
             .onKeyValueUpdated(this.settingsKey)

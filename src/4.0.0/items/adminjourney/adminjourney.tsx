@@ -2,13 +2,13 @@ import Vue from 'vue';
 import { Component, Watch, Prop } from 'vue-property-decorator';
 import { vueCustomElement, IWebComponentInstance, WebComponentBootstrapper, Localize, Inject } from "@omnia/fx";
 import { Blade, BladeSizes, JourneyInstance } from '@omnia/fx/ux';
-import { I$outputname$ } from './I$outputname$';
 import { $outputname$Styles } from './$outputname$.css';
 import HomeBlade from './blades/HomeBlade';
-import CreateBlade from './blades/CreateBlade';
+import EditBlade from './blades/EditBlade';
+import { $outputname$Destinations, $outputname$BladeIds } from './$outputname$Constants';
 
 @Component
-export default class $outputname$ extends Vue implements IWebComponentInstance, I$outputname$ {
+export default class $outputname$ extends Vue implements IWebComponentInstance {
 
     journey: JourneyInstance;
 
@@ -34,7 +34,7 @@ export default class $outputname$ extends Vue implements IWebComponentInstance, 
     getHomeBlade() {
         let h = this.$createElement;
         let blade: Blade = {
-            id: 'home',
+            id: $outputname$BladeIds.home,
             size: BladeSizes.medium,
             content: <HomeBlade journey={this.getJourneyInstance}></HomeBlade>
         }
@@ -42,12 +42,12 @@ export default class $outputname$ extends Vue implements IWebComponentInstance, 
         return blade;
     }
 
-    getCreateBlade() {
+    getEditBlade() {
         let h = this.$createElement;
         let blade: Blade = {
-            id: 'create',
+            id: $outputname$BladeIds.edit,
             size: BladeSizes.medium,
-            content: <CreateBlade journey={this.getJourneyInstance}></CreateBlade>
+            content: <EditBlade journey={this.getJourneyInstance}></EditBlade>
         }
 
         return blade;
@@ -58,7 +58,7 @@ export default class $outputname$ extends Vue implements IWebComponentInstance, 
             <omfx-journey onInstanceCreated={this.gotInstance} 
                 blades={[
                     this.getHomeBlade(), 
-                    this.getCreateBlade()
+                    this.getEditBlade()
                     ]}>
             </omfx-journey>
         )
@@ -68,17 +68,3 @@ export default class $outputname$ extends Vue implements IWebComponentInstance, 
 WebComponentBootstrapper.registerElement((manifest) => {
     vueCustomElement(manifest.elementName, $outputname$);
 });
-
-const BladeIds = {
-
-    home: "home",
-    create: "create",
-
-}
-
-export const $outputname$Destinations = {
-
-    home: [BladeIds.home],
-    create: [BladeIds.home, BladeIds.create],
-
-}

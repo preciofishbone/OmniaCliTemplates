@@ -5,6 +5,15 @@ Composer
     .registerManifest(new Guid("$guid1$"), "$outputname$")
     .registerWebComponent({
         elementName: "$element$",
-        entryPoint: "./$outputname$.jsx",
-        typings: ["./I$outputname$.ts"]
+        entryPoint: "./$outputname$.jsx"
     });
+
+Composer
+    .registerManifest("$guid2$", "$outputname$.core")
+    .registerResources({
+        resourcePaths: [
+            './store/**/*.js',
+            './model/index.js',
+            "./$outputname$Constants.js"
+        ]
+    })

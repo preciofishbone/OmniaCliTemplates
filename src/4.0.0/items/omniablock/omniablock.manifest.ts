@@ -18,8 +18,8 @@ Composer
     });
 
 Composer
-.registerManifest(new Guid("$guid2$"), "$outputname$setting")
+.registerManifest(new Guid("$guid2$"), "$outputname$.settings")
 .registerWebComponent({
-    elementName: "$element$-setting",
-    entryPoint: "./$outputname$Setting.jsx"
+    elementName: "$element$-settings",
+    entryPoint: "./$outputname$Settings.jsx"
 })

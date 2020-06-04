@@ -199,10 +199,6 @@
               "outputName": "$outputname$.tsx"
             },
             {
-              "sourceName": "iadminjourney.ts",
-              "outputName": "I$outputname$.ts"
-            },
-            {
               "sourceName": "adminjourney.manifest.ts",
               "outputName": "$outputname$.manifest.ts"
             },
@@ -211,12 +207,36 @@
               "outputName": "$outputname$.css.ts"
             },
             {
+              "sourceName": "adminjourneyconstants.ts",
+              "outputName": "$outputname$Constants.ts"
+            },
+            {
               "sourceName": "blades/homeblade.tsx",
               "outputName": "blades/HomeBlade.tsx"
             },
             {
-              "sourceName": "blades/createblade.tsx",
-              "outputName": "blades/CreateBlade.tsx"
+              "sourceName": "blades/editblade.tsx",
+              "outputName": "blades/EditBlade.tsx"
+            },
+            {
+              "sourceName": "models/index.ts",
+              "outputName": "models/index.ts"
+            },
+            {
+              "sourceName": "models/item.ts",
+              "outputName": "models/item.ts"
+            },
+            {
+              "sourceName": "registration/adminregistration.manifest.ts",
+              "outputName": "registration/AdminRegistration.manifest.ts"
+            },
+            {
+              "sourceName": "registration/adminregistration.ts",
+              "outputName": "registration/AdminRegistration.ts"
+            },
+            {
+              "sourceName": "store/adminjourneystore.ts",
+              "outputName": "store/$outputname$Store.ts"
             }
           ]
         }
@@ -246,12 +266,12 @@
               "outputName": "$outputname$.css.ts"
             },
             {
-              "sourceName": "omniablocksetting.tsx",
-              "outputName": "$outputname$setting.tsx"
+              "sourceName": "omniablocksettings.tsx",
+              "outputName": "$outputname$Settings.tsx"
             },
             {
-              "sourceName": "omniablocksetting.css.ts",
-              "outputName": "$outputname$setting.css.ts"
+              "sourceName": "omniablocksettings.css.ts",
+              "outputName": "$outputname$Settings.css.ts"
             }
           ]
         }

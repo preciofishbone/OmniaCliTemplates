@@ -3,7 +3,7 @@ import { Component, Watch, Prop } from 'vue-property-decorator';
 import { vueCustomElement, IWebComponentInstance, WebComponentBootstrapper, Localize, Inject, SubscriptionHandler, Utils} from "@omnia/fx";
 import { StyleFlow } from '@omnia/fx/ux';
 import { SettingsService, SettingsServiceConstructor } from '@omnia/fx/services';
-import { $outputname$SettingStyles } from './$outputname$Setting.css';
+import { $outputname$SettingsStyles } from './$outputname$Settings.css';
 import { BlockDataWithSettingsAndData } from "@omnia/wcm/models";
 
 export interface $outputname$BlockDataData{
@@ -19,14 +19,14 @@ export interface $outputname$BlockData extends BlockDataWithSettingsAndData<$out
 
 
 @Component
-export default class $outputname$Setting extends Vue implements IWebComponentInstance {
+export default class $outputname$Settings extends Vue implements IWebComponentInstance {
     
     @Prop() settingsKey: string;
 
     @Inject(SubscriptionHandler) private subscriptionHandler: SubscriptionHandler;
     @Inject<SettingsServiceConstructor>(SettingsService) private settingsService: SettingsService<$outputname$BlockData>;
 
-    private $outputname$SettingClasses = StyleFlow.use($outputname$SettingStyles);
+    private $outputname$SettingsClasses = StyleFlow.use($outputname$SettingsStyles);
     private blockData: $outputname$BlockData = {
         data: null,
         settings: {title: 'title initial value'}
@@ -78,5 +78,5 @@ export default class $outputname$Setting extends Vue implements IWebComponentIns
 }
 
 WebComponentBootstrapper.registerElement((manifest) => {
-    vueCustomElement(manifest.elementName, $outputname$Setting);
+    vueCustomElement(manifest.elementName, $outputname$Settings);
 });
