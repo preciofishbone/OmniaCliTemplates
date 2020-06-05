@@ -243,6 +243,45 @@
       ]
     },
     {
+      "name": "pagerollupview",
+      "description": "Page Rollup View",
+      "tokens": [
+        "element"
+      ],
+      "requiresName": true,
+      "sources": [
+        {
+          "folder": "items/pagerollupview",
+          "files": [
+            {
+              "sourceName": "pagerollupview.css.ts",
+              "outputName": "$outputname$.css.ts"
+            },
+            {
+              "sourceName": "pagerollupview.manifest.ts",
+              "outputName": "$outputname$.manifest.ts"
+            },
+            {
+              "sourceName": "pagerollupview.tsx",
+              "outputName": "$outputname$.tsx"
+            },
+            {
+              "sourceName": "pagerollupviewsettings.tsx",
+              "outputName": "$outputname$Settings.tsx"
+            },
+            {
+              "sourceName": "registration/registration.manifest.ts",
+              "outputName": "registration/Registration.manifest.ts"
+            },
+            {
+              "sourceName": "registration/registration.ts",
+              "outputName": "registration/Registration.ts"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "omniablock",
       "description": "Omnia Block",
       "tokens": [

@@ -9,7 +9,7 @@ Composer
     });
 
 Composer
-    .registerManifest("$guid2$", "$outputname$.core")
+    .registerManifest(new Guid("$guid2$"), "$outputname$.core")
     .registerResources({
         resourcePaths: [
             './store/**/*.js',
