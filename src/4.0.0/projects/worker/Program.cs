@@ -32,9 +32,15 @@ namespace $namespace$
         {
             return new OmniaHostBuilder(args)
                 .ConfigureOmniaFx((omniaConfig, logger) => { 
-                
+
+                    var currentDir = Directory.GetCurrentDirectory();
+                    if (currentDir.Contains("\\bin\\Debug\\"))
+                    {
+                        currentDir = currentDir.Substring(0, currentDir.IndexOf("\\bin\\Debug\\"));
+                    }
+                    
                     omniaConfig.AddAppSettingsJsonFile("appsettings.json");
-                    omniaConfig.AddAppSettingsJsonFile("appsettings.local.json", Directory.GetCurrentDirectory());
+                    omniaConfig.AddAppSettingsJsonFile("appsettings.local.json", currentDir);
                     omniaConfig.AddOmniaFxNetCore((options) =>
                     {
                         //Configure apphandlers etc
