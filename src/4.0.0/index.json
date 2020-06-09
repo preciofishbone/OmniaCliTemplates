@@ -184,6 +184,31 @@
       ]
     },
     {
+      "name": "localization",
+      "description": "localization",
+      "tokens": [],
+      "requiresName": true,
+      "sources": [
+        {
+          "folder": "items/localization",
+          "files": [
+            {
+              "sourceName": "localize.ts",
+              "outputName": "localize.ts"
+            },
+            {
+              "sourceName": "localize.sv-se.manifest.ts",
+              "outputName": "localize.sv-se.manifest.ts"
+            },
+            {
+              "sourceName": "localize.manifest.ts",
+              "outputName": "localize.manifest.ts"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "adminjourney",
       "description": "Web component for journey experience",
       "tokens": [
