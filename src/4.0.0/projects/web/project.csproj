@@ -35,7 +35,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Omnia.Fx.NetCore.WebApp" Version="4.0.8" />
+    <PackageReference Include="Omnia.Fx.NetCore.WebApp" Version="4.0.9" />
   </ItemGroup>
 
   <!--***************************************************************************************-->
