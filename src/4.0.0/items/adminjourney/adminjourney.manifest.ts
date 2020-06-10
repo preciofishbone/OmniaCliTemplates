@@ -7,13 +7,3 @@ Composer
         elementName: "$element$",
         entryPoint: "./$outputname$.jsx"
     });
-
-Composer
-    .registerManifest(new Guid("$guid2$"), "$outputname$.core")
-    .registerResources({
-        resourcePaths: [
-            './store/**/*.js',
-            './model/index.js',
-            "./$outputname$Constants.js"
-        ]
-    })

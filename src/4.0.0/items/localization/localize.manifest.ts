@@ -1,11 +1,7 @@
 ﻿import { Composer } from '@omnia/tooling/composers';
 import { $outputname$ } from "./localize";
 
-Composer
-    .registerManifest('$guid1$', "$outputname$")
-    .registerResources({ resourcePaths: ["./localize.js"] });
-
-Composer.registerManifest("$guid2$")
+Composer.registerManifest("$guid1$")
     .registerLocalization()
     .namespace($outputname$.namespace)
     .add<$outputname$.locInterface>({
