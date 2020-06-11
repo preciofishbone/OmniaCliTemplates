@@ -11,12 +11,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="publish\**" />
     <Compile Remove="approot\**" />
     <Compile Remove="node_modules\**" />
     <EmbeddedResource Remove="approot\**" />
     <EmbeddedResource Remove="node_modules\**" />
     <None Remove="**\*.d.ts" />
     <None Remove="**\*.js" />
+    <None Remove="publish\**" />
     <None Remove="approot\**" />
     <None Remove="node_modules\**" />
     <None Remove="appsettings.json" />
