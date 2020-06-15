@@ -436,6 +436,10 @@
             {
               "sourceName": "settings.json",
               "outputName": ".vscode/settings.json"
+            },
+            {
+              "sourceName": "tasks.json",
+              "outputName": ".vscode/tasks.json"
             }
           ]
         }
