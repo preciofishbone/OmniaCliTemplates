@@ -586,9 +586,6 @@
         },
         {
           "name": "Omnia.WebContentManagement.Fx.NetCore.WebApp"
-        },
-        {
-          "name": "Omnia.Wcm.Models"
         }
       ],
       "npm": [
