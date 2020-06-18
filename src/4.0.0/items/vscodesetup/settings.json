@@ -4,7 +4,8 @@
         "**/*.map": true,
         "**/client/**/*.js": true,
         "**/client/**/*.jsx": true,
-        "omnia.service.js": true,        
-      },    
-
+        "omnia.service.js": true,
+        "**/node_modules": true,
+        "**/wwwroot": true        
+      }  
 }
