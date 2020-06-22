@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "$namespace$": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "OMNIA_EXTENSIONID": "$extensionid$"
+      }
+    }
+  }
+}

@@ -109,6 +109,10 @@
             {
               "sourceName": "ExampleWorker.cs",
               "outputName": "ExampleWorker.cs"
+            },
+            {
+              "sourceName": "Properties/launchSettings.json",
+              "outputName": "Properties/launchSettings.json"
             }
           ]
         }
