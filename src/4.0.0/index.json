@@ -188,8 +188,8 @@
       ]
     },
     {
-      "name": "localization",
-      "description": "localization",
+      "name": "Localization",
+      "description": "Localization",
       "tokens": [],
       "requiresName": true,
       "sources": [
