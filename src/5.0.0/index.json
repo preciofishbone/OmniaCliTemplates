@@ -1,0 +1,655 @@
+{
+  "projects": [
+    {
+      "name": "extension",
+      "description": "Omnia Extension solution",
+      "requiresName": true,
+      "sources": [
+        {
+          "folder": "",
+          "files": []
+        }
+      ]
+    },
+    {
+      "name": "web",
+      "description": "Omnia web project",
+      "baseImage": "preciofishbone/omnia:3.0-webapp",
+      "requiresName": true,
+      "sources": [
+        {
+          "folder": "projects/web",
+          "files": [
+            {
+              "sourceName": "project.csproj",
+              "outputName": "$namespace$.csproj"
+            },
+            {
+              "sourceName": "tsconfig.json",
+              "outputName": "tsconfig.json"
+            },
+            {
+              "sourceName": "appsettings.json",
+              "outputName": "appsettings.json"
+            },
+            {
+              "sourceName": "appsettings.local.json",
+              "outputName": "appsettings.local.json"
+            },
+            {
+              "sourceName": "gulpfile.js",
+              "outputName": "gulpfile.js"
+            },
+            {
+              "sourceName": "omnia.service.ts",
+              "outputName": "omnia.service.ts"
+            },
+            {
+              "sourceName": "package.json",
+              "outputName": "package.json"
+            },
+            {
+              "sourceName": "Program.cs",
+              "outputName": "Program.cs"
+            },
+            {
+              "sourceName": "Properties/launchSettings.json",
+              "outputName": "Properties/launchSettings.json"
+            }
+          ]
+        }
+      ],
+      "folders": [
+        "client",
+        "wwwroot",
+        "Properties"
+      ]
+    },
+    {
+      "name": "worker",
+      "description": "Omnia worker project",
+      "baseImage": "preciofishbone/omnia:3.0-worker",
+      "requiresName": true,
+      "sources": [
+        {
+          "folder": "projects/worker",
+          "files": [
+            {
+              "sourceName": "project.csproj",
+              "outputName": "$namespace$.csproj"
+            },
+            {
+              "sourceName": "tsconfig.json",
+              "outputName": "tsconfig.json"
+            },
+            {
+              "sourceName": "appsettings.json",
+              "outputName": "appsettings.json"
+            },
+            {
+              "sourceName": "appsettings.local.json",
+              "outputName": "appsettings.local.json"
+            },
+            {
+              "sourceName": "gulpfile.js",
+              "outputName": "gulpfile.js"
+            },
+            {
+              "sourceName": "omnia.service.ts",
+              "outputName": "omnia.service.ts"
+            },
+            {
+              "sourceName": "package.json",
+              "outputName": "package.json"
+            },
+            {
+              "sourceName": "Program.cs",
+              "outputName": "Program.cs"
+            },
+            {
+              "sourceName": "ExampleWorker.cs",
+              "outputName": "ExampleWorker.cs"
+            },
+            {
+              "sourceName": "Properties/launchSettings.json",
+              "outputName": "Properties/launchSettings.json"
+            }
+          ]
+        }
+      ],
+      "folders": []
+    }
+  ],
+  "items": [
+    {
+      "name": "vuewebcomponent",
+      "description": "Vue based web component",
+      "tokens": [
+        { "name":"element", "lowercase": true }
+      ],
+      "requiresName": true,
+      "sources": [
+        {
+          "folder": "items/vuewebcomponent",
+          "files": [
+            {
+              "sourceName": "vuewebcomponent.tsx",
+              "outputName": "$outputname$.tsx"
+            },
+            {
+              "sourceName": "ivuewebcomponent.ts",
+              "outputName": "I$outputname$.ts"
+            },
+            {
+              "sourceName": "vuewebcomponent.manifest.ts",
+              "outputName": "$outputname$.manifest.ts"
+            },
+            {
+              "sourceName": "vuewebcomponent.css.ts",
+              "outputName": "$outputname$.css.ts"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "vuespfxcomponent",
+      "description": "Vue spfx component",
+      "tokens": [
+        { "name":"element", "lowercase": true }
+      ],
+      "requiresName": true,
+      "sources": [
+        {
+          "folder": "items/vuespfxcomponent",
+          "files": [
+            {
+              "sourceName": "vuespfxcomponent.tsx",
+              "outputName": "$outputname$.tsx"
+            },
+            {
+              "sourceName": "vuespfxcomponentsettings.tsx",
+              "outputName": "$outputname$Settings.tsx"
+            },
+            {
+              "sourceName": "ivuespfxcomponentsettings.ts",
+              "outputName": "I$outputname$Settings.ts"
+            },
+            {
+              "sourceName": "vuespfxcomponent.manifest.ts",
+              "outputName": "$outputname$.manifest.ts"
+            },
+            {
+              "sourceName": "vuespfxcomponent.css.ts",
+              "outputName": "$outputname$.css.ts"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "localization",
+      "description": "localization",
+      "tokens": [],
+      "requiresName": true,
+      "sources": [
+        {
+          "folder": "items/localization",
+          "files": [
+            {
+              "sourceName": "localize.ts",
+              "outputName": "localize.ts"
+            },
+            {
+              "sourceName": "localize.sv-se.manifest.ts",
+              "outputName": "localize.sv-se.manifest.ts"
+            },
+            {
+              "sourceName": "localize.manifest.ts",
+              "outputName": "localize.manifest.ts"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "adminjourney",
+      "description": "Web component for journey experience",
+      "tokens": [
+        { "name":"element", "lowercase": true }
+      ],
+      "requiresName": true,
+      "sources": [
+        {
+          "folder": "items/adminjourney",
+          "files": [
+            {
+              "sourceName": "adminjourney.tsx",
+              "outputName": "$outputname$.tsx"
+            },
+            {
+              "sourceName": "adminjourney.manifest.ts",
+              "outputName": "$outputname$.manifest.ts"
+            },
+            {
+              "sourceName": "adminjourney.css.ts",
+              "outputName": "$outputname$.css.ts"
+            },
+            {
+              "sourceName": "adminjourneyconstants.ts",
+              "outputName": "$outputname$Constants.ts"
+            },
+            {
+              "sourceName": "blades/homeblade.tsx",
+              "outputName": "blades/HomeBlade.tsx"
+            },
+            {
+              "sourceName": "blades/editblade.tsx",
+              "outputName": "blades/EditBlade.tsx"
+            },
+            {
+              "sourceName": "models/index.ts",
+              "outputName": "models/index.ts"
+            },
+            {
+              "sourceName": "models/item.ts",
+              "outputName": "models/item.ts"
+            },
+            {
+              "sourceName": "registration/adminregistration.manifest.ts",
+              "outputName": "registration/AdminRegistration.manifest.ts"
+            },
+            {
+              "sourceName": "registration/adminregistration.ts",
+              "outputName": "registration/AdminRegistration.ts"
+            },
+            {
+              "sourceName": "store/adminjourneystore.ts",
+              "outputName": "store/$outputname$Store.ts"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pagerollupview",
+      "description": "Page Rollup View",
+      "tokens": [
+        { "name":"element", "lowercase": true }
+      ],
+      "requiresName": true,
+      "sources": [
+        {
+          "folder": "items/pagerollupview",
+          "files": [
+            {
+              "sourceName": "pagerollupview.css.ts",
+              "outputName": "$outputname$.css.ts"
+            },
+            {
+              "sourceName": "pagerollupview.manifest.ts",
+              "outputName": "$outputname$.manifest.ts"
+            },
+            {
+              "sourceName": "pagerollupview.tsx",
+              "outputName": "$outputname$.tsx"
+            },
+            {
+              "sourceName": "pagerollupviewsettings.tsx",
+              "outputName": "$outputname$Settings.tsx"
+            },
+            {
+              "sourceName": "registration/registration.manifest.ts",
+              "outputName": "registration/Registration.manifest.ts"
+            },
+            {
+              "sourceName": "registration/registration.ts",
+              "outputName": "registration/Registration.ts"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "omniablock",
+      "description": "Omnia Block",
+      "tokens": [
+        { "name":"element", "lowercase": true }
+      ],
+      "requiresName": true,
+      "sources": [
+        {
+          "folder": "items/omniablock",
+          "files": [
+            {
+              "sourceName": "omniablock.tsx",
+              "outputName": "$outputname$.tsx"
+            },
+            {
+              "sourceName": "omniablock.manifest.ts",
+              "outputName": "$outputname$.manifest.ts"
+            },
+            {
+              "sourceName": "omniablock.css.ts",
+              "outputName": "$outputname$.css.ts"
+            },
+            {
+              "sourceName": "omniablocksettings.tsx",
+              "outputName": "$outputname$Settings.tsx"
+            },
+            {
+              "sourceName": "omniablocksettings.css.ts",
+              "outputName": "$outputname$Settings.css.ts"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "vuecomponent",
+      "description": "Vue based component",
+      "tokens": [],
+      "requiresName": true,
+      "sources": [
+        {
+          "folder": "items/vuecomponent",
+          "files": [
+            {
+              "sourceName": "vuecomponent.tsx",
+              "outputName": "$outputname$.tsx"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "manifest",
+      "description": "Manifest definition",
+      "tokens": [],
+      "requiresName": true,
+      "sources": [
+        {
+          "folder": "items/manifest",
+          "files": [
+            {
+              "sourceName": "manifest.ts",
+              "outputName": "$outputname$.manifest.ts"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "store",
+      "description": "Store module for state management",
+      "requiresName": true,
+      "sources": [
+        {
+          "folder": "items/store",
+          "files": [
+            {
+              "sourceName": "store.ts",
+              "outputName": "$outputname$.ts"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "unittest",
+      "description": "Unit test for client testing",
+      "requiresName": true,
+      "sources": [
+        {
+          "folder": "items/unittest",
+          "files": [
+            {
+              "sourceName": "unit.test.ts",
+              "outputName": "$outputname$.test.ts"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "gitignore",
+      "description": "Gitignore file for git versioning",
+      "requiresName": false,
+      "tokens": [],
+      "sources": [
+        {
+          "folder": "items/gitignore",
+          "files": [
+            {
+              "sourceName": ".gitignore",
+              "outputName": ".gitignore"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "vscodesetup",
+      "description": "Configure VS Code for extension development",
+      "tokens": [],
+      "requiresName": false,
+      "sources": [
+        {
+          "folder": "items/vscodesetup",
+          "files": [
+            {
+              "sourceName": "settings.json",
+              "outputName": ".vscode/settings.json"
+            },
+            {
+              "sourceName": "tasks.json",
+              "outputName": ".vscode/tasks.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "vscodetddsetup",
+      "description": "Configure project for TDD",
+      "tokens": [],
+      "requiresName": false,
+      "sources": [
+        {
+          "folder": "items/vstddsetup",
+          "files": [
+            {
+              "sourceName": "index.ts",
+              "outputName": "__mocks__/index.ts"
+            },
+            {
+              "sourceName": "Sample.mock.ts",
+              "outputName": "__mocks__/Sample.mock.ts"
+            },
+            {
+              "sourceName": "launch.json",
+              "outputName": ".vscode/launch.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "spfeature",
+      "description": "Feature for SharePoint",
+      "tokens": [],
+      "requiresName": true,
+      "sources": [
+        {
+          "folder": "items/spfeature",
+          "files": [
+            {
+              "sourceName": "spfeature.cs",
+              "outputName": "$outputname$.cs"
+            }
+          ]
+        },
+        {
+          "folder": "items/spfeature",
+          "files": [
+            {
+              "sourceName": "spfeature.manifest.ts",
+              "outputName": "$outputname$.manifest.ts"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "timerjob",
+      "description": "Timer Job",
+      "tokens": [],
+      "requiresName": true,
+      "sources": [
+        {
+          "folder": "items/timerjob",
+          "files": [
+            {
+              "sourceName": "timerjob.cs",
+              "outputName": "$outputname$.cs"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "name": "omniafx",
+      "tags": [ "latest", "dev", "preview" ],
+      "nuget": [
+        {
+          "name": "Omnia.Fx"
+        },
+        {
+          "name": "Omnia.Fx.Models"
+        },
+        {
+          "name": "Omnia.Fx.NetCore"
+        },
+        {
+          "name": "Omnia.Fx.NetCore.WebApp"
+        },
+        {
+          "name": "Omnia.Fx.NetCore.Worker"
+        },
+        {
+          "name": "Omnia.Fx.SharePoint"
+        },
+        {
+          "name": "Omnia.Fx.NetCore.Runtime"
+        },
+        {
+          "name": "Omnia.Fx.NetCore.SharePoint"
+        }
+      ],
+      "npm": [
+        {
+          "name": "@omnia/fx-models"
+        },
+        {
+          "name": "@omnia/fx-sp-models"
+        },
+        {
+          "name": "@omnia/types"
+        },
+        {
+          "name": "@omnia/fx"
+        },
+        {
+          "name": "@omnia/fx-sp"
+        },
+        {
+          "name": "@omnia/fx-spfx"
+        },
+        {
+          "name": "@omnia/runtime"
+        },
+        {
+          "name": "@omnia/tooling"
+        },
+        {
+          "name": "@omnia/tooling-composers"
+        },
+        {
+          "name": "@omnia/tooling-vue"
+        }
+      ]
+    },
+    {
+      "name": "wcmfx",
+      "tags": [ "latest", "dev", "preview" ],
+      "nuget": [
+        {
+          "name": "Omnia.WebContentManagement.Fx"
+        },
+        {
+          "name": "Omnia.WebContentManagement.Fx.NetCore.WebApp"
+        }
+      ],
+      "npm": [
+        {
+          "name": "@omnia/wcm"
+        }
+      ]
+    },
+    {
+      "name": "workplacefx",
+      "tags": [ "latest", "dev", "preview" ],
+      "nuget": [],
+      "npm": [
+        {
+          "name": "@omnia/workplace"
+        }
+      ]
+    },
+    {
+      "name": "adminfx",
+      "tags": [ "latest", "dev", "preview" ],
+      "nuget": [],
+      "npm": [
+        {
+          "name": "@omnia/tenantadmin"
+        }
+      ]
+    },
+	{
+      "name": "dmfx",
+      "tags": [ "latest", "dev", "preview" ],
+      "nuget": [],
+      "npm": [
+        {
+          "name": "@omnia/dm"
+        }
+      ]
+    },
+	{
+      "name": "pmfx",
+      "tags": [ "latest", "dev", "preview" ],
+      "nuget": [],
+      "npm": [
+        {
+          "name": "@omnia/pm"
+        }
+      ]
+    },
+    {
+      "name": "tcfx",
+      "tags": [ "latest", "dev", "preview" ],
+      "nuget": [
+        {
+          "name": "Omnia.TeamCollaboration.Fx"
+        },
+        {
+          "name": "Omnia.TeamCollaboration.Models"
+        }
+      ],
+      "npm": []
+    }
+  ]
+}
