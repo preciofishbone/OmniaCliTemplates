@@ -5,12 +5,15 @@
     <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
     <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
     <AssemblyName>$namespace$</AssemblyName>
+    <Configurations>Debug;Release;BuildWithoutTsc</Configurations>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DocumentationFile>bin\Debug\netcoreapp3.1\$namespace$.xml</DocumentationFile>
   </PropertyGroup>
-
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='BuildWithoutTsc|AnyCPU'">
+    <DocumentationFile>bin\Debug\netcoreapp3.1\$namespace$.xml</DocumentationFile>
+  </PropertyGroup>
   <ItemGroup>
     <Content Remove="publish\**" />
     <None Remove="**\*.d.ts" />
@@ -42,7 +45,7 @@
     <Exec Command="npm run omnia-after-build-release" ContinueOnError="false">
     </Exec>
   </Target>
-  <Target Name="OmniaRunAfterBuild" AfterTargets="Build" Condition="'$(Configuration)' != 'Release' ">
+  <Target Name="OmniaRunAfterBuild" AfterTargets="Build" Condition="'$(Configuration)' != 'Release' And '$(Configuration)' != 'BuildWithoutTsc' ">
     <Exec Command="npm run omnia-after-build" ContinueOnError="false">
     </Exec>
   </Target>
