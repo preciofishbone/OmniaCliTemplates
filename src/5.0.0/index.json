@@ -568,6 +568,9 @@
           "name": "@omnia/fx-spfx"
         },
         {
+          "name": "@omnia/fx-msteams"
+        },
+        {
           "name": "@omnia/runtime"
         },
         {
