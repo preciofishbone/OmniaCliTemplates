@@ -10,10 +10,8 @@ export interface I$outputname$ {
 
     required: boolean;
 
-    /*@DomProperty*/
     data?: $outputname$Data;
 
-    /*@DomProperty*/
     styles?: typeof $outputname$Styles;
 }
 
