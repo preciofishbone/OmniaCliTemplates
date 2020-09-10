@@ -1,11 +1,12 @@
 ﻿import Vue from 'vue';
 import { Component, Watch, Prop } from 'vue-property-decorator';
 import { vueCustomElement, IWebComponentInstance, WebComponentBootstrapper, Localize, Inject} from "@omnia/fx";
+import { VueComponentBase } from "@omnia/fx/ux";
 import { SettingsServiceConstructor, SettingsService } from "@omnia/fx/services";
 import { I$outputname$Settings, $outputname$Settings } from './I$outputname$Settings';
 
 @Component
-export default class $outputname$SettingsForm extends Vue implements IWebComponentInstance, I$outputname$Settings {
+export default class $outputname$SettingsForm extends VueComponentBase implements IWebComponentInstance, I$outputname$Settings {
     @Prop() settingsKey: string;
 
     @Inject<SettingsServiceConstructor>(SettingsService)

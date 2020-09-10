@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import { Component, Watch, Prop } from 'vue-property-decorator';
 import { vueCustomElement, IWebComponentInstance, WebComponentBootstrapper, Localize, Inject, SubscriptionHandler, Utils} from "@omnia/fx";
-import { StyleFlow } from '@omnia/fx/ux';
+import { StyleFlow, VueComponentBase } from '@omnia/fx/ux';
 import { SettingsService, SettingsServiceConstructor } from '@omnia/fx/services';
 import { $outputname$SettingsStyles } from './$outputname$Settings.css';
 import { BlockDataWithSettingsAndData } from "@omnia/wcm/models";
@@ -19,7 +19,7 @@ export interface $outputname$BlockData extends BlockDataWithSettingsAndData<$out
 
 
 @Component
-export default class $outputname$Settings extends Vue implements IWebComponentInstance {
+export default class $outputname$Settings extends VueComponentBase implements IWebComponentInstance {
     
     @Prop() settingsKey: string;
 

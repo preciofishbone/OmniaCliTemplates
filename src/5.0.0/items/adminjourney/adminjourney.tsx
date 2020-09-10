@@ -1,14 +1,14 @@
 import Vue from 'vue';
 import { Component, Watch, Prop } from 'vue-property-decorator';
 import { vueCustomElement, IWebComponentInstance, WebComponentBootstrapper, Localize, Inject } from "@omnia/fx";
-import { Blade, BladeSizes, JourneyInstance } from '@omnia/fx/ux';
+import { Blade, BladeSizes, JourneyInstance, VueComponentBase } from '@omnia/fx/ux';
 import { $outputname$Styles } from './$outputname$.css';
 import HomeBlade from './blades/HomeBlade';
 import EditBlade from './blades/EditBlade';
 import { $outputname$Destinations, $outputname$BladeIds } from './$outputname$Constants';
 
 @Component
-export default class $outputname$ extends Vue implements IWebComponentInstance {
+export default class $outputname$ extends VueComponentBase implements IWebComponentInstance {
 
     journey: JourneyInstance;
 

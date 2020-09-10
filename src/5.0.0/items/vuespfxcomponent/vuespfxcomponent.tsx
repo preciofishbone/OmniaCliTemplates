@@ -2,12 +2,12 @@ import Vue from 'vue';
 import { Component, Watch, Prop } from 'vue-property-decorator';
 import { SubscriptionHandler, vueCustomElement, IWebComponentInstance, WebComponentBootstrapper, Localize, Inject } from "@omnia/fx";
 import { SettingsServiceConstructor, SettingsService } from '@omnia/fx/services';
-import { StyleFlow } from '@omnia/fx/ux';
+import { StyleFlow, VueComponentBase } from '@omnia/fx/ux';
 import { $outputname$Settings } from './I$outputname$Settings';
 import { $outputname$Styles } from './$outputname$.css';
 
 @Component
-export default class $outputname$ extends Vue implements IWebComponentInstance {
+export default class $outputname$ extends VueComponentBase implements IWebComponentInstance {
 
     @Prop() settingsKey: string;
 
