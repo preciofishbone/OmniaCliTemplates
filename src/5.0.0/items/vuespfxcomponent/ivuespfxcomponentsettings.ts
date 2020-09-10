@@ -4,7 +4,7 @@ export interface $outputname$Settings {
     title: string;
 }
 
-/*@WebComponentInterface("$element$-settings")*/
+
 export interface I$outputname$Settings {
 }
 
@@ -14,7 +14,6 @@ declare global {
         interface ElementClass { }
         interface ElementAttributesProperty { }
         interface IntrinsicElements {
-            /*@WebComponent*/
             "$element$-settings": TsxAllowUnknowProperties<I$outputname$Settings>
         }
     }
