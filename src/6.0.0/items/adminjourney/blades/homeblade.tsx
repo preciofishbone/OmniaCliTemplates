@@ -1,11 +1,11 @@
 import { Inject } from '@omnia/fx';
 import Component from 'vue-class-component';
 import { Prop } from 'vue-property-decorator';
-import { JourneyInstance, OmniaTheming, VueComponentBase } from '@omnia/fx/ux';
+import { OmniaTheming, VueComponentBase } from '@omnia/fx/ux';
 import { $outputname$Destinations } from '../$outputname$Constants';
 import { Item } from '../models';
 import { $outputname$Store } from '../store/$outputname$Store';
-import { FontAwesomeIcon, ButtonPreset } from '@omnia/fx-models';
+import { JourneyInstance, FontAwesomeIcon, ButtonPreset } from '@omnia/fx-models';
 
 export interface HomeBladeProps {
     journey: () => JourneyInstance;

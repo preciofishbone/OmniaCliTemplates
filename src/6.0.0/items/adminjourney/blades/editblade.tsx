@@ -1,9 +1,9 @@
 import { Console, Inject } from '@omnia/fx';
 import Component from 'vue-class-component';
 import { Prop, Emit } from 'vue-property-decorator';
-import { JourneyInstance, Blade, BladeSizes, OmniaTheming, VueComponentBase } from '@omnia/fx/ux';
+import { OmniaTheming, VueComponentBase } from '@omnia/fx/ux';
 import { $outputname$Store } from '../store/$outputname$Store';
-import { ButtonPreset, ButtonModes } from '@omnia/fx-models';
+import { JourneyInstance, ButtonPreset, ButtonModes } from '@omnia/fx-models';
 
 export interface EditBladeProps {
     journey: () => JourneyInstance;
