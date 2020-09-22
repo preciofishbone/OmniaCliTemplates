@@ -1,4 +1,10 @@
 {
+  "envVersion": {
+    "omnia": "2.0.0",
+    "cli": "2.0.0",
+    "netCoreSdk": "3.0.100",
+    "baseImage": "3.0"
+  },
   "projects": [
     {
       "name": "extension",

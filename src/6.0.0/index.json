@@ -1,4 +1,10 @@
 {
+  "envVersion": {
+    "omnia": "3.0.0",
+    "cli": "2.0.0",
+    "netCoreSdk": "3.0.100",
+    "baseImage": "3.0"
+  },
   "projects": [
     {
       "name": "extension",
@@ -125,7 +131,10 @@
       "name": "vuewebcomponent",
       "description": "Vue based web component",
       "tokens": [
-        { "name":"element", "lowercase": true }
+        {
+          "name": "element",
+          "lowercase": true
+        }
       ],
       "requiresName": true,
       "sources": [
@@ -156,7 +165,10 @@
       "name": "vuespfxcomponent",
       "description": "Vue spfx component",
       "tokens": [
-        { "name":"element", "lowercase": true }
+        {
+          "name": "element",
+          "lowercase": true
+        }
       ],
       "requiresName": true,
       "sources": [
@@ -216,7 +228,10 @@
       "name": "adminjourney",
       "description": "Web component for journey experience",
       "tokens": [
-        { "name":"element", "lowercase": true }
+        {
+          "name": "element",
+          "lowercase": true
+        }
       ],
       "requiresName": true,
       "sources": [
@@ -275,7 +290,10 @@
       "name": "pagerollupview",
       "description": "Page Rollup View",
       "tokens": [
-        { "name":"element", "lowercase": true }
+        {
+          "name": "element",
+          "lowercase": true
+        }
       ],
       "requiresName": true,
       "sources": [
@@ -314,7 +332,10 @@
       "name": "omniablock",
       "description": "Omnia Block",
       "tokens": [
-        { "name":"element", "lowercase": true }
+        {
+          "name": "element",
+          "lowercase": true
+        }
       ],
       "requiresName": true,
       "sources": [
@@ -521,7 +542,11 @@
   "dependencies": [
     {
       "name": "omniafx",
-      "tags": [ "latest", "dev", "preview" ],
+      "tags": [
+        "latest",
+        "dev",
+        "preview"
+      ],
       "nuget": [
         {
           "name": "Omnia.Fx"
@@ -586,7 +611,11 @@
     },
     {
       "name": "wcmfx",
-      "tags": [ "latest", "dev", "preview" ],
+      "tags": [
+        "latest",
+        "dev",
+        "preview"
+      ],
       "nuget": [
         {
           "name": "Omnia.WebContentManagement.Fx"
@@ -603,7 +632,11 @@
     },
     {
       "name": "workplacefx",
-      "tags": [ "latest", "dev", "preview" ],
+      "tags": [
+        "latest",
+        "dev",
+        "preview"
+      ],
       "nuget": [],
       "npm": [
         {
@@ -613,7 +646,11 @@
     },
     {
       "name": "adminfx",
-      "tags": [ "latest", "dev", "preview" ],
+      "tags": [
+        "latest",
+        "dev",
+        "preview"
+      ],
       "nuget": [],
       "npm": [
         {
@@ -621,9 +658,13 @@
         }
       ]
     },
-	{
+    {
       "name": "dmfx",
-      "tags": [ "latest", "dev", "preview" ],
+      "tags": [
+        "latest",
+        "dev",
+        "preview"
+      ],
       "nuget": [],
       "npm": [
         {
@@ -631,9 +672,13 @@
         }
       ]
     },
-	{
+    {
       "name": "pmfx",
-      "tags": [ "latest", "dev", "preview" ],
+      "tags": [
+        "latest",
+        "dev",
+        "preview"
+      ],
       "nuget": [],
       "npm": [
         {
@@ -643,7 +688,11 @@
     },
     {
       "name": "tcfx",
-      "tags": [ "latest", "dev", "preview" ],
+      "tags": [
+        "latest",
+        "dev",
+        "preview"
+      ],
       "nuget": [
         {
           "name": "Omnia.TeamCollaboration.Fx"
