@@ -3,7 +3,7 @@
     "omnia": "5.0.0",
     "cli": "2.0.0",
     "netCoreSdk": "3.1.100",
-    "baseImage": "3.0"
+    "baseImage": "5.0"
   },
   "projects": [
     {
