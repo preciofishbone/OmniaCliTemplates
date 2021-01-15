@@ -25,11 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="3.3.1">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="Omnia.Fx.NetCore.WebApp" Version="6.0.192-dev" />
+    <PackageReference Include="Omnia.Fx.NetCore.WebApp" Version="6.0.101-preview" />
   </ItemGroup>
 
   <!--***************************************************************************************-->

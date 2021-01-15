@@ -43,8 +43,8 @@
               "outputName": "appsettings.local.json"
             },
             {
-              "sourceName": "gulpfile.js",
-              "outputName": "gulpfile.js"
+              "sourceName": "gulpfile.esm.js",
+              "outputName": "gulpfile.esm.js"
             },
             {
               "sourceName": "omnia.service.ts",
@@ -97,8 +97,8 @@
               "outputName": "appsettings.local.json"
             },
             {
-              "sourceName": "gulpfile.js",
-              "outputName": "gulpfile.js"
+              "sourceName": "gulpfile.esm.js",
+              "outputName": "gulpfile.esm.js"
             },
             {
               "sourceName": "omnia.service.ts",
