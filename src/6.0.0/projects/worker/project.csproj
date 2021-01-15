@@ -28,11 +28,11 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <DependentUpon>appsettings.json</DependentUpon>
     </Content>
-    <None Include="gulpfile.js" />
+    <None Include="gulpfile.esm.js" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Omnia.Fx.NetCore.Worker" Version="6.0.101-preview" />
+    <PackageReference Include="Omnia.Fx.NetCore.Worker" Version="6.0.103-preview" />
   </ItemGroup>
 
   <!--***************************************************************************************-->
