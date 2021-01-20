@@ -637,7 +637,11 @@
         "dev",
         "preview"
       ],
-      "nuget": [],
+      "nuget": [
+        {
+          "name": "Omnia.Workplace.Fx"
+        }
+      ],
       "npm": [
         {
           "name": "@omnia/workplace"
@@ -663,35 +667,7 @@
       ]
     },
     {
-      "name": "dmfx",
-      "tags": [
-        "latest",
-        "dev",
-        "preview"
-      ],
-      "nuget": [],
-      "npm": [
-        {
-          "name": "@omnia/dm"
-        }
-      ]
-    },
-    {
-      "name": "pmfx",
-      "tags": [
-        "latest",
-        "dev",
-        "preview"
-      ],
-      "nuget": [],
-      "npm": [
-        {
-          "name": "@omnia/pm"
-        }
-      ]
-    },
-    {
-      "name": "tcfx",
+      "name": "msfx",
       "tags": [
         "latest",
         "dev",
@@ -699,13 +675,14 @@
       ],
       "nuget": [
         {
-          "name": "Omnia.TeamCollaboration.Fx"
-        },
-        {
-          "name": "Omnia.TeamCollaboration.Models"
+          "name": "Omnia.ManagementSystem.Models"
         }
       ],
-      "npm": []
+      "npm": [
+        {
+          "name": "@omnia/management-system"
+        }
+      ]
     }
   ]
 }
