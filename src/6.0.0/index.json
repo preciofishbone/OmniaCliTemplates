@@ -651,7 +651,11 @@
         "dev",
         "preview"
       ],
-      "nuget": [],
+      "nuget": [
+        {
+          "name": "Omnia.Workplace.Fx"
+        }
+      ],
       "npm": [
         {
           "name": "@omnia/tenantadmin"
