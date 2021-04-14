@@ -20,7 +20,7 @@
     {
       "name": "web",
       "description": "Omnia web project",
-      "baseImage": "preciofishbone/omnia:5.0-webapp",
+      "baseImage": "preciofishbone/omnia:6.0-webapp",
       "requiresName": true,
       "sources": [
         {
@@ -74,7 +74,7 @@
     {
       "name": "worker",
       "description": "Omnia worker project",
-      "baseImage": "preciofishbone/omnia:5.0-worker",
+      "baseImage": "preciofishbone/omnia:6.0-worker",
       "requiresName": true,
       "sources": [
         {
