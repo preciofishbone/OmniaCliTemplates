@@ -9,22 +9,13 @@ export interface $outputname$BlockSettings{
     title: string;
 }
 
-export const BlockConfigurationFactory = {
-    defaultSettings(): $outputname$BlockSettings {
-        return {
-            title: "my block title"
-        }
-    }
-}
-
-
 @Component
 export default class $outputname$Settings extends VueComponentBase implements IWebComponentInstance {
     
     private $outputname$SettingsClasses = StyleFlow.use($outputname$SettingsStyles);
     
     @BlockSettingsWriter<$outputname$BlockSettings>({
-        defaultValue: BlockConfigurationFactory.defaultSettings()
+        defaultValue: { title: 'my block title'}
     })
     protected settings: IBlockSettingsWriter<$outputname$BlockSettings>;
 

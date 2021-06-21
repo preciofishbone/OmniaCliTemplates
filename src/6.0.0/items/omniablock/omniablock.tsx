@@ -2,7 +2,7 @@ import { Component } from 'vue-property-decorator';
 import { vueCustomElement, IWebComponentInstance, WebComponentBootstrapper } from "@omnia/fx";
 import { StyleFlow, VueComponentBase, BlockSettingsReader } from '@omnia/fx/ux';
 import { $outputname$Styles } from './$outputname$.css';
-import { BlockConfigurationFactory, $outputname$BlockSettings } from './$outputname$Settings';
+import { $outputname$BlockSettings } from './$outputname$Settings';
 
 @Component
 export default class $outputname$ extends VueComponentBase implements IWebComponentInstance {
@@ -11,7 +11,7 @@ export default class $outputname$ extends VueComponentBase implements IWebCompon
     private $outputname$Classes = StyleFlow.use($outputname$Styles);
 
     @BlockSettingsReader<$outputname$BlockSettings>({
-        defaultValue: BlockConfigurationFactory.defaultSettings(),
+        defaultValue: { title: 'my block title'},
         editElement: "$element$-settings"
     })
     protected settings: $outputname$BlockSettings;
