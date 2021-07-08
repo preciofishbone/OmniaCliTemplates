@@ -367,6 +367,44 @@
       ]
     },
     {
+      "name": "mediaprovider",
+      "description": "Media Provider",
+      "tokens": [
+        {
+          "name": "element",
+          "lowercase": true
+        }
+      ],
+      "requiresName": true,
+      "sources": [
+        {
+          "folder": "items/mediaprovider",
+          "files": [
+            {
+              "sourceName": "MediaProvider.tsx",
+              "outputName": "$outputname$.tsx"
+            },
+            {
+              "sourceName": "MediaProvider.manifest.ts",
+              "outputName": "$outputname$.manifest.ts"
+            },
+            {
+              "sourceName": "MediaProvider.css.ts",
+              "outputName": "$outputname$Styles.css.ts"
+            },
+            {
+              "sourceName": "./Registrations/MediaRegistration.ts",
+              "outputName": "./Registrations/$outputname$Registration.ts"
+            },
+            {
+              "sourceName": "./Registrations/RegistrationLoader.ts",
+              "outputName": "./Registrations/RegistrationLoader.ts"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "vuecomponent",
       "description": "Vue based component",
       "tokens": [],
@@ -417,16 +455,16 @@
       ]
     },
     {
-      "name": "unittest",
-      "description": "Unit test for client testing",
+      "name": "service",
+      "description": "Client service wiht http client",
       "requiresName": true,
       "sources": [
         {
-          "folder": "items/unittest",
+          "folder": "items/service",
           "files": [
             {
-              "sourceName": "unit.test.ts",
-              "outputName": "$outputname$.test.ts"
+              "sourceName": "service.ts",
+              "outputName": "$outputname$.ts"
             }
           ]
         }
