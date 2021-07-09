@@ -17,6 +17,6 @@ Composer.registerManifest(new Guid("$guid1$"), "$outputname$")
 /*Registration of the provider to mediapicker*/
 Composer.registerManifest(new Guid("$guid2$"), "$outputname$.registration")
 .registerResources({
-    resourcePaths: ["./Registrations/RegistrationLoader.js"]
+    resourcePaths: ["./registrations/RegistrationLoader.js"]
 })
 .extendApi(api => api.fx.ux.mediaPicker.registration);

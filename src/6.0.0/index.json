@@ -393,12 +393,54 @@
               "outputName": "$outputname$Styles.css.ts"
             },
             {
-              "sourceName": "./Registrations/MediaRegistration.ts",
-              "outputName": "./Registrations/$outputname$Registration.ts"
+              "sourceName": "./registrations/MediaRegistration.ts",
+              "outputName": "./registrations/$outputname$Registration.ts"
             },
             {
-              "sourceName": "./Registrations/RegistrationLoader.ts",
-              "outputName": "./Registrations/RegistrationLoader.ts"
+              "sourceName": "./registrations/RegistrationLoader.ts",
+              "outputName": "./registrations/RegistrationLoader.ts"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "action",
+      "description": "Action handler",
+      "tokens": [
+        {
+          "name": "element",
+          "lowercase": true
+        }
+      ],
+      "requiresName": true,
+      "sources": [
+        {
+          "folder": "items/action",
+          "files": [
+            {
+              "sourceName": "actionhandler.manifest.ts",
+              "outputName": "$outputname$.manifest.ts"
+            },
+            {
+              "sourceName": "actionhandlerClickHandler.ts",
+              "outputName": "$outputname$ClickHandler.ts"
+            },
+            {
+              "sourceName": "actionhandlerSettings.tsx",
+              "outputName": "$outputname$Settings.tsx"
+            },
+            {
+              "sourceName": "actionhandlerSettingsStyles.css.ts",
+              "outputName": "$outputname$SettingsStyles.css.ts"
+            },
+            {
+              "sourceName": "./model/actionhandlerSettings.ts",
+              "outputName": "./model/$outputname$Settings.ts"
+            },
+            {
+              "sourceName": "actionhandlerTypeRegistration.ts",
+              "outputName": "$outputname$TypeRegistration.ts"
             }
           ]
         }
