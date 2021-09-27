@@ -1,9 +1,9 @@
 import { Console, Inject } from '@omnia/fx';
 import Component from 'vue-class-component';
 import { Prop, Emit } from 'vue-property-decorator';
-import { OmniaTheming, VueComponentBase } from '@omnia/fx/ux';
+import { OmniaTheming, VueComponentBase, ButtonPresets } from '@omnia/fx/ux';
 import { $outputname$Store } from '../store/$outputname$Store';
-import { JourneyInstance, ButtonPreset, ButtonModes } from '@omnia/fx-models';
+import { JourneyInstance, ButtonModes } from '@omnia/fx-models';
 
 export interface EditBladeProps {
     journey: () => JourneyInstance;
@@ -51,7 +51,7 @@ EditBladeScopedSlots
                     <omfx-button
                         dark={this.omniaTheming.promoted.header.dark}
                         onClick={() => { this.closeBlade() }}
-                        preset={ButtonPreset.CloseIconButton}>
+                        preset={ButtonPresets.icons.close}>
                     </omfx-button>
                 </v-app-bar>
                 <v-divider></v-divider>

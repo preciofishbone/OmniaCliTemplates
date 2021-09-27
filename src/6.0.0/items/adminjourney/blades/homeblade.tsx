@@ -1,11 +1,11 @@
 import { Inject } from '@omnia/fx';
 import Component from 'vue-class-component';
 import { Prop } from 'vue-property-decorator';
-import { OmniaTheming, VueComponentBase } from '@omnia/fx/ux';
+import { OmniaTheming, VueComponentBase, ButtonPresets } from '@omnia/fx/ux';
 import { $outputname$Destinations } from '../$outputname$Constants';
 import { Item } from '../models';
 import { $outputname$Store } from '../store/$outputname$Store';
-import { JourneyInstance, FontAwesomeIcon, ButtonPreset } from '@omnia/fx-models';
+import { JourneyInstance, FontAwesomeIcon } from '@omnia/fx-models';
 
 export interface HomeBladeProps {
     journey: () => JourneyInstance;
@@ -64,10 +64,7 @@ HomeBladeScopedSlots
                     <omfx-button
                         dark={this.omniaTheming.promoted.header.dark}
                         onClick={() => { this.openEditBlade() }}
-                        icon={{
-                            iconType: new FontAwesomeIcon('add')
-                        }}
-                        preset={ButtonPreset.ImageIconButton} ></omfx-button>
+                        preset={ButtonPresets.icons.add} ></omfx-button>
                 </v-app-bar>
                 <v-divider></v-divider>
 
@@ -90,7 +87,7 @@ HomeBladeScopedSlots
                                             icon={{
                                                 iconType: new FontAwesomeIcon('fas fa-pencil-alt')
                                             }}
-                                            preset={ButtonPreset.ImageIconButton} ></omfx-button>
+                                            preset={ButtonPresets.base.smallIcon}></omfx-button>
                                     </td>
                                 </tr>
                             )

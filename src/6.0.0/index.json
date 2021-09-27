@@ -268,7 +268,7 @@
             },
             {
               "sourceName": "models/item.ts",
-              "outputName": "models/item.ts"
+              "outputName": "models/Item.ts"
             },
             {
               "sourceName": "registration/adminregistration.manifest.ts",
