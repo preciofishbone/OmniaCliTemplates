@@ -423,8 +423,8 @@
               "outputName": "$outputname$.manifest.ts"
             },
             {
-              "sourceName": "actionhandlerClickHandler.ts",
-              "outputName": "$outputname$ClickHandler.ts"
+              "sourceName": "actionhandlerHandler.ts",
+              "outputName": "$outputname$Handler.ts"
             },
             {
               "sourceName": "actionhandlerSettings.tsx",
@@ -437,10 +437,6 @@
             {
               "sourceName": "./model/actionhandlerSettings.ts",
               "outputName": "./model/$outputname$Settings.ts"
-            },
-            {
-              "sourceName": "actionhandlerTypeRegistration.ts",
-              "outputName": "$outputname$TypeRegistration.ts"
             }
           ]
         }

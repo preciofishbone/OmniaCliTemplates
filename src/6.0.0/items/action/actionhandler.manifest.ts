@@ -1,20 +1,22 @@
+import { ActionHandlerRegistrationId, Guid } from '@omnia/fx/models';
 import { Composer } from '@omnia/tooling/composers';
-import { Guid } from '@omnia/fx/models';
 
 Composer.registerManifest(new Guid("$guid1$"), "$outputname$.settings")
     .registerWebComponent({
         elementName: "$element$-settings",
-        entryPoint: "./$outputname$.jsx"
+        entryPoint: "./$outputname$Settings.jsx"
     });
 
-Composer
-    .registerManifest(new Guid("$guid2$"), "$outputname$.registration")
-    .registerResources({ resourcePaths: ["./$outputname$Registration.js"] })
-    .extendApi(api => api.fx.ux.actionHandler.registration)
 
-Composer.registerManifest(new Guid("$guid3$"), "$outputname$.handler")
+Composer.registerManifest(new Guid("$guid2$"), "$outputname$.handler")
     .registerResources({
-        resourcePaths: ["./$outputname$ClickHandler.js"]
+        resourcePaths: ["./$outputname$Handler.js"]
     })
+    .extendApi(api => api.fx.ux.actions.handlers.configure(ActionHandlerRegistrationId.create(new Guid("$guid3$"))))
+    .extendApi(api => api.fx.ux.actions.registrations);
+
+
+
+
 
 
