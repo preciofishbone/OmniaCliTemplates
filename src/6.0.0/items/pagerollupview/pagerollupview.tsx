@@ -1,11 +1,11 @@
+import { Inject, IWebComponentInstance, Localize, Utils, vueCustomElement, WebComponentBootstrapper } from '@omnia/fx';
+import { BuiltInEnterprisePropertyInternalNames, MediaPickerMedia, MediaPickerVideo, SpacingSettings } from '@omnia/fx-models';
+import { DialogModel, ImageSvgTransformer, OmniaTheming, StyleFlow, VueComponentBase } from '@omnia/fx/ux';
+import { PageQueryService, PageRollupStore } from '@omnia/wcm';
+import { IPageRollupViewInterface, LinkData, PageDetailsQueryResult } from '@omnia/wcm/models';
 import Component from 'vue-class-component';
-import { VueComponentBase, DialogModel, ITransformerConfigs, ImageTransformer, OmniaTheming, StyleFlow } from '@omnia/fx/ux';
-import { IWebComponentInstance, WebComponentBootstrapper, vueCustomElement, Inject, Utils, Localize } from '@omnia/fx';
-import { IPageRollupViewInterface, PageDetailsQueryResult, LinkData, PageImage } from '@omnia/wcm/models';
-import { $outputname$Settings } from './$outputname$Settings';
 import { Prop } from 'vue-property-decorator';
-import { SpacingSettings, MediaPickerVideoProviderResult, BuiltInEnterprisePropertyInternalNames } from '@omnia/fx-models';
-import { PageRollupStore, PageQueryService } from '@omnia/wcm';
+import { $outputname$Settings } from './$outputname$Settings';
 import { $outputname$Styles } from './$outputname$.css'
 
 @Component
@@ -26,25 +26,21 @@ export class $outputname$Component extends VueComponentBase implements IWebCompo
 
     @Localize("OWCM.PageRollup.Status") private loc;
 
-    private defaultPageImageHtml = `<img src=${this.pageQueryServcie.getDefaultPageImageSrc()} />`;
+    private defaultPageImageHtml = "";
     private $outputname$Classes = StyleFlow.use($outputname$Styles);
 
     private contentDialogModal: DialogModel = {
         visible: false
     }
 
-    private selectedPageId: number = 0;
+    private selectedPageId = 0;
 
     mounted() {
         WebComponentBootstrapper.registerElementInstance(this, this.$el);
     }
 
-    beforeDestroy() {
-
-    }
-
     created() {
-
+        this.defaultPageImageHtml = `<img src=${this.pageQueryServcie.getDefaultPageImageSrc()} />`;
     }
 
     private onPageSelected(page: PageDetailsQueryResult, event: MouseEvent) {
@@ -87,11 +83,11 @@ export class $outputname$Component extends VueComponentBase implements IWebCompo
     }
 
     private renderImage(h, page: PageDetailsQueryResult) {
-        let pageImage: PageImage = page.properties[this.viewSettings.imageProp];
+        let pageImage: MediaPickerMedia = page.properties[this.viewSettings.imageProp];
         let imageHTML = this.viewSettings.imageProp ? this.defaultPageImageHtml : '';
         if (pageImage) {
             try {
-                let thumbnailUrl = (pageImage as MediaPickerVideoProviderResult).thumbnailUrl;
+                let thumbnailUrl = (pageImage as MediaPickerVideo).thumbnailUrl;
                 if (thumbnailUrl) {
                     if (thumbnailUrl.match(/https:\/\/img\.youtube\.com\/vi\/(.)+\/hqdefault\.jpg/gm)) {
                         thumbnailUrl = thumbnailUrl.replace("/hqdefault.jpg", "/maxresdefault.jpg");
@@ -101,9 +97,9 @@ export class $outputname$Component extends VueComponentBase implements IWebCompo
                 else {
                     let desiredRatio = { xRatio: 1, yRatio: 1 };
 
-                    let ratio = pageImage.ratios ? pageImage.ratios.filter(r => r.xRatio == desiredRatio.xRatio && r.yRatio == desiredRatio.yRatio)[0] : null;
-                    let transformerConfig: ITransformerConfigs = ratio ? { cropArea: ratio.ratioCropArea, cropRatio: { x: ratio.xRatio, y: ratio.yRatio }, elementId: Utils.generateGuid() } : { elementId: Utils.generateGuid() };
-                    let svg = new ImageTransformer(pageImage.src, transformerConfig);
+                    let ratio = pageImage['ratios'] ? pageImage['ratios'].filter(r => r.xRatio == desiredRatio.xRatio && r.yRatio == desiredRatio.yRatio)[0] : null;
+                    let transformerConfig = ratio ? { cropArea: ratio.ratioCropArea, cropRatio: { x: ratio.xRatio, y: ratio.yRatio }, elementId: Utils.generateGuid() } : { elementId: Utils.generateGuid() };
+                    let svg = new ImageSvgTransformer(pageImage['src'], transformerConfig);
                     imageHTML = svg.getElementString();
                 }
             } catch (ex) {

@@ -1,12 +1,17 @@
-
 import { Guid } from '@omnia/fx/models';
-import { Topics} from '@omnia/wcm';
+import { extendApi } from "@omnia/fx";
 
-Topics.registerPageRollupView.publish({
-    id: new Guid("$guid3$"),
-    title: '$outputname$',
-    viewElement: '$element$-view',
-    settingsElement: '$element$-settings',
-    supportClassicPaging: true,
-    supportScrollPaging: true
-});
+
+extendApi(api => api.wcm.pageRollup.registration,
+    registerApi => {
+        registerApi.registerViews([
+            {
+                id: new Guid("$guid3$"),
+                title: '$outputname$',
+                settingsComponentManifestId: new Guid("$guid1$"),
+                componentManifestId: new Guid("$guid2$"),
+                supportClassicPaging: true,
+                supportScrollPaging: true
+            }
+        ])
+    })
