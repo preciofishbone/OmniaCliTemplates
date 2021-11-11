@@ -5,7 +5,7 @@ import { FontAwesomeIcon, AdminNavigationBuiltInCategory } from '@omnia/fx/model
 extendApi(api => api.fx.ux.admin.registration.navigationNode, api => {
     api.registerNavigationNode([
         {
-            title: '$outputname$',
+            title: '$outputname$', // You can use localization, i.e., $Localize:Namespace.Something.Title; 
             category: AdminNavigationBuiltInCategory.Tenant,
             elementToRender: "$element$",
             icon: new FontAwesomeIcon("far fa-smile-beam"),

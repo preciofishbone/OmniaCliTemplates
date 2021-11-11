@@ -7,7 +7,7 @@ extendApi(api => api.wcm.pageRollup.registration,
         registerApi.registerViews([
             {
                 id: new Guid("$guid3$"),
-                title: '$outputname$',
+                title: '$outputname$', // You can use localization, i.e., $Localize:Namespace.Something.Title; 
                 settingsComponentManifestId: new Guid("$guid1$"),
                 componentManifestId: new Guid("$guid2$"),
                 supportClassicPaging: true,

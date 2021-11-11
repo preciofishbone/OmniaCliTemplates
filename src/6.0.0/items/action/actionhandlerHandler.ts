@@ -49,7 +49,7 @@ extendApi(api => api.fx.ux.actions.registrations,
         registerApi.registerActionHandler([
             {
                 id: $outputname$ActionHandler.typeId,
-                title: "$outputname$",
+                title: "$outputname$", // You can use localization, i.e., $Localize:Namespace.Something.Title; 
                 settingsElementName: "$element$-settings"
             }
         ]);
