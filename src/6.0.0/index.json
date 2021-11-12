@@ -405,6 +405,31 @@
       ]
     },
     {
+      "name": "mediastorage",
+      "description": "Media Storage",
+      "tokens": [],
+      "requiresName": true,
+      "sources": [
+        {
+          "folder": "items/mediastorage",
+          "files": [
+            {
+              "sourceName": "mediastorageprovider.cs",
+              "outputName": "$outputname$.cs"
+            },
+            {
+              "sourceName": "mediastorageprovidercontext.cs",
+              "outputName": "$outputname$Context.cs"
+            },
+            {
+              "sourceName": "mediastorageprovidercontext.ts",
+              "outputName": "$outputname$Context.ts"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "action",
       "description": "Action handler",
       "tokens": [
