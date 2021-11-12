@@ -5,6 +5,5 @@ Composer
     .registerManifest(new Guid("$guid1$"), "$outputname$")
     .registerWebComponent({
         elementName: "$element$",
-        entryPoint: "./$outputname$.jsx",
-        typings: ["./I$outputname$.ts"]
+        entryPoint: "./$outputname$.jsx"
     });

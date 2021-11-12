@@ -1,4 +1,3 @@
-import Vue from 'vue';
 import { Component, Watch, Prop } from 'vue-property-decorator';
 import { vueCustomElement, IWebComponentInstance, WebComponentBootstrapper, Localize, Inject } from "@omnia/fx";
 import { StyleFlow, VueComponentBase } from '@omnia/fx/ux';
