@@ -12,8 +12,13 @@
       "requiresName": true,
       "sources": [
         {
-          "folder": "",
-          "files": []
+          "folder": "projects",
+          "files": [
+            {
+              "sourceName": "global.json",
+              "outputName": "global.json"
+            }
+          ]
         }
       ]
     },
