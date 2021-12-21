@@ -1,0 +1,11 @@
+{
+    "files.exclude": {
+        "**/*.d.ts": true,
+        "**/*.map": true,
+        "**/client/**/*.js": true,
+        "**/client/**/*.jsx": true,
+        "omnia.service.js": true,
+        "**/node_modules": true,
+        "**/wwwroot": true        
+      }  
+}
