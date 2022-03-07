@@ -24,6 +24,8 @@
     "forceConsistentCasingInFileNames": true,
     "jsx": "preserve",
     "jsxFactory": "VueTsxSupport",
+    "baseUrl": "client",
+    "paths": {},
     "typeRoots": [
       "./node_modules/@omnia/types",
       "./node_modules/@types"

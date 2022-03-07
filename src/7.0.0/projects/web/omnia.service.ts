@@ -10,12 +10,13 @@ Composer
         moduleOptions: {
             enableTransformResourcePath: true
         },
-        bundleOptions: {
-            commonsChunk: {
-                name: new Guid("$guid2$"),
-                minChunks: 2
-            }
-        }
+        //FIXME: when we fixed HMR we will add this back
+        // bundleOptions: {
+        //     commonsChunk: {
+        //         name: new Guid("$guid2$"),
+        //         minChunks: 2
+        //     }
+        // }
     });
 
 DevelopmentEnvironment
