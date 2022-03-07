@@ -48,6 +48,10 @@
               "outputName": "appsettings.local.json"
             },
             {
+              "sourceName": "gulpfile.esm.js",
+              "outputName": "gulpfile.esm.js"
+            },
+            {
               "sourceName": "omnia.service.ts",
               "outputName": "omnia.service.ts"
             },
@@ -98,6 +102,10 @@
               "outputName": "appsettings.local.json"
             },
             {
+              "sourceName": "gulpfile.esm.js",
+              "outputName": "gulpfile.esm.js"
+            },
+            {
               "sourceName": "omnia.service.ts",
               "outputName": "omnia.service.ts"
             },
@@ -141,6 +149,10 @@
             {
               "sourceName": "vuewebcomponent.tsx",
               "outputName": "$outputname$.tsx"
+            },
+            {
+              "sourceName": "ivuewebcomponent.ts",
+              "outputName": "I$outputname$.ts"
             },
             {
               "sourceName": "vuewebcomponent.manifest.ts",
