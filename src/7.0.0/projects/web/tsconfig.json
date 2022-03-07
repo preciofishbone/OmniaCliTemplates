@@ -1,10 +1,17 @@
 ﻿{
   "compilerOptions": {
-    "target": "es5",
+    "target": "es2021",
     "module": "ES6",
     "moduleResolution": "node",
-    "lib": [ "es2015", "dom" ],
-    "declaration": true,
+    "lib": [
+      "es2021",
+      "dom",
+      "webworker"
+    ],
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "declaration": false,
     "sourceMap": false,
     "inlineSourceMap": false,
     "removeComments": false,
@@ -14,10 +21,13 @@
     "experimentalDecorators": true,
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
     "jsx": "preserve",
+    "jsxFactory": "VueTsxSupport",
     "typeRoots": [
       "./node_modules/@omnia/types",
-      "./node_modules/@types"]
+      "./node_modules/@types"
+    ]
   },
   "compileOnSave": true,
   "exclude": [

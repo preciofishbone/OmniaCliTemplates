@@ -6,7 +6,7 @@ Composer
     .registerManifest(new Guid("$guid1$"), "$outputname$")
     .registerWebComponent({
         elementName: "$element$",
-        entryPoint: "./$outputname$.jsx"
+        entryPoint: "./$outputname$.tsx"
     })
     .withDefinition({
         title: "$outputname$", // You can use localization, i.e., $Localize:Namespace.Something.Title; 
@@ -15,14 +15,14 @@ Composer
     })
     .registerOmniaBlock({
         category: "$outputname$", // You can use localization, i.e., $Localize:Namespace.Something.Category;
-        
+
         //which layout provider can use this block. 
         //layoutDependencyProviders: ["wcm"] //i.e. only WCM layout can use this block 
     });
 
 Composer
-.registerManifest(new Guid("$guid2$"), "$outputname$.settings")
-.registerWebComponent({
-    elementName: "$element$-settings",
-    entryPoint: "./$outputname$Settings.jsx"
-})
+    .registerManifest(new Guid("$guid2$"), "$outputname$.settings")
+    .registerWebComponent({
+        elementName: "$element$-settings",
+        entryPoint: "./$outputname$Settings.tsx"
+    })

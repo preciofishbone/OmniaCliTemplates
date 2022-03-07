@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
     <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
     <AssemblyName>$namespace$</AssemblyName>
@@ -42,7 +42,7 @@
     <ItemGroup>
       <AppRoot Include="approot\**" />
     </ItemGroup>
-    <Exec Command="npm run omnia-after-build" ContinueOnError="false"></Exec>
+    <Exec Command="npm run build" ContinueOnError="false"></Exec>
     <Copy SourceFiles="@(AppRoot)" DestinationFolder="$(OutDir)/approot/%(RecursiveDir)" />
   </Target>
   <Target Name="OmniaPublish" AfterTargets="ComputeFilesToPublish">

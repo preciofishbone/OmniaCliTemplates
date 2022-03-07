@@ -1,46 +1,21 @@
-﻿import Vue from 'vue';
-import { Component, Watch, Prop } from 'vue-property-decorator';
-import { vueCustomElement, IWebComponentInstance, WebComponentBootstrapper, Localize, Inject} from "@omnia/fx";
-import { VueComponentBase } from "@omnia/fx/ux";
-import { SettingsServiceConstructor, SettingsService } from "@omnia/fx/services";
-import { I$outputname$Settings, $outputname$Settings } from './I$outputname$Settings';
+﻿import { StyleFlow, useBlockSettingsWriter } from '@omnia/fx/ux';
+import { $outputname$SettingsStyles } from './$outputname$Settings.css';
+import { $outputname$Settings } from './I$outputname$Settings';
+import { IBlockSettingsWriter } from '@omnia/fx-models';
 
-@Component
-export default class $outputname$SettingsForm extends VueComponentBase implements IWebComponentInstance, I$outputname$Settings {
-    @Prop() settingsKey: string;
-
-    @Inject<SettingsServiceConstructor>(SettingsService)
-    private settingsService: SettingsService<$outputname$Settings>;
-
-    private settings: $outputname$Settings = { title: "" };
-
-    created() {
-        this.settingsService.getValue(this.settingsKey).then((result) => {
-            this.settings = result || this.settings;
+export default defineVueWebComponent({
+    setup(props) {
+        const settings = useBlockSettingsWriter<$outputname$Settings>({
+            defaultValue: { title: 'my block title' }
         });
-    }
 
-    mounted() {
-        WebComponentBootstrapper.registerElementInstance(this, this.$el);
-    }
-
-    updateSettings() {
-        this.settingsService.setValue(this.settingsKey, this.settings);
-    }
-
-    render(h) {
-        return (
+        return () => (
             <v-text-field
                 single-line
                 box
                 label="Title"
-                v-model={this.settings.title}
-                onChange={() => this.updateSettings()}>
+                v-model={this.settings.title}>
             </v-text-field>
         )
     }
-}
-
-WebComponentBootstrapper.registerElement((manifest) => {
-    vueCustomElement(manifest.elementName, $outputname$SettingsForm);
 });

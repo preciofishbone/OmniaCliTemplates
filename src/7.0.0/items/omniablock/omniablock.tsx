@@ -1,34 +1,22 @@
-import { Component } from 'vue-property-decorator';
-import { vueCustomElement, IWebComponentInstance, WebComponentBootstrapper } from "@omnia/fx";
-import { StyleFlow, VueComponentBase, BlockSettingsReader } from '@omnia/fx/ux';
+import { StyleFlow, defineVueWebComponent, useBlockSettingsReader } from '@omnia/fx/ux';
 import { $outputname$Styles } from './$outputname$.css';
 import { $outputname$BlockSettings } from './$outputname$Settings';
 
-@Component
-export default class $outputname$ extends VueComponentBase implements IWebComponentInstance {
-    
 
-    private $outputname$Classes = StyleFlow.use($outputname$Styles);
+export default defineVueWebComponent({
+    setup(props) {
+        const settings = useBlockSettingsReader<$outputname$BlockSettings>({
+            defaultValue: { title: 'my block title' },
+            editElement: "$element$-settings"
+        });
 
-    @BlockSettingsReader<$outputname$BlockSettings>({
-        defaultValue: { title: 'my block title'},
-        editElement: "$element$-settings"
-    })
-    protected settings: $outputname$BlockSettings;
+        const $outputname$Classes = StyleFlow.use($outputname$Styles);
 
-    mounted() {
-        WebComponentBootstrapper.registerElementInstance(this, this.$el);
-    }
-
-    render(h) {
-        return (
+        return () => (
             <div class={this.$outputname$Classes.container}>
                 {this.settings.title}
             </div>
         )
     }
-}
-
-WebComponentBootstrapper.registerElement((manifest) => {
-    vueCustomElement(manifest.elementName, $outputname$);
 });
+

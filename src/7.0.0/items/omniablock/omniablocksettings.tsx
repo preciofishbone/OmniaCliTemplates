@@ -1,31 +1,21 @@
-import { Component } from 'vue-property-decorator';
-import { vueCustomElement, IWebComponentInstance, WebComponentBootstrapper } from "@omnia/fx";
-import { StyleFlow, VueComponentBase, BlockSettingsWriter } from '@omnia/fx/ux';
+import { StyleFlow, useBlockSettingsWriter } from '@omnia/fx/ux';
 import { $outputname$SettingsStyles } from './$outputname$Settings.css';
 import { IBlockSettingsWriter } from '@omnia/fx-models';
 
 
-export interface $outputname$BlockSettings{
+export interface $outputname$BlockSettings {
     title: string;
 }
 
-@Component
-export default class $outputname$Settings extends VueComponentBase implements IWebComponentInstance {
-    
-    private $outputname$SettingsClasses = StyleFlow.use($outputname$SettingsStyles);
-    
-    @BlockSettingsWriter<$outputname$BlockSettings>({
-        defaultValue: { title: 'my block title'}
-    })
-    protected settings: IBlockSettingsWriter<$outputname$BlockSettings>;
+export default defineVueWebComponent({
+    setup(props) {
+        const settings = useBlockSettingsWriter<$outputname$BlockSettings>({
+            defaultValue: { title: 'my block title' }
+        });
 
-    mounted() {
-        WebComponentBootstrapper
-            .registerElementInstance(this, this.$el);
-    }
+        const $outputname$SettingsClasses = StyleFlow.use($outputname$SettingsStyles);
 
-    render(h) {
-        return (
+        return () => (
             <v-card flat>
                 <v-card-text>
                     <v-text-field
@@ -36,8 +26,5 @@ export default class $outputname$Settings extends VueComponentBase implements IW
             </v-card>
         )
     }
-}
-
-WebComponentBootstrapper.registerElement((manifest) => {
-    vueCustomElement(manifest.elementName, $outputname$Settings);
 });
+

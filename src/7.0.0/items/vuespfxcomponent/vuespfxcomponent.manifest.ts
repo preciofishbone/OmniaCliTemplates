@@ -5,7 +5,7 @@ Composer
     .registerManifest(new Guid("$guid1$"), "$outputname$")
     .registerWebComponent({
         elementName: "$element$",
-        entryPoint: "./$outputname$.jsx"
+        entryPoint: "./$outputname$.tsx"
     })
     .withDefinition({
         title: "$outputname$",
@@ -18,6 +18,5 @@ Composer
     .registerManifest(new Guid("$guid2$"), "$outputname$.settings")
     .registerWebComponent({
         elementName: "$element$-settings",
-        entryPoint: "./$outputname$Settings.jsx",
-        typings: ["./I$outputname$Settings.ts"]
+        entryPoint: "./$outputname$Settings.tsx"
     });

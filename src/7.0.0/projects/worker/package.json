@@ -2,16 +2,13 @@
   "name": "$namespace$",
   "version": "0.1.0",
   "scripts": {
-    "omnia-before-build": "gulp omnia-before-build",
-    "omnia-after-build": "tsc -v && tsc && gulp omnia-after-build"
+    "build": "tsc -v && tsc && omniafx build"
   },
   "dependencies": {
-    "@omnia/tooling-composers": "6.6.0"
+    "@omnia/tooling-composers": "7.0.61-dev"
   },
-  "devDependencies": {
-    "gulp": "4.0.2"
-  },
+  "devDependencies": {},
   "engines": {
-    "node": ">=10.0.0"
+    "node": ">=14.16.0"
   }
 }
