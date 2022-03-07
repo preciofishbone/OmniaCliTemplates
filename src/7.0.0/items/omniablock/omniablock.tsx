@@ -13,8 +13,8 @@ export default defineVueWebComponent({
         const $outputname$Classes = StyleFlow.use($outputname$Styles);
 
         return () => (
-            <div class={this.$outputname$Classes.container}>
-                {this.settings.title}
+            <div class={$outputname$Classes.container}>
+                {settings.title}
             </div>
         )
     }

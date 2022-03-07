@@ -13,7 +13,8 @@ export default defineVueWebComponent({
             required: true
         },
         data: {
-            type: Object as PropType<$outputname$Data>
+            type: Object as PropType<$outputname$Data>,
+            default: { title: 'Hello from $outputname$!' }
         },
         styles: {
             type: Object as PropType<typeof $outputname$Styles>
@@ -23,9 +24,9 @@ export default defineVueWebComponent({
         const $outputname$Classes = StyleFlow.use($outputname$Styles, props.styles);
 
         return () => (
-            <div class={this.$outputname$Classes.container}>
-                <div>{this.data.title}</div>
-                {this.required ? <div>Im required</div> : null}
+            <div class={$outputname$Classes.container}>
+                <div>{props.data.title}</div>
+                {props.required ? <div>Im required</div> : null}
             </div>
         )
     }

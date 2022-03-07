@@ -1,4 +1,4 @@
-﻿import { StyleFlow, defineVueComponent } from '@omnia/fx/ux';
+﻿import { defineVueComponent } from '@omnia/fx/ux';
 
 export default defineVueComponent({
     setup(props) {
