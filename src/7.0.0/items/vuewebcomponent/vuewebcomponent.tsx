@@ -1,5 +1,5 @@
 import { PropType } from '@vue/composition-api';
-import { StyleFlow, defineVueWebComponent } from '@omnia/fx/ux';
+import { StyleFlow, defineVueWebComponent, definePropObjectType } from '@omnia/fx/ux';
 import { $outputname$Styles } from './$outputname$.css';
 
 interface $outputname$Data {
@@ -13,11 +13,11 @@ export default defineVueWebComponent({
             required: true
         },
         data: {
-            type: Object as PropType<$outputname$Data>,
+            type: definePropObjectType<$outputname$Data>(),
             default: { title: 'Hello from $outputname$!' }
         },
         styles: {
-            type: Object as PropType<typeof $outputname$Styles>
+            type: definePropObjectType<typeof $outputname$Styles>()
         }
     },
     setup(props) {

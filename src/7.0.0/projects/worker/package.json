@@ -5,7 +5,7 @@
     "build": "tsc -v && tsc && omniafx build"
   },
   "dependencies": {
-    "@omnia/tooling-composers": "7.0.71-dev"
+    "@omnia/tooling-composers": "7.0.74-dev"
   },
   "devDependencies": {},
   "engines": {
