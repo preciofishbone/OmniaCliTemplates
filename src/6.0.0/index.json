@@ -677,6 +677,9 @@
         },
         {
           "name": "Omnia.Fx.NetCore.SharePoint"
+        },
+        {
+          "name": "Omnia.Fx.NetCore.SharePoint.WebApp"
         }
       ],
       "npm": [
