@@ -1,4 +1,9 @@
 ﻿{
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  },
   "compilerOptions": {
     "target": "es2021",
     "module": "ES2020",
