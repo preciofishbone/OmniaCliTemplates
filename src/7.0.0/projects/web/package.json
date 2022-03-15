@@ -9,10 +9,10 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@omnia/fx-models": "7.0.79-dev",
-    "@omnia/fx-sp": "7.0.79-dev",
-    "@omnia/fx-spfx": "7.0.79-dev",
-    "@omnia/tooling-vue": "7.0.79-dev"
+    "@omnia/fx-models": "7.0.86-dev",
+    "@omnia/fx-sp": "7.0.86-dev",
+    "@omnia/fx-spfx": "7.0.86-dev",
+    "@omnia/tooling-vue": "7.0.86-dev"
   },
   "engines": {
     "node": ">=14.16.0"
