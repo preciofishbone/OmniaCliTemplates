@@ -13,6 +13,7 @@
       "dom",
       "webworker"
     ],
+    "strict": true,
     "esModuleInterop": true,
     "isolatedModules": true,
     "noEmit": true,
