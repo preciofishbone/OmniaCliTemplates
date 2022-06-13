@@ -1,4 +1,4 @@
-import { useBlockSettingsWriter, defineVueWebComponent } from '@omnia/fx/ux';
+import { useBlockSettingsWriter, defineVueWebComponent } from "@omnia/fx/ux";
 
 export interface $outputname$BlockSettings {
     title: string;

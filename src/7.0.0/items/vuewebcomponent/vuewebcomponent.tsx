@@ -1,6 +1,6 @@
-import { PropType } from '@vue/composition-api';
-import { StyleFlow, defineVueWebComponent, definePropObjectType } from '@omnia/fx/ux';
-import { $outputname$Styles } from './$outputname$.css';
+import { PropType } from "@vue/composition-api";
+import { StyleFlow, defineVueWebComponent, definePropObjectType } from "@omnia/fx/ux";
+import { $outputname$Styles } from "./$outputname$.css";
 
 interface $outputname$Data {
     title: string;
@@ -14,7 +14,7 @@ export default defineVueWebComponent({
         },
         data: {
             type: definePropObjectType<$outputname$Data>(),
-            default: { title: 'Hello from $outputname$!' }
+            default: { title: "Hello from $outputname$!" }
         },
         styles: {
             type: definePropObjectType<typeof $outputname$Styles>()
