@@ -1,71 +1,44 @@
-import Vue from 'vue';
-import { Component, Watch, Prop } from 'vue-property-decorator';
-import { vueCustomElement, IWebComponentInstance, WebComponentBootstrapper, Localize, Inject } from "@omnia/fx";
-import { VueComponentBase } from '@omnia/fx/ux';
+import { defineVueWebComponent } from "@omnia/fx/ux";
 import { Blade, BladeSizes, JourneyInstance } from '@omnia/fx-models';
 import { $outputname$Styles } from './$outputname$.css';
 import HomeBlade from './blades/HomeBlade';
 import EditBlade from './blades/EditBlade';
 import { $outputname$Destinations, $outputname$BladeIds } from './$outputname$Constants';
 
-@Component
-export default class $outputname$ extends VueComponentBase implements IWebComponentInstance {
+export default defineVueWebComponent({
+    props: {
+    },
+    setup(props) {
+        let journey: JourneyInstance;
+        const gotInstance = (instance: JourneyInstance) => {
+            journey = instance;
+            journey.travelTo($outputname$Destinations.home);
+        };
 
-    journey: JourneyInstance;
+        const getHomeBlade = () => {
+            return {
+                id: $outputname$BladeIds.home,
+                size: BladeSizes.medium,
+                content: () => <HomeBlade></HomeBlade>
+            } as Blade
+        };
 
-    mounted() {
+        const getEditBlade = () => {
+            return {
+                id: $outputname$BladeIds.edit,
+                size: BladeSizes.medium,
+                content: () => <EditBlade></EditBlade>
+            } as Blade
+        };
 
-        WebComponentBootstrapper
-            .registerElementInstance(this, this.$el);
-
-    }
-
-    getJourneyInstance() {
-        //Need to use method callback to get instance since it dosent exist when bootstrapped
-        return this.journey;
-    }
-
-    private gotInstance(instance: JourneyInstance) {
-
-        this.journey = instance;
-        this.journey.travelTo($outputname$Destinations.home);
-
-    }
-
-    getHomeBlade() {
-        let h = this.$createElement;
-        let blade: Blade = {
-            id: $outputname$BladeIds.home,
-            size: BladeSizes.medium,
-            content: <HomeBlade journey={this.getJourneyInstance}></HomeBlade>
-        }
-
-        return blade;
-    }
-
-    getEditBlade() {
-        let h = this.$createElement;
-        let blade: Blade = {
-            id: $outputname$BladeIds.edit,
-            size: BladeSizes.medium,
-            content: <EditBlade journey={this.getJourneyInstance}></EditBlade>
-        }
-
-        return blade;
-    }
-
-    render(h) {
-        return (
-            <omfx-journey onInstanceCreated={this.gotInstance} 
+        return () => (
+            <omfx-journey onInstanceCreated={gotInstance}
                 blades={[
-                    this.getHomeBlade(), 
-                    this.getEditBlade()
-                    ]}>
+                    getHomeBlade(),
+                    getEditBlade()
+                ]}>
             </omfx-journey>
         )
     }
-}
-
-WebComponentBootstrapper.registerElement((manifest) => {
-    vueCustomElement(manifest.elementName, $outputname$);
 });
+
