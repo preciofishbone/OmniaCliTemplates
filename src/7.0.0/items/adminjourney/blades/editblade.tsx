@@ -1,7 +1,7 @@
-import { ButtonPresets, defineVueComponent, OmniaTheming, useJourney } from '@omnia/fx/ux';
-import { ButtonModes } from '@omnia/fx-models';
+import { ButtonPresets, defineVueComponent, OmniaTheming, useJourney } from "@omnia/fx/ux";
+import { ButtonModes } from "@omnia/fx-models";
 import { useInject } from "@omnia/fx";
-import { $outputname$Store } from '../store/$outputname$Store';
+import { $outputname$Store } from "../store/$outputname$Store";
 
 export default defineVueComponent({
     setup(props) {
@@ -11,11 +11,11 @@ export default defineVueComponent({
 
         const addOrUpdate = () => {
             store.actions.addOrUpdate.dispatch();
-        }
+        };
 
         const closeBlade = () => {
             journey.travelBack();
-        }
+        };
 
         return () => (
             <div>
@@ -45,6 +45,6 @@ export default defineVueComponent({
                     ></omfx-button>
                 </v-card-text>
             </div>
-        )
+        );
     }
 });

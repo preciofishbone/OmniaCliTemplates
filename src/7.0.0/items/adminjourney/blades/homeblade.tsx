@@ -1,9 +1,9 @@
-import { ButtonPresets, defineVueComponent, OmniaTheming, useJourney } from '@omnia/fx/ux';
+import { ButtonPresets, defineVueComponent, OmniaTheming, useJourney } from "@omnia/fx/ux";
 import { useInject } from "@omnia/fx";
-import { $outputname$Destinations } from '../$outputname$Constants';
-import { Item } from '../models';
-import { $outputname$Store } from '../store/$outputname$Store';
-import { JourneyInstance, FontAwesomeIcon } from '@omnia/fx-models';
+import { $outputname$Destinations } from "../$outputname$Constants";
+import { Item } from "../models";
+import { $outputname$Store } from "../store/$outputname$Store";
+import { JourneyInstance, FontAwesomeIcon } from "@omnia/fx-models";
 
 export default defineVueComponent({
     setup(props) {
@@ -20,10 +20,10 @@ export default defineVueComponent({
             }
 
             journey.travelTo($outputname$Destinations.edit);
-        }
+        };
 
         const headers = [
-            { text: 'title' },
+            { text: "title" },
             { text: '' }
         ];
 
@@ -70,7 +70,7 @@ export default defineVueComponent({
                         </v-data-table>
                     </v-card-text>
                 </div>
-            )
+            );
         };
     }
 });
