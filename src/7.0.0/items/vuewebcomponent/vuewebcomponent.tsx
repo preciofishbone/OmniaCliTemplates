@@ -1,4 +1,3 @@
-import { PropType } from "@vue/composition-api";
 import { StyleFlow, defineVueWebComponent, definePropObjectType } from "@omnia/fx/ux";
 import { $outputname$Styles } from "./$outputname$.css";
 
@@ -28,6 +27,6 @@ export default defineVueWebComponent({
                 <div>{props.data.title}</div>
                 {props.required ? <div>Im required</div> : null}
             </div>
-        )
+        );
     }
 });

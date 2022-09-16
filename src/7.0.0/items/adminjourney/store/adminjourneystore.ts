@@ -1,27 +1,21 @@
-﻿import { Store } from '@omnia/fx/stores';
-import { Injectable, Utils } from '@omnia/fx';
-import { InstanceLifetimes } from '@omnia/fx-models';
-import { Item } from '../models';
+﻿import { Store } from "@omnia/fx/stores";
+import { Injectable, Utils } from "@omnia/fx";
+import { InstanceLifetimes } from "@omnia/fx-models";
+import { Item } from "../models";
 
 @Injectable({
     onStartup: (storeType) => { Store.register(storeType, InstanceLifetimes.Singelton) }
 })
 export class $outputname$Store extends Store {
 
-    private editingItem = this.state<Item>(null);
+    private editingItem = this.state<Item>();
 
     private items = this.state<Array<Item>>([
-        { id: Utils.generateGuid(), title: 'Item A' },
-        { id: Utils.generateGuid(), title: 'Item B' },
-        { id: Utils.generateGuid(), title: 'Item C' },
-        { id: Utils.generateGuid(), title: 'Item D' }
+        { id: Utils.generateGuid(), title: "Item A" },
+        { id: Utils.generateGuid(), title: "Item B" },
+        { id: Utils.generateGuid(), title: "Item C" },
+        { id: Utils.generateGuid(), title: "Item D" }
     ]);
-
-    constructor() {
-        super({
-            id: "$guid3$"
-        });
-    }
 
     getters = {
         items: () => this.items.state,
@@ -51,11 +45,11 @@ export class $outputname$Store extends Store {
     }
 
     mutations = {
-        setEditState: this.mutation((item: Item) => {
+        setEditState: this.mutation((item) => {
             this.editingItem.mutate(Utils.clone(item));
         }),
         setCreateState: this.mutation(() => {
-            this.editingItem.mutate({ id: Utils.generateGuid(), title: '' });
+            this.editingItem.mutate({ id: Utils.generateGuid(), title: "" });
         })
     }
 

@@ -1,23 +1,17 @@
 ﻿{
-  "ts-node": {
-    "compilerOptions": {
-      "module": "commonjs"
-    }
-  },
   "compilerOptions": {
-    "target": "es2021",
+    "target": "es2020",
     "module": "ES2020",
     "moduleResolution": "node",
     "lib": [
-      "es2021",
+      "es2020",
       "dom",
       "webworker"
     ],
-    "strict": true,
     "esModuleInterop": true,
     "isolatedModules": true,
-    "noEmit": true,
     "declaration": false,
+    "noEmit": true,
     "sourceMap": false,
     "inlineSourceMap": false,
     "removeComments": false,

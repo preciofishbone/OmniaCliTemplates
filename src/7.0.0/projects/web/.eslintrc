@@ -4,8 +4,7 @@
         "node_modules",
         "wwwroot",
         "*.js",
-        "*.ts",
-        "!client/fx/**/*.ts"
+        "*.ts"
     ],
     "parser": "@typescript-eslint/parser",
     "plugins": [

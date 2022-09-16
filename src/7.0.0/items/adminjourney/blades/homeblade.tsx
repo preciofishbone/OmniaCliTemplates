@@ -3,7 +3,7 @@ import { useInject } from "@omnia/fx";
 import { $outputname$Destinations } from "../$outputname$Constants";
 import { Item } from "../models";
 import { $outputname$Store } from "../store/$outputname$Store";
-import { JourneyInstance, FontAwesomeIcon } from "@omnia/fx-models";
+import { FontAwesomeIcon } from "@omnia/fx-models";
 
 export default defineVueComponent({
     setup(props) {
@@ -24,7 +24,7 @@ export default defineVueComponent({
 
         const headers = [
             { text: "title" },
-            { text: '' }
+            { text: "" }
         ];
 
         return () => {
@@ -39,7 +39,7 @@ export default defineVueComponent({
                         <v-toolbar-title>Hello Omnia Fx Admin</v-toolbar-title>
                         <v-spacer></v-spacer>
                         <omfx-button
-                            dark={this.omniaTheming.promoted.header.dark}
+                            dark={omniaTheming.promoted.header.dark}
                             onClick={() => openEditBlade()}
                             preset={ButtonPresets.icons.add} ></omfx-button>
                     </v-app-bar>
@@ -60,7 +60,7 @@ export default defineVueComponent({
                                             <omfx-button
                                                 onClick={() => openEditBlade(props.item)}
                                                 icon={{
-                                                    iconType: new FontAwesomeIcon('fas fa-pencil-alt')
+                                                    iconType: new FontAwesomeIcon("fas fa-pencil-alt")
                                                 }}
                                                 preset={ButtonPresets.base.smallIcon}></omfx-button>
                                         </td>

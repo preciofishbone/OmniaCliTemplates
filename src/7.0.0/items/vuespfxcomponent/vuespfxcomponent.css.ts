@@ -1,5 +1,5 @@
-import { types } from 'typestyle';
-import { StyleFlow } from '@omnia/fx/ux';
+import { types } from "typestyle";
+import { StyleFlow } from "@omnia/fx/ux";
 
 /**
  * Styles for the $outputname$ component

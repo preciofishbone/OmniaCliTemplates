@@ -7,7 +7,7 @@ export interface $outputname$BlockSettings {
 export default defineVueWebComponent({
     setup(props) {
         const settings = useBlockSettingsWriter<$outputname$BlockSettings>({
-            defaultValue: { title: 'my block title' }
+            defaultValue: { title: "my block title" }
         });
 
         return () => (
@@ -19,7 +19,7 @@ export default defineVueWebComponent({
                         label='Title'></v-text-field>
                 </v-card-text>
             </v-card>
-        )
+        );
     }
 });
 

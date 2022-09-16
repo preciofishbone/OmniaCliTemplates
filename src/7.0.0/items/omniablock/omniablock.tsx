@@ -17,7 +17,7 @@ export default defineVueWebComponent({
             <div class={$outputname$Classes.container}>
                 {settings.title}
             </div>
-        )
+        );
     }
 });
 
