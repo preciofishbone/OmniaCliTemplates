@@ -52,6 +52,10 @@
               "outputName": "omnia.service.ts"
             },
             {
+              "sourceName": ".eslintrc",
+              "outputName": ".eslintrc"
+            },
+            {
               "sourceName": "package.json",
               "outputName": "package.json"
             },
