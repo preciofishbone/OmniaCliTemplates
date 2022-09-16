@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Omnia.Fx.NetCore.WebApp" Version="7.0.301-dev" />
+    <PackageReference Include="Omnia.Fx.NetCore.WebApp" Version="7.0.303-dev" />
   </ItemGroup>
 
   <!--***************************************************************************************-->
