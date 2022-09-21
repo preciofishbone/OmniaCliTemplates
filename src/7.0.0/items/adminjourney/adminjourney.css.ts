@@ -1,12 +1,9 @@
 import { style, cssRule, cssRaw } from "typestyle";
+import { StyleFlow } from "@omnia/fx/ux";
 
-/**
- * Styles for the $outputname$ component
- */
-export const $outputname$Styles ={
-    container:style({
-       
-    })
-}
-
+export default StyleFlow.define({
+    container: {
+        fontSize: 22
+    }
+})
 

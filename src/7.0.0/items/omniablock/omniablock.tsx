@@ -1,6 +1,6 @@
 import { Guid } from "@omnia/fx-models";
 import { StyleFlow, defineVueWebComponent, useBlockSettingsReader } from "@omnia/fx/ux";
-import { $outputname$Styles } from "./$outputname$.css";
+import $outputname$Styles from "./$outputname$.css";
 import { $outputname$BlockSettings } from "./$outputname$Settings";
 
 

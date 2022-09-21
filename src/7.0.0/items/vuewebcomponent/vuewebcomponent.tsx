@@ -1,5 +1,5 @@
 import { StyleFlow, defineVueWebComponent, definePropObjectType } from "@omnia/fx/ux";
-import { $outputname$Styles } from "./$outputname$.css";
+import $outputname$Styles from "./$outputname$.css";
 
 interface $outputname$Data {
     title: string;

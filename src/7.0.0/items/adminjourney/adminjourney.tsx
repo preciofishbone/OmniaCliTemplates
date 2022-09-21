@@ -1,6 +1,6 @@
-import { defineVueWebComponent } from "@omnia/fx/ux";
+import { defineVueWebComponent, StyleFlow } from "@omnia/fx/ux";
 import { Blade, BladeSizes, JourneyInstance } from "@omnia/fx-models";
-import "./$outputname$.css";
+import $outputname$Styles from "./$outputname$.css";
 import HomeBlade from "./blades/HomeBlade";
 import EditBlade from "./blades/EditBlade";
 import { $outputname$Destinations, $outputname$BladeIds } from "./$outputname$Constants";
@@ -9,6 +9,8 @@ export default defineVueWebComponent({
     props: {
     },
     setup(props) {
+        const $outputname$Classes = StyleFlow.use($outputname$Styles);
+
         let journey: JourneyInstance;
         const gotInstance = (instance: JourneyInstance) => {
             journey = instance;
@@ -32,7 +34,9 @@ export default defineVueWebComponent({
         };
 
         return () => (
-            <omfx-journey onInstanceCreated={gotInstance}
+            <omfx-journey
+                class={$outputname$Classes.container}
+                onInstanceCreated={gotInstance}
                 blades={[
                     getHomeBlade(),
                     getEditBlade()
