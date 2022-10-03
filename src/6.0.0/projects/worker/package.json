@@ -2,11 +2,11 @@
   "name": "$namespace$",
   "version": "0.1.0",
   "scripts": {
-    "omnia-before-build": "gulp omnia-before-build",
-    "omnia-after-build": "tsc -v && tsc && gulp omnia-after-build"
+    "build": "tsc -v && tsc && omniafx build",
+    "build-release": "npm run build -- --docs --minify"
   },
   "dependencies": {
-    "@omnia/tooling-composers": "6.7.2"
+    "@omnia/tooling-composers": "6.11.24"
   },
   "devDependencies": {
     "gulp": "4.0.2"

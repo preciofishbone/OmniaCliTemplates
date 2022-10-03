@@ -25,18 +25,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Omnia.Fx.NetCore.WebApp" Version="6.6.0" />
+    <PackageReference Include="Omnia.Fx.NetCore.WebApp" Version="6.11.24" />
   </ItemGroup>
 
-  <!--***************************************************************************************-->
+   <!--***************************************************************************************-->
   <!--**** Omnia Build Tasks ****************************************************************-->
   <!--***************************************************************************************-->
   <Target Name="OmniaRunAfterBuildRelease" AfterTargets="Build" Condition="'$(Configuration)' == 'Release' ">
-    <Exec Command="npm run omnia-after-build-release" ContinueOnError="false">
+    <Exec Command="npm run build-release" ContinueOnError="false">
     </Exec>
   </Target>
   <Target Name="OmniaRunAfterBuild" AfterTargets="Build" Condition="'$(Configuration)' != 'Release' And '$(Configuration)' != 'BuildWithoutTsc' ">
-    <Exec Command="npm run omnia-after-build" ContinueOnError="false">
+    <Exec Command="npm run build" ContinueOnError="false">
     </Exec>
   </Target>
   <Target Name="IncludeOmniaOutput" AfterTargets="ComputeFilesToPublish">

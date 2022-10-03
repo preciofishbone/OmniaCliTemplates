@@ -2,16 +2,15 @@
   "name": "$namespace$",
   "version": "0.1.0",
   "scripts": {
-    "omnia-watch": "tsc -v && tsc -w",
-    "omnia-before-build": "gulp omnia-before-build",
-    "omnia-after-build": "tsc -v && tsc && gulp omnia-after-build",
-    "omnia-after-build-release": "npm run omnia-after-build -- --docs"
+    "build": "tsc -v && tsc && omniafx build",
+    "build-release": "npm run build -- --docs --minify",
+    "omnia-watch": "tsc -w"
   },
   "dependencies": {
-    "@omnia/fx-models": "6.7.2",
-    "@omnia/fx-sp": "6.7.2",
-    "@omnia/fx-spfx": "6.7.2",
-    "@omnia/tooling-vue": "6.7.2"
+    "@omnia/fx-models": "6.11.24",
+    "@omnia/fx-sp": "6.11.24",
+    "@omnia/fx-spfx": "6.11.24",
+    "@omnia/tooling-vue": "6.11.24"
   },
   "devDependencies": {
     "gulp": "4.0.2"
