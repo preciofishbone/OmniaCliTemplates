@@ -1,9 +1,9 @@
 {
   "envVersion": {
-    "omnia": "6.0.0",
+    "omnia": "6.10.0",
     "cli": "3.1.0",
-    "netCoreSdk": "5.0.100",
-    "baseImage": "6.0"
+    "netCoreSdk": "5.0.408",
+    "baseImage": "6.10"
   },
   "projects": [
     {
