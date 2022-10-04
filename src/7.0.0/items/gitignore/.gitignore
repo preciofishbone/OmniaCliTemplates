@@ -37,3 +37,4 @@ We use typescript all in except for taskrunner
 *.key
 *.crt
 *.user
+appsettings.local.json
