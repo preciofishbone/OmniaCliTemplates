@@ -27,8 +27,6 @@ We use typescript all in except for taskrunner
 *.js
 *.jsx
 *.d.ts
-!gulpfile.js
-!gulpfile.esm.js
 
 # Exclude local certs and secrets
 *.pem

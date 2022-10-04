@@ -28,7 +28,6 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <DependentUpon>appsettings.json</DependentUpon>
     </Content>
-    <None Include="gulpfile.esm.js" />
   </ItemGroup>
 
   <ItemGroup>
