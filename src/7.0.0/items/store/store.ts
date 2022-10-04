@@ -5,24 +5,20 @@ import { InstanceLifetimes } from '@omnia/fx-models';
 @Injectable({
     onStartup: (storeType) => { Store.register(storeType, InstanceLifetimes.Scoped) }
 })
-export class $outputname$ extends Store
-{
+export class $outputname$ extends Store {
     private testState = this.state<string>("Inital value");
-   
-    constructor()
-    {
+
+    constructor() {
         super({
             id: "$guid1$"
         });
     }
 
-    onActivated()
-    {
+    onActivated() {
         //Called when the store gets created and ready to use
     }
 
-    onDisposing()
-    {
+    onDisposing() {
         //Called when the store is disposed, do some cleanup here
     }
 
@@ -39,9 +35,9 @@ export class $outputname$ extends Store
      * Implementation of mutations
      */
     mutations = {
-        update: (newState: string) => {
+        update: this.mutation((newState: string) => {
             this.testState.mutate(newState);
-        }
+        })
     }
     /**
      * Implementation of actions
