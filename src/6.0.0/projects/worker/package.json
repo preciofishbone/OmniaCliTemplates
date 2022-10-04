@@ -8,9 +8,7 @@
   "dependencies": {
     "@omnia/tooling-composers": "6.11.24"
   },
-  "devDependencies": {
-    "gulp": "4.0.2"
-  },
+  "devDependencies": {},
   "engines": {
     "node": ">=10.0.0"
   }
