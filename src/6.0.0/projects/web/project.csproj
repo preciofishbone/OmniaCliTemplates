@@ -16,7 +16,6 @@
     <None Remove="**\*.jsx" />
     <None Remove="**\*.map" />
     <None Remove="publish\**" />
-    <None Include="gulpfile.esm.js" />
   </ItemGroup>
 
   <ItemGroup>
