@@ -8,17 +8,6 @@
     }
   },
   "profiles": {
-    "IIS Express": {
-      "commandName": "IISExpress",
-      "launchBrowser": true,
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development",
-        "ASPNETCORE_URLS": "https://localhost:443$num1$",
-        "OMNIA_LOGGING": "ON",
-        "OMNIA_ENVIRONMENT": "LocalHosting",
-        "OMNIA_EXTENSIONID": "$extensionid$"
-      }
-    },
     "$namespace$": {
       "commandName": "Project",
       "launchBrowser": true,
