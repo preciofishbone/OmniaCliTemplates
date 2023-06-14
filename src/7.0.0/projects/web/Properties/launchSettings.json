@@ -1,12 +1,4 @@
 {
-  "iisSettings": {
-    "windowsAuthentication": false,
-    "anonymousAuthentication": true,
-    "iisExpress": {
-      "applicationUrl": "http://localhost:307$num1$",
-      "sslPort": 443$num1$
-    }
-  },
   "profiles": {
     "$namespace$": {
       "commandName": "Project",
@@ -15,9 +7,11 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
         "ASPNETCORE_URLS": "https://localhost:443$num1$",
-        "OMNIA_LOGGING": "ON",
-        "OMNIA_ENVIRONMENT": "LocalHosting",
-        "OMNIA_EXTENSIONID": "$extensionid$"
+        "OMNIA_EXTENSIONID": "$extensionid$",
+        "OMNIA_SERVICEID": "$serviceid$",
+        "OMNIA_CONSOLE_LOGGING": "ON",
+        "OMNIA_LOGGING_LEVEL": "Information",
+        "OMNIA_ENVIRONMENT": "LocalHosting"
       }
     }
   }

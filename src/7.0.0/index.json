@@ -1,9 +1,9 @@
 {
   "envVersion": {
     "omnia": "7.0.0",
-    "cli": "6.0.0",
-    "netCoreSdk": "7.0.100",
-    "baseImage": "7.1"
+    "cli": "7.0.9",
+    "netCoreSdk": "7.0.304",
+    "baseImage": "7.0"
   },
   "projects": [
     {
@@ -25,7 +25,7 @@
     {
       "name": "web",
       "description": "Omnia web project",
-      "baseImage": "preciofishbone/omnia:7.0-preview2-webapp",
+      "baseImage": "preciofishbone/omnia:7.0-webapp",
       "requiresName": true,
       "sources": [
         {
@@ -79,7 +79,7 @@
     {
       "name": "worker",
       "description": "Omnia worker project",
-      "baseImage": "preciofishbone/omnia:7.0-preview2-worker",
+      "baseImage": "preciofishbone/omnia:7.0-worker",
       "requiresName": true,
       "sources": [
         {
