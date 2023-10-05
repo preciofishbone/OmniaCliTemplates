@@ -1,0 +1,28 @@
+{
+  "name": "$namespace$",
+  "version": "0.1.0",
+  "scripts": {
+    "tsc": "tsc -v && tsc",
+    "serve": "omniafx serve",
+    "build": "omniafx build --manifestOnly",
+    "build-release": "tsc -v && tsc && omniafx build --clean",
+    "clean": "omniafx clean",
+    "lint": "eslint .",
+    "lintfix": "eslint . --fix",
+    "lintgroup": "eslint . -f ./eslint-formatter.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@omnia/fx-models": "7.0.0",
+    "@omnia/fx-sp": "7.0.0",
+    "@omnia/fx-spfx": "7.0.0",
+    "@omnia/tooling-vue": "7.0.0",
+    "@typescript-eslint/eslint-plugin": "5.15.0",
+    "@typescript-eslint/parser": "5.15.0",
+    "eslint": "8.11.0",
+    "eslint-plugin-unused-imports": "2.0.0"
+  },
+  "engines": {
+    "node": ">=14.16.0"
+  }
+}

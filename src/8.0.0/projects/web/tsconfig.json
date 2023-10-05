@@ -1,0 +1,38 @@
+﻿{
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "ES2020",
+    "moduleResolution": "node",
+    "lib": [
+      "es2020",
+      "dom",
+      "webworker"
+    ],
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "declaration": false,
+    "noEmit": true,
+    "sourceMap": false,
+    "inlineSourceMap": false,
+    "removeComments": false,
+    "noImplicitAny": false,
+    "importHelpers": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "preserve",
+    "jsxFactory": "VueTsxSupport",
+    "baseUrl": "client",
+    "paths": {},
+    "typeRoots": [
+      "./node_modules/@omnia/types",
+      "./node_modules/@types"
+    ]
+  },
+  "compileOnSave": true,
+  "exclude": [
+    "node_modules"
+  ]
+}

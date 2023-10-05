@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "$namespace$": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "OMNIA_EXTENSIONID": "$extensionid$",
+        "OMNIA_SERVICEID": "$serviceid$",
+        "OMNIA_CONSOLE_LOGGING": "ON",
+        "OMNIA_LOGGING_LEVEL": "Information"
+      }
+    }
+  }
+}

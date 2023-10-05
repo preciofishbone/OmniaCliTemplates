@@ -1,0 +1,14 @@
+{
+  "name": "$namespace$",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "tsc -v && tsc && omniafx build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@omnia/tooling-composers": "7.0.0"
+  },
+  "engines": {
+    "node": ">=14.16.0"
+  }
+}

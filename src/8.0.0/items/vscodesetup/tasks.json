@@ -1,0 +1,40 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "omnia run",
+        "dependsOn": [
+          "dotnet",
+          "watch ts"
+        ],
+        "problemMatcher": [
+          "$msCompile",
+          "$tsc"
+        ]
+      },
+      {
+        "label": "dotnet",
+        "command": "dotnet",
+        "type": "shell",
+        "args": [
+          "run",
+          "/property:GenerateFullPaths=true"
+        ],
+        "isBackground": true,
+        "problemMatcher": "$msCompile"
+      },
+      {
+        "label": "watch ts",
+        "type": "npm",
+        "script": "omnia-watch",
+        "problemMatcher": {
+          "base": "$tsc-watch",
+          "applyTo": "allDocuments"
+        },
+        "isBackground": true,
+        "runOptions": {
+          "runOn": "folderOpen"
+        }
+      }
+    ]
+}

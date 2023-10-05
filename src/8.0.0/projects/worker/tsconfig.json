@@ -1,0 +1,33 @@
+﻿{
+  "compilerOptions": {
+    "target": "es2021",
+    "module": "ES2020",
+    "moduleResolution": "node",
+    "lib": [
+      "es2021",
+      "dom",
+      "webworker"
+    ],
+    "strict": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "declaration": false,
+    "sourceMap": false,
+    "inlineSourceMap": false,
+    "removeComments": false,
+    "noImplicitAny": false,
+    "importHelpers": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "preserve",
+    "jsxFactory": "VueTsxSupport"
+  },
+  "compileOnSave": true,
+  "exclude": [
+    "node_modules"
+  ]
+}
