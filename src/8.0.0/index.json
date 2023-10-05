@@ -129,6 +129,36 @@
   ],
   "items": [
     {
+      "name": "component-manifest",
+      "description": "Component exposing element in manifest for automatic bootstrap",
+      "tokens": [
+        {
+          "name": "element",
+          "lowercase": true
+        }
+      ],
+      "requiresName": true,
+      "sources": [
+        {
+          "folder": "items/component-manifest",
+          "files": [
+            {
+              "sourceName": "component.tsx",
+              "outputName": "$outputname$.tsx"
+            },
+            {
+              "sourceName": "component.manifest.ts",
+              "outputName": "$outputname$.manifest.ts"
+            },
+            {
+              "sourceName": "component.css.ts",
+              "outputName": "$outputname$.css.ts"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "vuespfxcomponent",
       "description": "Vue spfx component",
       "tokens": [
@@ -441,10 +471,10 @@
       "requiresName": true,
       "sources": [
         {
-          "folder": "items/vuecomponent",
+          "folder": "items/component",
           "files": [
             {
-              "sourceName": "vuecomponent.tsx",
+              "sourceName": "component.tsx",
               "outputName": "$outputname$.tsx"
             }
           ]

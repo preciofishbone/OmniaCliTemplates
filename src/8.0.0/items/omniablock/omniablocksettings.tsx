@@ -16,7 +16,7 @@ export default defineVueComponent({
             <o-panel variant="settings">
                 <o-text-field
                     v-model={settings.title}
-                    label='Title'>
+                    label="Title">
                 </o-text-field>
             </o-panel>
         );

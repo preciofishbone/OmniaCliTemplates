@@ -1,10 +1,10 @@
 import { Composer } from "@omnia/tooling/composers";
-import { Guid } from "@omnia/fx/models";
+import { ClientManifestTargetTypes, Guid } from "@omnia/fx/models";
 import { FontAwesomeIcon } from "@omnia/fx-models";
 
 Composer
     .registerManifest(new Guid("$guid1$"), "$outputname$")
-    .registerWebComponent({
+    .registerElement({
         elementName: "$element$",
         entryPoint: "./$outputname$.tsx"
     })
@@ -18,11 +18,15 @@ Composer
 
         //which layout provider can use this block. 
         //layoutDependencyProviders: ["wcm"] //i.e. only WCM layout can use this block 
-    });
+    })
+    //Define your target, i.e., where the block should be available
+    .withTarget(ClientManifestTargetTypes.Public);
 
 Composer
     .registerManifest(new Guid("$guid2$"), "$outputname$.settings")
-    .registerWebComponent({
+    .registerElement({
         elementName: "$element$-settings",
         entryPoint: "./$outputname$Settings.tsx"
     })
+    //Define your target, i.e., where the block should be available
+    .withTarget(ClientManifestTargetTypes.Public);
