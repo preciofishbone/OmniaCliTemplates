@@ -1,10 +1,10 @@
 ﻿{
   "compilerOptions": {
-    "target": "es2020",
-    "module": "ES2020",
+    "target": "es2022",
+    "module": "es2022",
     "moduleResolution": "node",
     "lib": [
-      "es2020",
+      "es2022",
       "dom",
       "webworker"
     ],
@@ -22,6 +22,7 @@
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
+    "useDefineForClassFields": false,
     "jsx": "preserve",
     "jsxFactory": "VueTsxSupport",
     "baseUrl": "client",
