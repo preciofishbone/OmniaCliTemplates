@@ -1,26 +1,15 @@
 import { Func } from "@omnia/fx-models";
-import { defineVue, defineVueComponent, useIcons } from "@omnia/fx/ux";
+import { defineVue, defineVueComponent, useIcons, SetupComponentContext, DefineVModel, DefineProp, DefineSlot, DefineEmit } from "@omnia/fx/ux";
 import { VNodeChild, reactive } from "vue";
 
-export default defineVueComponent({
-    props: {
-        //Two way data binding for v-model setting the value will auto emit the updates
-        ...defineVue().vModel<number>(),
-        //Expose props with default value
-        ...defineVue().prop<string>().name("title").defaultValue("Omnia Fx"),
-        //Custom rendering of slots
-        ...defineVue().slots<{
-            icon?: Func<[VNodeChild]>
-        }>()
-    },
-    emits: {
-        //Emit v-model event to parent component
-        "update:modelValue": (value: number) => true,
-        //Custom events for parent component
-        "click:someThing": (value: string) => true,
-    },
-    setup({ props, slots, emit, models }) {
-        
+export default defineVueComponent(
+    ({ props, slots, emit, models }: SetupComponentContext<
+        DefineVModel<"", number> &
+        DefineProp<"title", string> &
+        DefineSlot<"icon", Func<[VNodeChild]>> &
+        DefineEmit<"click:someThing", (value: string) => true>
+    >) => {
+
         //Create a reactive local state
         const state = reactive({
             description: "This is a reactive description"
@@ -50,4 +39,4 @@ export default defineVueComponent({
             </o-panel>
         );
     }
-});
+);
