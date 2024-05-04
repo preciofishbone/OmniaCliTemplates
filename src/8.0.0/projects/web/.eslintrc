@@ -4,11 +4,13 @@
         "node_modules",
         "wwwroot",
         "*.js",
-        "*.ts"
+        "*.ts",
+        "!client/fx/**/*.ts"
     ],
     "parser": "@typescript-eslint/parser",
     "plugins": [
         "@typescript-eslint",
+        "@stylistic/eslint-plugin",
         "unused-imports"
     ],
     "extends": [
@@ -55,7 +57,23 @@
         "no-useless-escape": "off",
         "no-async-promise-executor": "off",
         "no-control-regex": "off",
+        "valid-typeof": "off",
         "@typescript-eslint/no-unnecessary-type-constraint": "off",
-        "no-unsafe-optional-chaining": "off"
+        "no-unsafe-optional-chaining": "off",
+        "@typescript-eslint/no-array-constructor": "off",
+        "@typescript-eslint/no-unsafe-declaration-merging": "off",
+        "@typescript-eslint/no-duplicate-enum-values": "off",
+
+        "@stylistic/indent": ["error", 4],
+        "@stylistic/dot-location": ["error", "property"],
+        "@stylistic/jsx-quotes": ["error", "prefer-double"],
+        "@stylistic/arrow-spacing": ["error"],
+        "@stylistic/comma-style": ["error", "last"],
+        "@stylistic/comma-spacing": ["error", { "before": false, "after": true }],
+   
+        "func-style": [
+            "warn",
+            "declaration"
+        ]
     }
 }
