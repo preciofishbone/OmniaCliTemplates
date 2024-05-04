@@ -6,7 +6,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@omnia/tooling-composers": "7.0.0"
+    "@omnia/tooling-composers": "8.0.188-dev"
   },
   "engines": {
     "node": ">=14.16.0"
