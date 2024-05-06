@@ -20,7 +20,7 @@ Composer
         //layoutDependencyProviders: ["wcm"] //i.e. only WCM layout can use this block 
     })
     //Define your target, i.e., where the block should be available
-    .withTarget(ClientManifestTargetTypes.Public);
+    .withTarget(ClientManifestTargetTypes.public);
 
 Composer
     .registerManifest(new Guid("$guid2$"), "$outputname$.settings")
@@ -29,4 +29,4 @@ Composer
         entryPoint: "./$outputname$Settings.tsx"
     })
     //Define your target, i.e., where the block should be available
-    .withTarget(ClientManifestTargetTypes.Public);
+    .withTarget(ClientManifestTargetTypes.public);

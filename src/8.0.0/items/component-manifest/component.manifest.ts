@@ -8,4 +8,4 @@ Composer
         entryPoint: "./$outputname$.tsx"
     })
     //Define the target if intended use is for public/editor/admin/docs
-    .withTarget(ClientManifestTargetTypes.Public);
+    .withTarget(ClientManifestTargetTypes.public);
