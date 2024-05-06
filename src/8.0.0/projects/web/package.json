@@ -17,10 +17,13 @@
     "@omnia/fx-sp": "8.0.188-dev",
     "@omnia/fx-spfx": "8.0.188-dev",
     "@omnia/tooling-vue": "8.0.188-dev",
-    "@typescript-eslint/eslint-plugin": "5.15.0",
-    "@typescript-eslint/parser": "5.15.0",
-    "eslint": "8.11.0",
-    "eslint-plugin-unused-imports": "2.0.0"
+    "eslint": "8.54.0",
+    "@typescript-eslint/eslint-plugin": "6.13.2",
+    "@typescript-eslint/parser": "6.13.2",
+    "eslint-plugin-unused-imports": "3.0.0",
+    "@stylistic/eslint-plugin": "1.5.3",
+    "@stylistic/eslint-plugin-jsx": "1.5.3",
+    "@stylistic/eslint-plugin-ts": "1.5.3"
   },
   "engines": {
     "node": ">=14.16.0"
